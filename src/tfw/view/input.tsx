@@ -1,7 +1,10 @@
-import * as React from "react";
-import "../theme.css";
-import "./input.css";
-
+import * as React from "react"
+import "../theme.css"
+import "./input.css"
+import castInteger from "../converter/integer"
+import castBoolean from "../converter/boolean"
+import castString from "../converter/string"
+import Debouncer from "../debouncer"
 
 interface IStringSlot {
     (value: string): void;
@@ -12,6 +15,10 @@ interface IInputProps {
     value?: string;
     delay?: number;
     size?: number;
+    focus?: boolean;
+    type?: "text" | "password" | "submit" | "color" | "date"
+    | "datetime-local" | "email" | "month" | "number" | "range"
+    | "search" | "tel" | "time" | "url" | "week";
     onChange?: IStringSlot
 }
 
@@ -26,6 +33,17 @@ export default class Input extends React.Component<IInputProps, {}> {
         this.onChange = this.onChange.bind(this);
         this.timerId = 0;
         this.input = React.createRef();
+        this.setFocus = Debouncer(this.setFocus.bind(this), 100);
+    }
+
+    setFocus() {
+        const input = this.input ? this.input.current : null;
+        if (!input) return;
+        const focus = castBoolean(this.props.focus, false);
+        if (focus) {
+            console.log("focus =", input);
+            input.focus();
+        }
     }
 
     onFocus(event: React.FocusEvent<HTMLInputElement>): void {
@@ -60,28 +78,34 @@ export default class Input extends React.Component<IInputProps, {}> {
         }
     }
 
+    componentDidMount() {
+        this.setFocus();
+    }
+
     componentDidUpdate(oldProps: IInputProps) {
         const
             newProps = this.props,
             input = this.input ? this.input.current : null;
 
-        if (input) input.value = castString(newProps.value);
+        if (input) input.value = castString(newProps.value, "");
+        this.setFocus();
     }
 
     render() {
         const
             p = this.props,
-            label = castString(p.label),
-            value = castString(p.value),
+            type = castString(p.type, "text"),
+            label = castString(p.label, ""),
+            value = castString(p.value, ""),
             size = Math.max(1, castInteger(p.size, 8)),
             id = nextId();
 
         return (<div className="tfw-view-input thm-ele-button" >
-            {label ? (<label htmlFor={id} className="thm-bgPD">{label}</label>) : null}
+            {label ? (<label htmlFor={id} className="thm-bgPD" >{label}</label>) : null}
             <input
                 ref={this.input}
                 className="thm-bg3"
-                type="text"
+                type={type}
                 id={id}
                 size={size}
                 onFocus={this.onFocus}
@@ -90,18 +114,6 @@ export default class Input extends React.Component<IInputProps, {}> {
                 defaultValue={value} />
         </div>);
     }
-}
-
-function castInteger(v: any, defaultValue: number = 0): number {
-    if (typeof v !== 'number') return defaultValue;
-    if (isNaN(v)) return defaultValue;
-    return Math.max(0, Math.floor(v));
-}
-
-function castString(v: any): string {
-    if (typeof v === 'number') return `${v}`;
-    if (typeof v !== 'string') return "";
-    return v;
 }
 
 

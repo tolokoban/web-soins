@@ -99,11 +99,14 @@ export default class Color {
      * @this Color
      * @returns {undefined}
      */
-    luminance() {
+    luminance(): number {
         return (0.2126 * this.R) + (0.7152 * this.G) + (0.0722 * this.B);
     }
 
-    luminanceStep() {
+    /**
+     * @returns {integer} 0 if the color is dark and 1 if it is light.
+     */
+    luminanceStep(): number {
         return this.luminance() < .6 ? 0 : 1;
     }
 
@@ -167,6 +170,39 @@ export default class Color {
         this.R = R + shift;
         this.G = G + shift;
         this.B = B + shift;
+    }
+
+    rgb2hsl() {
+        const R = this.R;
+        const G = this.G;
+        const B = this.B;
+
+        const min = Math.min(R, G, B);
+        const max = Math.max(R, G, B);
+        const delta = max - min;
+
+        this.L = 0.5 * (max + min);
+
+        if (delta < 0.000001) {
+            this.H = 0;
+            this.S = 0;
+        }
+        else {
+            this.S = delta / (1 - Math.abs(2 * this.L - 1));
+            if (max === R) {
+                if (G >= B) {
+                    this.H = INV6 * ((G - B) / delta);
+                } else {
+                    this.H = 1 - INV6 * ((B - G) / delta);
+                }
+            }
+            else if (max === G) {
+                this.H = INV6 * (2 + (B - R) / delta);
+            }
+            else {
+                this.H = INV6 * (4 + (R - G) / delta);
+            }
+        }
     }
 
     private parseHexa(text: string) {
