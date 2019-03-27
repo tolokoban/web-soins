@@ -1,6 +1,7 @@
 import * as React from "react"
 import Input from "./tfw/view/input"
 import Button from "./tfw/view/button"
+import * as Dialog from "./tfw/factory/dialog"
 
 interface IAppState {
     username: string;
@@ -22,7 +23,8 @@ export default class App extends React.Component<{}, {}> {
     }
 
     handleLogin() {
-        alert(this.username + ", " + this.password);
+        Dialog.alert(this.username + ", " + this.password);
+        window.setTimeout(() => Dialog.alert("Stacked dialog"), 500);
     }
 
     handleUsernameChange(value: string) {
@@ -35,22 +37,22 @@ export default class App extends React.Component<{}, {}> {
 
     render() {
         return (
-            <div className="app-login thm-bg0 thm-ele-dialog">
-                <Input
+            <div className= "app-login thm-bg0 thm-ele-dialog" >
+            <Input
                     label="Utilisateur"
-                    onChange={this.handleUsernameChange}
-                    size={20}
-                    focus={true} />
-                <Input
+        onChange = { this.handleUsernameChange }
+        size = { 20}
+        focus = { true} />
+            <Input
                     label="Mot de passe"
-                    onChange={this.handlePasswordChange}
-                    size={20}
-                    type="password" />
-                <Button
+        onChange = { this.handlePasswordChange }
+        size = { 20}
+        type = "password" />
+            <Button
                     label="Connexion"
-                    onClick={this.handleLogin}
-                    icon="user"
-                    flat={true} />
+        onClick = { this.handleLogin }
+        icon = "user"
+        flat = { true} />
             </div>
         );
     }
