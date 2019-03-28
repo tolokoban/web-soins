@@ -2,6 +2,7 @@ import * as React from "react"
 import Input from "./tfw/view/input"
 import Button from "./tfw/view/button"
 import * as Dialog from "./tfw/factory/dialog"
+import WebService from "./tfw/web-service"
 
 interface IAppState {
     username: string;
@@ -23,8 +24,19 @@ export default class App extends React.Component<{}, {}> {
     }
 
     handleLogin() {
-        Dialog.alert(this.username + ", " + this.password);
-        window.setTimeout(() => Dialog.alert("Stacked dialog"), 500);
+        document.getElementById("LOGIN").classList.add("hide");
+        WebService.login(this.username, this.password)
+            .then(() => this.start(), err => this.badLogin(err));
+    }
+
+    start() {
+        alert("OK");
+    }
+
+    badLogin(err) {
+        document.getElementById("LOGIN").classList.remove("hide");
+        console.log("err:", err);
+        alert(`Bad: ${err}`);
     }
 
     handleUsernameChange(value: string) {
