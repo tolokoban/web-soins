@@ -1,8 +1,14 @@
-import * as React from "react"
+import React from 'react'
+import ReactDOM from 'react-dom'
 import Input from "./tfw/view/input"
 import Button from "./tfw/view/button"
 import * as Dialog from "./tfw/factory/dialog"
 import WebService from "./tfw/web-service"
+
+import Intl from "./tfw/intl";
+const _ = Intl.make(require("./Login.yaml"));
+
+const AsyncStart = import("./main");
 
 interface IAppState {
     username: string;
@@ -26,17 +32,26 @@ export default class App extends React.Component<{}, {}> {
     handleLogin() {
         document.getElementById("LOGIN").classList.add("hide");
         WebService.login(this.username, this.password)
-            .then(() => this.start(), err => this.badLogin(err));
+            .then(user => this.start(user), err => this.badLogin(err));
     }
 
-    start() {
-        alert("OK");
+    async start(user) {
+        const applicationStarter = await AsyncStart;
+        applicationStarter.default(user);
+        document.body.classList.add("start");
+        setTimeout(() => {
+            const body = document.body;
+            const splash1 = document.getElementById("splash1");
+            const splash2 = document.getElementById("splash2");
+            body.removeChild(splash1);
+            body.removeChild(splash2);
+        }, 1000);
     }
 
     badLogin(err) {
         document.getElementById("LOGIN").classList.remove("hide");
         console.log("err:", err);
-        alert(`Bad: ${err}`);
+        Dialog.alert(_('bad-login', this.username));
     }
 
     handleUsernameChange(value: string) {
@@ -49,22 +64,22 @@ export default class App extends React.Component<{}, {}> {
 
     render() {
         return (
-            <div className= "app-login thm-bg0 thm-ele-dialog" >
-            <Input
+            <div className="app-login thm-bg0 thm-ele-dialog" >
+                <Input
                     label="Utilisateur"
-        onChange = { this.handleUsernameChange }
-        size = { 20}
-        focus = { true} />
-            <Input
+                    onChange={this.handleUsernameChange}
+                    size={20}
+                    focus={true} />
+                <Input
                     label="Mot de passe"
-        onChange = { this.handlePasswordChange }
-        size = { 20}
-        type = "password" />
-            <Button
+                    onChange={this.handlePasswordChange}
+                    size={20}
+                    type="password" />
+                <Button
                     label="Connexion"
-        onClick = { this.handleLogin }
-        icon = "user"
-        flat = { true} />
+                    onClick={this.handleLogin}
+                    icon="user"
+                    flat={true} />
             </div>
         );
     }

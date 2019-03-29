@@ -1,0 +1,4 @@
+en:
+    bad-login: User "$1" is unknown or the password is wrong!
+fr:
+    bad-login: L'utilisateur "$1" est inconnu ou le mot de passe est erroné !

@@ -13,6 +13,9 @@ import "./dialog.css"
 
 import Button from "../view/button"
 
+import Intl from "../intl";
+const _ = Intl.make(require("./dialog.yaml"));
+
 const gDialogs = [];
 
 document.addEventListener("keydown", (event) => {
@@ -63,7 +66,7 @@ function alert(message: string, onClose: () => void = null) {
             <footer className="thm-bg1">
                 <Button
                     icon="close"
-                    label="Got it!"
+                    label={_('close')}
                     flat={true}
                     onClick={dialog.hide} />
             </footer>

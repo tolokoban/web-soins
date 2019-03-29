@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Login from './Login'
+import "./tfw/font/josefin.css"
 import "./index.css"
 import Theme from "./tfw/theme"
 

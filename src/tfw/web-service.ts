@@ -15,7 +15,7 @@ export default {
     login
 };
 
-enum EnumWebServiceError {
+export enum EnumWebServiceError {
     OK = 0,
     BAD_ROLE,
     BAD_TYPE,
@@ -23,6 +23,15 @@ enum EnumWebServiceError {
     MISSING_AUTOLOGIN,
     UNKNOWN_USER,
     HTTP_ERROR
+}
+
+export enum EnumLoginError {
+    WRONG_CHALLENGE = -1,
+    MISSING_WAITING_STATE = -2, // USER:waiting.
+    MISSING_RESPONSE_STATE = -3, // USER:response.
+    WRONG_LENGTH = -4, // Response has not the correct length.
+    WRONG_PASSWORD = -5,
+    ACCOUNT_DISABLED = -6
 }
 
 interface ICallResponse {
@@ -83,6 +92,9 @@ async function login(username: string, password: string): Promise<User> {
     const challenge = await exec("tfw.login.Challenge", username);
     const h = hash(challenge, password);
     const response = await exec("tfw.login.Response", h);
+    if (typeof response === 'number') {
+        throw response;
+    }
     gLastSuccessfulLogin.username = username;
     gLastSuccessfulLogin.password = password;
     return new User(response.login, response.name, response.roles);

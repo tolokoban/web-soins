@@ -99,7 +99,7 @@ export default class Icon extends React.Component<IIconProps, {}> {
                 height={size}
                 onClick={onClick} >
                 {svgContent}
-                <g strokeWidth="6" fill="none" strokeLinecap="round" strokeLinejoin="round" >
+                < g strokeWidth="6" fill="none" strokeLinecap="round" strokeLinejoin="round" >
                     {createSvgContent(content, p)}
                 </g>
             </svg>
@@ -121,9 +121,34 @@ function createSvgContent(def: TIconDefinition, props: IIconProps): any {
     ) as React.ReactSVGElement;
 }
 
+const CLASSES = ["0", "1", "P", "PL", "PD", "S", "SL", "SD"];
 
-function manageColors(attribs: {}, props: IIconProps) {
+/**
+ * If the value of the attribute "fill" is an element of CLASSES,
+ * it will be removed and replace with a class.
+ * Same thing for the attibute "stroke".
+ *
+ * @example
+ * manageColors({ fill: "1" }) === { className: "thn-svg-fill-1" }
+ *
+ * @param   attribs [description]
+ * @param   props   [description]
+ * @returns         [description]
+ */
+function manageColors(attribs: { [key: string]: any }, props: IIconProps) {
     // @TODO For special forms of "fill" and "stroke", add classes.
+    const classes = (attribs.className || "").split(" ");
+
+    ["fill", "stroke"].forEach(attribName => {
+        const attribValue = attribs[attribName];
+        if (typeof attribValue === 'undefined') return;
+        const key = `${attribValue}`.toUpperCase();
+        if (CLASSES.indexOf(key) === -1) return;
+        delete attribs[attribName];
+        classes.push(`thm-svg-${attribName}${key}`);
+    });
+
+    attribs.className = classes.join(" ").trim();
     return attribs;
 }
 
