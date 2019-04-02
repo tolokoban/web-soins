@@ -9,6 +9,8 @@ interface IUserAction {
     data: any;
 }
 
+export const INITIAL_STATE = { email: "", nickname: "", language: "", roles: [] };
+
 const PREFIX = "user:";
 const ATTRIBUTES = new Set(['nickname', 'language']);
 
@@ -24,10 +26,17 @@ export function reducer(state: IUserState, action: IUserAction) {
     return Object.assign(state, { [attName]: attValue });
 }
 
+export function setLanguage(language: string): IUserAction {
+    return { type: "user:language", data: language };
+}
+
+export function setNickname(nickname: string): IUserAction {
+    return { type: "user:nickname", data: nickname };
+}
+
 export class Actions {
     constructor(private dispatch: (action: {}) => void) { }
 
-    setLanguage(language: string) {
-        this.dispatch({ type: "user:language", data: language });
-    };
+    setLanguage(language: string) { this.dispatch(setLanguage(language)); };
+    setNickname(nickname: string) { this.dispatch(setNickname(nickname)); };
 };

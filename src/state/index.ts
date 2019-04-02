@@ -2,11 +2,7 @@
  * The full state of the application is stored and managed here.
  */
 import { createStore } from 'redux'
-import * as UserState from "./user"
-
-const REDUCERS: { [name: string]: any } = {
-    user: UserState.reducer
-}
+import * as UserState from "./user";
 
 export interface IGlobalState {
     user?: UserState.IUserState;
@@ -17,21 +13,22 @@ export interface IAction {
     [key: string]: any;
 }
 
-const INITIAL_STATE: IGlobalState = {};
+function dispatch(action: IAction) {
+    store.dispatch(action);
+}
+
+const INITIAL_STATE: IGlobalState = {
+    user: UserState.INITIAL_STATE
+};
 
 function reducer(state: IGlobalState | undefined = INITIAL_STATE, action: IAction): IGlobalState {
-    const newState: IGlobalState = {};
-    for (const attName of Object.keys(REDUCERS)) {
-        const subReducer = REDUCERS[attName];
-        newState[attName] = subReducer(state[attName], action);
-    }
-    return newState;
+    console.log("state =", state);
+    return {
+        user: UserState.reducer(state.user, action)
+    };
 }
-
-function dispatch(action: IAction) {
-    gStore.dispatch(action);
-}
-
-const gStore = createStore(reducer);
 
 export const User = new UserState.Actions(dispatch);
+
+
+export const store = createStore(reducer);

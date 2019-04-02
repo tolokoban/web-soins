@@ -5,16 +5,12 @@ import Button from "./tfw/view/button"
 import * as Dialog from "./tfw/factory/dialog"
 import WebService from "./tfw/web-service"
 
+import Combo from "./tfw/view/combo"
+
 import Intl from "./tfw/intl";
 const _ = Intl.make(require("./Login.yaml"));
 
 const AsyncStart = import("./main");
-
-interface IAppState {
-    username: string;
-    password: string;
-    focus: number;
-}
 
 export default class App extends React.Component<{}, {}> {
     private username: string;
@@ -25,8 +21,8 @@ export default class App extends React.Component<{}, {}> {
         this.handleLogin = this.handleLogin.bind(this);
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
-        this.username = "";
-        this.password = "";
+        this.username = "eric";
+        this.password = "cires";
     }
 
     handleLogin() {
@@ -80,7 +76,12 @@ export default class App extends React.Component<{}, {}> {
                     onClick={this.handleLogin}
                     icon="user"
                     flat={true} />
+                <Combo items={[
+                    (<div><Icon content="flag-en">English</div>),
+                    (<div><Icon content="flag-fr">French</div>),
+                    (<div><Icon content="flag-jp">Japanese</div>)
+                                        ]} />
             </div>
-        );
-    }
-}
+                            );
+                        }
+                    }

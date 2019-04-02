@@ -3,7 +3,7 @@ interface ITranslations {
 }
 
 let gCurrentLanguage: string =
-    localStorage.getItem("CurrentLanguage") || navigator.language;
+    localStorage.getItem("CurrentLanguage") || navigator.language.split("-")[0];
 
 export default class Intl {
     constructor(private translations: ITranslations) { }
@@ -15,7 +15,9 @@ export default class Intl {
 
     static get lang() { return gCurrentLanguage; }
 
-    static set lang(value: string) {
+    static set lang(_value: string) {
+        if (typeof _value !== 'string') return;
+        const value = _value.split("-")[0];
         gCurrentLanguage = value;
         localStorage.setItem("CurrentLanguage", value);
     }
