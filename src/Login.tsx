@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom'
 import Icon from "./tfw/view/icon"
 import Input from "./tfw/view/input"
 import Button from "./tfw/view/button"
-import * as Dialog from "./tfw/factory/dialog"
+import Dialog from "./tfw/factory/dialog"
 import WebService from "./tfw/web-service"
+import Storage from "./tfw/storage"
 
 import "./Login.css"
 import Combo from "./tfw/view/combo"
@@ -24,29 +25,34 @@ export default class App extends React.Component<{}, ILoginState> {
 
     constructor(props: {}) {
         super(props);
-        this.state = { lang: Intl.lang };
+        this.state = Storage.local.get(
+            "web-soins/login", { lang: Intl.lang, username: "eric" });
 
         this.handleLogin = this.handleLogin.bind(this);
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
-        this.handleLanguageChanged = this.handleLanguageChanged.bind(this);
+        this.handleLanguageChange = this.handleLanguageChange.bind(this);
         this.username = "eric";
         this.password = "cires";
     }
 
-    handleLanguageChanged(value: string) {
+    componentDidUpdate() {
+        Storage.local.set("web-soins/login", this.state);
+    }
+
+    handleLanguageChange(value: string) {
         Intl.lang = value;
         this.setState({ lang: value });
     }
 
     handleLogin() {
-        const elem = document.getElementById("LOGIN");
-        if (elem) elem.classList.add("hide");
         WebService.login(this.username, this.password)
             .then(user => this.start(user), err => this.badLogin(err));
     }
 
     async start(user) {
+        const elem = document.getElementById("LOGIN");
+        if (elem) elem.classList.add("hide");
         const applicationStarter = await AsyncStart;
         applicationStarter.default(user);
         document.body.classList.add("start");
@@ -61,7 +67,6 @@ export default class App extends React.Component<{}, ILoginState> {
 
     badLogin(err) {
         const elem = document.getElementById("LOGIN");
-        if (elem) elem.classList.add("hide");
         console.log("err:", err);
         Dialog.alert(_('bad-login', this.username));
     }
@@ -78,21 +83,24 @@ export default class App extends React.Component<{}, ILoginState> {
         return (
             <div className="app-login thm-bg0 thm-ele-dialog" >
                 <Input
+                    wide={true}
                     label="Utilisateur"
                     onChange={this.handleUsernameChange}
+                    value={this.state.username}
                     size={20}
                     focus={true} />
                 <Input
+                    wide={true}
                     label="Mot de passe"
                     onChange={this.handlePasswordChange}
                     size={20}
                     type="password" />
                 <Combo label="Language"
                     value={this.state.lang}
-                    onValueChanged={this.handleLanguageChanged}>
+                    wide={true}
+                    onChange={this.handleLanguageChange}>
                     <div key="en" class="login-flex"><Icon content="flag-en" /> English</div>
                     <div key="fr" class="login-flex"><Icon content="flag-fr" /> French</div>
-                    <div key="jp" class="login-flex"><Icon content="flag-jp" /> Japanese</div>
                 </Combo>
                 <Button
                     label="Connexion"
