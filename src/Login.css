@@ -1,0 +1,10 @@
+div.login-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.login-flex>svg {
+    margin-right: 8px;
+}

@@ -1,7 +1,11 @@
 /**
- * Manage material design like CSS styles.
+ * Manage CSS styles.
  */
-export default { register: registerTheme, apply: applyTheme };
+export default {
+    register: registerTheme,
+    apply: applyTheme,
+    isDark
+};
 
 interface IStyle {
     bg0?: string;
@@ -26,6 +30,7 @@ interface IStyle {
     fgSL?: string;
     black?: string;
     white?: string;
+    [key: string]: string | undefined;
 };
 
 
@@ -36,6 +41,7 @@ import Color from "./color"
 
 interface IThemes {
     css: { [name: string]: HTMLStyleElement };
+    vars: { [name: string]: IStyle }
     current: string | null;
 }
 
@@ -46,11 +52,13 @@ const COLOR = new Color();
 const THEME_COLOR_NAMES = ["0", "1", "2", "3", "P", "PD", "PL", "S", "SD", "SL"];
 const THEMES: IThemes = {
     css: {},
+    vars: {},
     current: null
 };
 
 function registerTheme(themeName: string, _style: IStyle) {
     const style = completeWithDefaultValues(_style);
+    THEMES.vars[themeName] = style;
 
     let codeCSS = codeVariables(themeName, style);
     codeCSS += codeBackground(themeName, style);
@@ -94,6 +102,9 @@ function codeText(themeName: string, style: IStyle) {
                     + piecesBG.join(" > ")
                     + " { color: " + styleFgColorName + " }\n";
                 codeCSS += "body.dom-theme-" + themeName + " "
+                    + removeTail(piecesBG.join(" > "), ".thm-fg")
+                    + " { color: " + styleFgColorName + " }\n";
+                codeCSS += "body.dom-theme-" + themeName + " "
                     + piecesFG.join(" > ")
                     + " { color: " + styleBgColorName + " }\n";
                 codeCSS += "body.dom-theme-" + themeName + " "
@@ -115,7 +126,12 @@ function codeVariables(themeName: string, style: IStyle) {
     THEME_COLOR_NAMES.forEach(function(colorName) {
         const s = style[`bg${colorName}`] as string;
         codeCSS += `  --thm-bg${colorName}: ${s};\n`;
+        COLOR.parse(s);
+        const pen = COLOR.luminanceStep() ? style.black : style.white;
+        codeCSS += `  --thm-fg${colorName}: ${pen};\n`;
     });
+    codeCSS += `  --thm-white: ${style.white};\n`;
+    codeCSS += `  --thm-black: ${style.black};\n`;
     codeCSS += "}\n";
     return codeCSS;
 }
@@ -154,17 +170,34 @@ function codeBackground(themeName: string, style: IStyle) {
     return codeCSS;
 }
 
+const ELEVATIONS: { [ele: string]: string[] } = {
+    "0": ["none"],
+    "2": ["button", "card"],
+    "4": ["bar"],
+    "6": ["floating"],
+    "8": ["button:active", "button-raised", "card-raised"],
+    "9": ["sunmenu-0"],
+    "10": ["sunmenu-1"],
+    "11": ["sunmenu-2"],
+    "12": ["floating:active"],
+    "16": ["nav"],
+    "24": ["dialog"]
+};
 function codeElevation(themeName: string, style: IStyle) {
     COLOR.parse(style.bg2);
     const luminance = COLOR.luminance();
     var elevationColor = luminance < .6
-        ? addAlpha(style.white, Math.ceil(10 * luminance))
-        : addAlpha(style.black, '6');
+        ? addAlpha(style.white, 4)
+        : addAlpha(style.black, 6);
     var codeCSS = '';
-    [0, 1, 2, 3, 4, 6, 8, 9, 12, 16, 24].forEach(function(elevation) {
-        codeCSS += "body.dom-theme-" + themeName + " .thm-ele" + elevation + " {\n"
-            + "  box-shadow: 0 " + elevation + "px " + (2 * elevation) + "px " + elevationColor + "\n"
-            + "}\n";
+    const elevationKeys = Object.keys(ELEVATIONS);
+    elevationKeys.forEach(function(elevationKey) {
+        const elevation = parseInt(elevationKey, 10);
+        ELEVATIONS[elevationKey].forEach(name => {
+            codeCSS += `body.dom-theme-${themeName} .thm-ele-${name} {
+  box-shadow: 0 ${elevation}px ${2 * elevation}px ${elevationColor}
+}\n`;
+        })
     });
     return codeCSS;
 }
@@ -182,26 +215,60 @@ function applyTheme(name: string, target: HTMLElement = document.body) {
     body.classList.add(`dom-theme-${THEMES.current}`);
 }
 
+function completeBackgrounds(style: IStyle) {
+    let has0 = typeof style.bg0 === 'string';
+    const has1 = typeof style.bg1 === 'string';
+    const has2 = typeof style.bg2 === 'string';
+    let has3 = typeof style.bg3 === 'string';
+
+    if (has0 && has1 && has2 && has3) return
+
+    if (!has0 && !has1 && !has2 && !has3) {
+        style.bg0 = "#E0E0E0";
+        style.bg1 = "#F5F5F5";
+        style.bg2 = "#FAFAFA";
+        style.bg3 = "#FFF";
+        return;
+    }
+    if (has0 && !has1 && !has2 && !has3) {
+        style.bg3 = lightenBackground(style.bg0 as string);
+        has3 = true;
+    }
+    if (!has0 && !has1 && !has2 && has3) {
+        style.bg0 = darkenBackground(style.bg3 as string);
+        has3 = true;
+    }
+    const color0 = new Color(style.bg0);
+    const r0 = color0.R;
+    const g0 = color0.G;
+    const b0 = color0.B;
+    const color3 = new Color(style.bg3);
+    const r3 = color3.R;
+    const g3 = color3.G;
+    const b3 = color3.B;
+    const color1 = Color.newRGB((2 * r0 + r3) / 3, (2 * g0 + g3) / 3, (2 * b0 + b3) / 3);
+    const color2 = Color.newRGB((r0 + 2 * r3) / 3, (g0 + 2 * g3) / 3, (b0 + 2 * b3) / 3);
+    style.bg1 = color1.stringify();
+    style.bg2 = color2.stringify();
+}
+
 function completeWithDefaultValues(style: IStyle) {
     if (typeof style === 'undefined') style = {};
-    if (typeof style.bg0 !== 'string') style.bg0 = "#E0E0E0";
-    if (typeof style.bg1 !== 'string') style.bg1 = "#F5F5F5";
-    if (typeof style.bg2 !== 'string') style.bg2 = "#FAFAFA";
-    if (typeof style.bg3 !== 'string') style.bg3 = "#FFF";
+
+    completeBackgrounds(style);
 
     if (typeof style.bgP !== 'string') style.bgP = "#3E50B4";
     if (typeof style.bgPD !== 'string') style.bgPD = dark(style.bgP);
     if (typeof style.bgPL !== 'string') style.bgPL = light(style.bgP);
-    if (typeof style.bgS !== 'string') style.bgS = "#FF3F80";
+    if (typeof style.bgS !== 'string') style.bgS = rotateHue(style.bgP);
     if (typeof style.bgSD !== 'string') style.bgSD = dark(style.bgS);
     if (typeof style.bgSL !== 'string') style.bgSL = light(style.bgS);
 
-    if (typeof style.white === 'undefined') style.white = '#fff';
-    if (typeof style.black === 'undefined') style.black = '#000';
-
+    if (typeof style.white !== 'string') style.white = '#fff';
+    if (typeof style.black !== 'string') style.black = '#000';
 
     THEME_COLOR_NAMES.forEach(function(name) {
-        const bg: string = style[`bg${name}`];
+        const bg: string = style[`bg${name}`] || '#000';
         COLOR.parse(bg);
         var luminance = COLOR.luminance();
         style[`fg${name}`] = luminance < .6 ? style.white : style.black;
@@ -219,6 +286,14 @@ function dark(color: string) {
     return COLOR.stringify();
 }
 
+function darkenBackground(color: string) {
+    COLOR.parse(color);
+    COLOR.rgb2hsl();
+    COLOR.L = Math.max(0, COLOR.L - 0.15);
+    COLOR.hsl2rgb();
+    return COLOR.stringify();
+}
+
 function light(color: string) {
     var percent = .4;
     COLOR.parse(color);
@@ -228,12 +303,64 @@ function light(color: string) {
     return COLOR.stringify();
 }
 
+function lightenBackground(color: string) {
+    COLOR.parse(color);
+    COLOR.rgb2hsl();
+    COLOR.L = Math.min(1, COLOR.L + 0.3);
+    COLOR.hsl2rgb();
+    return COLOR.stringify();
+}
+
+function rotateHue(color: string): string {
+    COLOR.parse(color);
+    COLOR.rgb2hsl();
+    COLOR.H = COLOR.H + .5;
+    if (COLOR.H > 1) COLOR.H--;
+    COLOR.hsl2rgb();
+    return COLOR.stringify();
+}
 
 /**
  * @param {string} color - RGB color in format #xxx or #xxxxxx.
  * @param {string} alpha - Single char between 0 and F.
  */
-function addAlpha(color, alpha) {
+function addAlpha(color: string, alpha: string) {
     if (color.length < 5) return color + alpha;
     return color + alpha + alpha;
 }
+
+function removeTail(text: string, tail: string) {
+    return text.substr(0, text.length - tail.length);
+}
+
+function isDark(colorName: string = ""): boolean {
+    if (colorName === "") return isThemeGloballyDark();
+
+    const vars = THEMES.vars[THEMES.current || "default"];
+    const varName = `$isDark/${colorName}`;
+    let isDark = vars[varName];
+    if (typeof isDark === 'boolean') return isDark;
+
+    const color = new Color(vars[colorName]);
+    vars[varName] = !color.luminanceStep();
+    return vars[varName];
+}
+
+function isThemeGloballyDark(): boolean {
+    const vars = THEMES.vars[THEMES.current || "default"];
+    let isDark = vars.$isDark;
+    if (typeof isDark === 'boolean') return isDark;
+
+    const bg0 = new Color(vars.bg0);
+    const bg1 = new Color(vars.bg1);
+    const bg2 = new Color(vars.bg2);
+    const bg3 = new Color(vars.bg3);
+    const average = Color.mix(
+        Color.mix(bg0, bg1),
+        Color.mix(bg2, bg3)
+    );
+    vars.$isDark = !average.luminanceStep();
+    return vars.$isDark;
+}
+
+registerTheme("default", { bgP: "#1e90ff" });

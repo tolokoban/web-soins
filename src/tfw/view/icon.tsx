@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import castBoolean from "../converter/boolean";
+import castInteger from "../converter/integer";
 import castUnit from "../converter/unit";
 import { iconsBook, TIconDefinition } from "../icons";
 import "./icon.css";
@@ -15,6 +16,7 @@ interface IIconProps {
     animate?: boolean;
     flipH?: boolean;
     flipV?: boolean;
+    rotate?: number;
     pen0?: EnumPenColor;
     pen1?: EnumPenColor;
     pen2?: EnumPenColor;
@@ -76,19 +78,28 @@ export default class Icon extends React.Component<IIconProps, {}> {
             flipV = castBoolean(p.flipV, false),
             size = castUnit(p.size, "28px"),
             content = castContent(p.content),
+            rotate = castInteger(p.rotate, 0),
             onClick = p.onClick,
             classes = ["tfw-view-icon"];
         const svgContent = createSvgContent(content, p);
         if (!svgContent) return null;
 
         if (animate) classes.push("animate");
-        if (flipH) classes.push("flipH");
-        if (flipV) classes.push("flipV");
         if (visible) classes.push("zero");
         if (typeof onClick === 'function') classes.push("active");
 
-        this.visible = visible;
+        let transform = "";
+        if (rotate !== 0) {
+            transform += `rotate(${rotate}deg) `;
+        }
+        if (flipH || flipV) {
+            transform += `scale(${flipH ? -1 : 1},${flipV ? -1 : 1})`;
+        }
+        const style: React.CSSProperties = { width: size, height: size };
+        if (transform.length > 0) style.transform = transform;
+
         requestAnimationFrame(() => this.triggerVisibleAnimation());
+        this.visible = visible;
 
         return (
             <svg className={classes.join(" ")}
@@ -97,7 +108,8 @@ export default class Icon extends React.Component<IIconProps, {}> {
                 preserveAspectRatio="xMidYMid"
                 width={size}
                 height={size}
-                onClick={onClick} >
+                onClick={onClick}
+                style={style}>
                 {svgContent}
                 < g strokeWidth="6" fill="none" strokeLinecap="round" strokeLinejoin="round" >
                     {createSvgContent(content, p)}
@@ -107,17 +119,20 @@ export default class Icon extends React.Component<IIconProps, {}> {
     }
 }
 
-function createSvgContent(def: TIconDefinition, props: IIconProps): any {
+function createSvgContent(def: TIconDefinition, props: IIconProps, key: string = ""): any {
     const
         elementName = def[0],
         { attributes, children } = parseDef(def);
 
     if (typeof elementName === 'undefined') return <g></g>;
 
+    const attribs: React.Attributes = manageColors(attributes);
+    if (key.length > 0) attributes.key = key;
+
     return React.createElement(
         elementName,
-        manageColors(attributes, props),
-        children.map(child => createSvgContent(child, props))
+        attribs,
+        children.map((child, index) => createSvgContent(child, props, `${index}`))
     ) as React.ReactSVGElement;
 }
 
@@ -135,7 +150,7 @@ const CLASSES = ["0", "1", "P", "PL", "PD", "S", "SL", "SD"];
  * @param   props   [description]
  * @returns         [description]
  */
-function manageColors(attribs: { [key: string]: any }, props: IIconProps) {
+function manageColors(attribs: { [key: string]: any }) {
     // @TODO For special forms of "fill" and "stroke", add classes.
     const classes = (attribs.className || "").split(" ");
 
