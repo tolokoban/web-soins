@@ -2,33 +2,29 @@
  * The full state of the application is stored and managed here.
  */
 import { createStore } from 'redux'
-import * as UserState from "./user";
-
-export interface IGlobalState {
-    user?: UserState.IUserState;
-}
-
-export interface IAction {
-    type: string;
-    [key: string]: any;
-}
+import User from "./user";
+import Organization from "./organization"
+import CareCenter from "./care-center"
+import { IState, IAction } from "../types"
 
 function dispatch(action: IAction) {
     store.dispatch(action);
 }
 
-const INITIAL_STATE: IGlobalState = {
-    user: UserState.INITIAL_STATE
+const INITIAL_STATE: IState = {
+    user: User.INITIAL_STATE
 };
 
-function reducer(state: IGlobalState | undefined = INITIAL_STATE, action: IAction): IGlobalState {
+function reducer(state: IState | undefined = INITIAL_STATE, action: IAction): IState {
     console.log("state =", state);
     return {
-        user: UserState.reducer(state.user, action)
+        user: User.reducer(state.user, action)
     };
 }
 
-export const User = new UserState.Actions(dispatch);
+const store = createStore(reducer);
 
-
-export const store = createStore(reducer);
+export default {
+    store, dispatch,
+    User
+}

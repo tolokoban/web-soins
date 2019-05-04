@@ -1,42 +1,28 @@
-export interface IUserState {
-    email: string;
-    nickname: string;
-    roles: string[];
-}
-
-interface IUserAction {
-    type: string;
-    data: any;
-}
-
-export const INITIAL_STATE = { email: "", nickname: "", language: "", roles: [] };
+import { IAction, IUserState } from "../types"
 
 const PREFIX = "user:";
 const ATTRIBUTES = new Set(['nickname', 'language']);
 
-export function reducer(state: IUserState, action: IUserAction) {
-    const { type } = action;
-    if (!type.startsWith(PREFIX)) return state;
+export default {
+    INITIAL_STATE: { email: "", nickname: "", language: "", roles: [] },
 
-    const attName = action.type.substr(PREFIX.length);
-    if (!ATTRIBUTES.has(attName)) {
-        throw Error(`Unknown attribute "${attName}"!`);
+    reducer(state: IUserState, action: IAction): IUserState {
+        const { type } = action;
+        if (!type.startsWith(PREFIX)) return state;
+
+        const attName = action.type.substr(PREFIX.length);
+        if (!ATTRIBUTES.has(attName)) {
+            throw Error(`Unknown attribute "${attName}"!`);
+        }
+        const attValue = action.data;
+        return Object.assign(state, { [attName]: attValue });
+    },
+
+    setLanguage(language: string): IAction {
+        return { type: "user:language", data: language };
+    },
+
+    setNickname(nickname: string): IAction {
+        return { type: "user:nickname", data: nickname };
     }
-    const attValue = action.data;
-    return Object.assign(state, { [attName]: attValue });
 }
-
-export function setLanguage(language: string): IUserAction {
-    return { type: "user:language", data: language };
-}
-
-export function setNickname(nickname: string): IUserAction {
-    return { type: "user:nickname", data: nickname };
-}
-
-export class Actions {
-    constructor(private dispatch: (action: {}) => void) { }
-
-    setLanguage(language: string) { this.dispatch(setLanguage(language)); };
-    setNickname(nickname: string) { this.dispatch(setNickname(nickname)); };
-};
