@@ -1,18 +1,19 @@
 import { connect } from 'react-redux'
 import Header from "../presentational/header"
-import * as UserState from "../state/user"
+import User from "../state/user"
+import { IState, IDispatchFunction } from "../types"
 
-function mapStateToProps(state) {
+function mapStateToProps(state: IState) {
     return {
         nickname: state.user.nickname,
         language: state.user.language
     }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch: IDispatchFunction) {
     return {
         onLanguageClick() {
-            dispatch(UserState.setLanguage("jp"));
+            dispatch(User.setLanguage("jp"));
         },
 
         onLogoutClick() {

@@ -27,7 +27,7 @@ function getAllOrganizations( $whereClause="" ) {
         $id = intval( $row['id'] );
         $name = $row['name'];
         $organizations[] = [
-            'id' => $id, 'name' => $name, 'carecenters' => []
+            'id' => $id, 'name' => $name
         ];
     }
     return $organizations;

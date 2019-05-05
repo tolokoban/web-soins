@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Icon from "./tfw/view/icon"
 import Input from "./tfw/view/input"
 import Button from "./tfw/view/button"
@@ -18,6 +17,7 @@ const AsyncStart = import("./main");
 
 interface ILoginState {
     lang: string;
+    email: string;
 }
 
 export default class App extends React.Component<{}, ILoginState> {
@@ -56,7 +56,7 @@ export default class App extends React.Component<{}, ILoginState> {
         const elem = document.getElementById("LOGIN");
         if (elem) elem.classList.add("hide");
         const applicationStarter = await AsyncStart;
-        applicationStarter.default(user);
+        applicationStarter.default.start(user);
         document.body.classList.add("start");
         setTimeout(() => {
             const body = document.body;
@@ -88,7 +88,7 @@ export default class App extends React.Component<{}, ILoginState> {
                     wide={true}
                     label="Utilisateur"
                     onChange={this.handleUsernameChange}
-                    value={this.state.username}
+                    value={this.state.email}
                     size={20}
                     focus={true} />
                 <Input
@@ -101,8 +101,8 @@ export default class App extends React.Component<{}, ILoginState> {
                     value={this.state.lang}
                     wide={true}
                     onChange={this.handleLanguageChange}>
-                    <div key="en" class="login-flex"><Icon content="flag-en" /> English</div>
-                    <div key="fr" class="login-flex"><Icon content="flag-fr" /> French</div>
+                    <div key="en" className="login-flex"><Icon content="flag-en" /> English</div>
+                    <div key="fr" className="login-flex"><Icon content="flag-fr" /> French</div>
                 </Combo>
                 <Button
                     label="Connexion"
@@ -110,7 +110,6 @@ export default class App extends React.Component<{}, ILoginState> {
                     icon="user"
                     flat={true} />
             </div>
-
         );
     }
 }

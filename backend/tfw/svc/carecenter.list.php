@@ -14,14 +14,33 @@ function execService( $args ) {
                      . "WHERE id IN (" . implode(',',$carecenterIds) . ")");
     $carecenters = [];
     while( null != ($row = $stm->fetch()) ) {
+        $id = intval($row['id']);
         $carecenters[] = [
-            'id' => intval($row['id']),
+            'id' => $id,
             'name' => $row['name'],
             'code' => $row['code'],
+            'patientsCount' => getPatientsCount($id),
+            'consultationsCount' => getConsultationsCount($id),
             'structure' => intval($row['structure'])
         ];
     }
     error_log("[carecenter.list] carecenters: " . json_encode($carecenters));
     return $carecenters;
+}
+
+function getPatientsCount( $carecenterId ) {
+    return count(\Data\Carecenter\getPatients($carecenterId));
+}
+
+function getConsultationsCount( $carecenterId ) {
+    $count = 0;
+    $patientIds = \Data\Carecenter\getPatients($carecenterId);
+    foreach( $patientIds as $patientId ) {
+        $admissionIds = \Data\Patient\getAdmissions($patientId);
+        foreach( $admissionIds as $admissionId ) {
+            $count += count(\Data\Admission\getConsultations($admissionId));
+        }
+    }
+    return $count;
 }
 ?>

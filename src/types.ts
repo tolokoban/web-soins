@@ -4,19 +4,22 @@ export interface IAction {
 }
 
 export interface IUser {
+    language?: string;
     email: string;
     nickname: string;
     roles: string[];
 }
 
 export interface IOrganization {
-    id: string;
+    id: number;
     name: string;
 }
 
 export interface ICarecenter {
-    id: string;
-    organization: string;
+    id: number;
+    organizationId: number;
+    patientsCount: number;
+    consultationsCount: number;
     name: string;
     code: string;
 }
@@ -26,3 +29,5 @@ export interface IState {
     organizations: IOrganization[];
     carecenters: ICarecenter[];
 }
+
+export type IDispatchFunction = (action: IAction)=>void;

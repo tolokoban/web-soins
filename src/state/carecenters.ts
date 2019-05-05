@@ -11,28 +11,35 @@ export default {
 
         const command = action.type.substr(PREFIX.length);
         switch (command) {
+            case "set": return set(state, action.carecenters);
             case "add": return add(state, action.carecenter);
             case "update": return update(state, action.carecenter);
             default: throw Error(`Unknown action "${type}"!`);
         }
     },
 
-    addCarecenter(carecenter: string): IAction {
+    setCarecenters(carecenters: ICarecenter[]): IAction {
+        return { type: "carecenter:set", carecenters };
+    },
+
+    addCarecenter(carecenter: ICarecenter): IAction {
         return { type: "carecenter:add", carecenter };
     },
 
-    updateCarecenter(carecenter: string): IAction {
+    updateCarecenter(carecenter: ICarecenter): IAction {
         return { type: "carecenter:update", carecenter };
     }
 }
 
+function set(state: ICarecenter[], carecenters: ICarecenter[]): ICarecenter[] {
+    return carecenters.slice();
+}
 
 function add(state: ICarecenter[], carecenter: ICarecenter): ICarecenter[] {
     const newState = state.slice();
     newState.push(carecenter);
     return newState;
 }
-
 
 function update(state: ICarecenter[], carecenter: ICarecenter): ICarecenter[] {
     return state.map(
