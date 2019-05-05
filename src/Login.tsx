@@ -6,6 +6,7 @@ import Button from "./tfw/view/button"
 import Dialog from "./tfw/factory/dialog"
 import WebService from "./tfw/web-service"
 import Storage from "./tfw/storage"
+import { IUser } from "./types"
 
 import "./Login.css"
 import Combo from "./tfw/view/combo"
@@ -47,10 +48,11 @@ export default class App extends React.Component<{}, ILoginState> {
 
     handleLogin() {
         WebService.login(this.username, this.password)
-            .then(user => this.start(user), err => this.badLogin(err));
+            .then((user: IUser) => this.start(user))
+            .catch(err => this.badLogin(err));
     }
 
-    async start(user) {
+    async start(user: IUser) {
         const elem = document.getElementById("LOGIN");
         if (elem) elem.classList.add("hide");
         const applicationStarter = await AsyncStart;
@@ -65,7 +67,7 @@ export default class App extends React.Component<{}, ILoginState> {
         }, 1000);
     }
 
-    badLogin(err) {
+    badLogin(err: {}) {
         const elem = document.getElementById("LOGIN");
         console.log("err:", err);
         Dialog.alert(_('bad-login', this.username));

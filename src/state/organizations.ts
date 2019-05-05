@@ -1,11 +1,11 @@
-import { IAction, IOrganization, IOrganizationState } from "../types"
+import { IAction, IOrganization } from "../types"
 
 const PREFIX = "organization:";
 
 export default {
     INITIAL_STATE: [],
 
-    reducer(state: IOrganizationState, action: IAction): IOrganizationState {
+    reducer(state: IOrganization[], action: IAction): IOrganization[] {
         const { type } = action;
         if (!type.startsWith(PREFIX)) return state;
 
@@ -27,13 +27,13 @@ export default {
 }
 
 
-function add(state: IOrganizationState, organization: IOrganization): IOrganizationState {
+function add(state: IOrganization[], organization: IOrganization): IOrganization[] {
     const newState = state.slice();
     newState.push(organization);
     return newState;
 }
 
 
-function update(state: IOrganizationState, organization: IOrganization): IOrganizationState {
+function update(state: IOrganization[], organization: IOrganization): IOrganization[] {
     return state.map(item => item.id === organization.id ? organization : item);
 }

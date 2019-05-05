@@ -1,4 +1,4 @@
-import { IAction, IUserState } from "../types"
+import { IAction, IUser } from "../types"
 
 const PREFIX = "user:";
 const ATTRIBUTES = new Set(['nickname', 'language']);
@@ -6,7 +6,7 @@ const ATTRIBUTES = new Set(['nickname', 'language']);
 export default {
     INITIAL_STATE: { email: "", nickname: "", language: "", roles: [] },
 
-    reducer(state: IUserState, action: IAction): IUserState {
+    reducer(state: IUser, action: IAction): IUser {
         const { type } = action;
         if (!type.startsWith(PREFIX)) return state;
 

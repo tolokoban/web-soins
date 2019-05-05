@@ -3,7 +3,7 @@ export interface IAction {
     [key: string]: any;
 }
 
-export interface IUserState {
+export interface IUser {
     email: string;
     nickname: string;
     roles: string[];
@@ -14,19 +14,15 @@ export interface IOrganization {
     name: string;
 }
 
-export type IOrganizationState = IOrganization[];
-
-export interface ICareCenter {
+export interface ICarecenter {
     id: string;
     organization: string;
     name: string;
     code: string;
 }
 
-export type  ICareCenterState = ICareCenter[];
-
 export interface IState {
-    user: IUserState;
-    organizations: IOrganizationState;
-    carecenters: ICareCenterState;
+    user: IUser;
+    organizations: IOrganization[];
+    carecenters: ICarecenter[];
 }
