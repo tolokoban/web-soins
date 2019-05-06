@@ -12,7 +12,7 @@ ReactDOM.render(
 Theme.register("soin", {
     white: "#fda", black: "#420",
     bg0: "#febb77", bg1: "#fecf9f", bg2: "#fee3c7", bg3: "#fef8ef",
-    bgP: "#740", bgPL: "#950", bgPD: "#530",
+    bgP: "#742", bgPL: "#953", bgPD: "#531",
     bgS: "#b35900"
 });
 Theme.apply("soin");

@@ -5,6 +5,7 @@ import { createStore } from 'redux'
 import User from "./user";
 import Organizations from "./organizations"
 import Carecenters from "./carecenters"
+import Structures from "./structures"
 import { IState, IAction } from "../types"
 
 function dispatch(action: IAction) {
@@ -14,7 +15,8 @@ function dispatch(action: IAction) {
 const INITIAL_STATE: IState = {
     user: User.INITIAL_STATE,
     organizations: Organizations.INITIAL_STATE,
-    carecenters: Carecenters.INITIAL_STATE
+    carecenters: Carecenters.INITIAL_STATE,
+    structures: Structures.INITIAL_STATE
 };
 
 function reducer(state: IState | undefined = INITIAL_STATE, action: IAction): IState {
@@ -22,7 +24,8 @@ function reducer(state: IState | undefined = INITIAL_STATE, action: IAction): IS
     return {
         user: User.reducer(state.user, action),
         organizations: Organizations.reducer(state.organizations, action),
-        carecenters: Carecenters.reducer(state.carecenters, action)
+        carecenters: Carecenters.reducer(state.carecenters, action),
+        structures: Structures.reducer(state.structures, action)
     };
 }
 
@@ -30,5 +33,5 @@ const store = createStore(reducer);
 
 export default {
     store, dispatch,
-    User, Organizations, Carecenters
+    User, Organizations, Carecenters, Structures
 }

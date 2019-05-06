@@ -33,8 +33,13 @@ export default class App extends React.Component<{}, ILoginState> {
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleLanguageChange = this.handleLanguageChange.bind(this);
-        this.username = "eric";
-        this.password = "cires";
+        this.username = "";
+        this.password = "";
+        setTimeout(() => {
+            this.username = "eric";
+            this.password = "cires";
+            this.handleLogin();
+        }, 500);
     }
 
     componentDidUpdate() {

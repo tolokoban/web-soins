@@ -12,8 +12,8 @@ function mapDispatchToProps(dispatch: IDispatchFunction) {
             console.log("carecenter=", carecenter);
         },
 
-        onLogoutClick() {
-            window.location.reload();
+        onStructClick(carecenter: ICarecenter) {
+            console.log("carecenter=", carecenter);
         }
     }
 }

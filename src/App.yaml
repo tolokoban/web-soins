@@ -1,14 +1,20 @@
 en:
     code: "Code:"
+    consultations: Consultations
     consultations-count: "Consultations:"
     create-stat-consultation: Consult. Statistics
     create-stat-patient: Patients Statistics
     logout: Logout
+    patients: Patients
     patients-count: "Patients:"
+    struct: "Structure:"
 fr:
     code: "Code :"
+    consultations: Consultations
     consultations-count: "Consultations :"
     create-stat-consultation: Stats consultations
     create-stat-patient: Stats patients
     logout: Déconnexion
+    patients: Patients
     patients-count: "Patients :"
+    struct: "Structure :"
