@@ -1,18 +1,28 @@
 import { connect } from 'react-redux'
 import StatsConfig from "../presentational/stats-config"
-import User from "../state/user"
+import Actions from "../state/stats-config"
 import { IState, IDispatchFunction } from "../types"
 
 function mapStateToProps(state: IState) {
     return {
-        type: state.statsConfig.type
+        statsType: state.statsConfig.statsType,
+        dateMin: state.statsConfig.dateMin,
+        dateMax: state.statsConfig.dateMax
     }
 }
 
 function mapDispatchToProps(dispatch: IDispatchFunction) {
     return {
-        onTypeChange(type: string) {
-            dispatch(StatsConfig.setType(type));
+        onTypeChange(type: "patients" | "consultations") {
+            dispatch(Actions.setType(type));
+        },
+
+        onDateMinChange(date: number) {
+            dispatch(Actions.setDateMin(date));
+        },
+
+        onDateMaxChange(date: number) {
+            dispatch(Actions.setDateMax(date));
         }
     }
 }

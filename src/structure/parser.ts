@@ -86,7 +86,7 @@ function parse(code: string) {
 
             // Calculer le niveau hiérarchique `level`.
             const level = computeLevel(line);
-            line = line.trim();
+            line = line.substr(level).trim();
 
             if (level > levels.length) {
                 throw _('err-2', line, levels.length - 1, level);
@@ -123,10 +123,9 @@ function computeLevel(line: string): number {
 }
 
 
-function parseLine(line) {
-    line = line.trim();
-    var item = { children: {} };
-    var m = RX_LINE.exec(line);
+function parseLine(line: string) {
+    const item = { children: {} };
+    const m = RX_LINE.exec(line.trim());
     if (m[2]) {
         item.caption = m[2].trim();
     }
@@ -142,6 +141,9 @@ function parseLine(line) {
         item.tags = m[4].trim().substr(1).split(',').map(function(v) { return v.trim(); });
     }
 
+    if (Object.keys(item.children).length === 0) {
+        delete item.children;
+    }
     return item;
 }
 

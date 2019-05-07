@@ -1,15 +1,19 @@
 import * as React from "react"
 import { connect } from 'react-redux'
 import CarecenterHeader from "./carecenter-header"
+import Stat from "../presentational/stat"
 import Sidemenu from "../tfw/layout/sidemenu"
 import Button from "../tfw/view/button"
-import StatsConfig form "../presentational/stats-config"
+import InputDate from "../tfw/view/input-date"
 import User from "../state/user"
 import { IState, IDispatchFunction, IOrganization, ICarecenter } from "../types"
 
 import _ from "../intl";
 
 function mapStateToProps(state: IState) {
+    const stats = state.stats.map( stat => (
+        <Stat key={JSON.stringify(stat)} stat={stat}/>
+    ));
     return {
         head: state.user.nickname,
         menu: (<div>
@@ -30,9 +34,7 @@ function mapStateToProps(state: IState) {
             <Button label={_("logout")} icon="logout" wide={true}
                 onClick={() => window.location.reload()} />
         </div>),
-        body: (<div className="thm-bg1" style={{ padding: "2rem" }}>
-            <StatsConfig />
-        </div>)
+        body: stats.length > 0 ? stats : <div>{"Toutes vos statistiques s'afficheront ici..."}</div>
     }
 }
 

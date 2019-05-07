@@ -1,5 +1,8 @@
 import React from "react"
 import Checkbox from "../tfw/view/checkbox"
+import InputDate from "../tfw/view/input-date"
+import Flex from "../tfw/layout/flex"
+import castInteger from "../tfw/converter/integer"
 
 import _ from "../intl"
 
@@ -7,7 +10,7 @@ interface IStatsPatientsConfigProps {
     fields: {
         [key: string]: boolean;
     };
-    types: {
+    fieldsCaptions: {
         [key: string]: string;
     }
     dateMin?: Date;
@@ -61,21 +64,34 @@ export default class StatsConfig extends React.Component<IStatsPatientsConfigPro
     render() {
         const p = this.props;
         const fields = p.fields;
-        const types = p.types;
+        const captions = p.fieldsCaptions;
         const handleFieldChange = this.handleFieldChange;
+        const dateMin = castInteger(p.dateMin, Date.now());
+        const dateMax = castInteger(p.dateMax, Date.now());
 
         return (
-            <div>{
-                Object.keys(fields).map((fieldName: string) => {
-                    const fieldCaption = types[fieldName];
-                    if (typeof fieldCaption !== 'string') return null;
-                    const isSelected = fields[fieldName];
-                    return <Checkbox wide={true}
-                        value={isSelected}
-                        label={fieldCaption}
-                        onChange={(selected: boolean) => handleFieldChange(fieldName, selected)} />
-                })
-            }</div>
+            <div>
+                <div><InputDate
+                    label={_("date-min")}
+                    onChange={this.handleDateMinChange}
+                    value={dateMin} /></div>
+                <div><InputDate
+                    label={_("date-max")}
+                    onChange={this.handleDateMaxChange}
+                    value={dateMax} /></div>
+                <div>{
+                    Object.keys(fields).map((fieldName: string) => {
+                        const fieldCaption = captions[fieldName];
+                        if (typeof fieldCaption !== 'string') return null;
+                        const isSelected = fields[fieldName];
+                        return <Checkbox wide={true}
+                            key={fieldName}
+                            value={isSelected}
+                            label={fieldCaption}
+                            onChange={(selected: boolean) => handleFieldChange(fieldName, selected)} />
+                    })
+                }</div>
+            </div>
         )
     }
 }

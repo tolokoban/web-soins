@@ -11,8 +11,8 @@ ReactDOM.render(
 
 Theme.register("soin", {
     white: "#fda", black: "#420",
-    bg0: "#febb77", bg1: "#fecf9f", bg2: "#fee3c7", bg3: "#fef8ef",
+    bg0: "#ffcb97", bg1: "#ffdab3", bg2: "#ffe6cc", bg3: "#fff3e6",
     bgP: "#742", bgPL: "#953", bgPD: "#531",
-    bgS: "#b35900"
+    bgS: "#ff9f30", bgSD: "#ff7f00", bgSL: "#ffbf60"
 });
 Theme.apply("soin");
