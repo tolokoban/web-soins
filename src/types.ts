@@ -35,12 +35,14 @@ export interface IStructure {
     id: number;
     organizationId: number;
     name: string;
-    exams: string;
-    vaccins: string;
-    patient: string;
-    patientData: IPatientField[];
-    forms: string;
-    types: string;
+    patientFields: IPatientField[];
+    sources: {
+        exams: string;
+        vaccins: string;
+        patient: string;
+        forms: string;
+        types: string;
+    }
 }
 
 export interface IStatsConfig {
@@ -59,6 +61,13 @@ export interface IState {
     carecenters: ICarecenter[];
     structures: IStructure[];
     statsConfig: IStatsConfig;
+}
+
+export type IOccurence = [string, number];
+
+export interface IOccurences {
+    sum: number;
+    occ: IOccurence[]
 }
 
 export type IDispatchFunction = (action: IAction) => void;

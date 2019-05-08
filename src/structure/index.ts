@@ -4,7 +4,7 @@ import Intl from "../tfw/intl"
 export default {
     createPatientsFieldsFromStructure(structure: IStructure): { [key: string]: boolean } {
         const patientsFields : { [key: string]: boolean }= {};
-        structure.patientData.forEach((patientField: IPatientField) => {
+        structure.patientFields.forEach((patientField: IPatientField) => {
             patientsFields[patientField.id] = true;
         });
         return patientsFields;
@@ -12,7 +12,7 @@ export default {
 
     createPatientsFieldsCaptionsFromStructure(structure: IStructure): { [key: string]: string } {
         const patientsFieldsCaptions : { [key: string]: string }= {};
-        structure.patientData.forEach((patientField: IPatientField) => {
+        structure.patientFields.forEach((patientField: IPatientField) => {
             patientsFieldsCaptions[patientField.id] = Intl.toText(patientField.caption);
         });
         return patientsFieldsCaptions;

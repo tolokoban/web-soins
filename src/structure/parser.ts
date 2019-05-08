@@ -99,7 +99,7 @@ function parse(code: string) {
                 throw _('err-3', item.id);
             }
             levels[levels.length - 1][item.id] = item;
-            levels.push(item.children);
+            levels.push(item.children || {});
         }
         catch (ex) {
             throw { lineNumber: lineNumber + 1, message: ex };
@@ -139,10 +139,6 @@ function parseLine(line: string) {
     }
     if (m[4]) {
         item.tags = m[4].trim().substr(1).split(',').map(function(v) { return v.trim(); });
-    }
-
-    if (Object.keys(item.children).length === 0) {
-        delete item.children;
     }
     return item;
 }
