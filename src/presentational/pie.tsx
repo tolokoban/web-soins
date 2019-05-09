@@ -28,7 +28,7 @@ export default class Pie extends React.Component<IPieProps, IPieState> {
         const
             canvas: HTMLCanvasElement = this.canvas.current,
             values = this.props.values,
-            colors = castArray(this.props.colors, DEFAULT_COLORS),
+            colors = castArray(this.props.colors, DEFAULT_COLORS).slice(),
             size = canvas.width,
             lineWidth = 1,
             radius = Math.floor(size / 2) - 3,

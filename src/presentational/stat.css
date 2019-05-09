@@ -14,3 +14,10 @@ div.presentational-stat > div:first-child {
   line-height: 2em;
   padding    : 0 .5em;
 }
+div.presentational-stat div.bullet {
+  display      : inline-block;
+  border-radius: 100%;
+  width        : .7em;
+  height       : .7em;
+  margin       : 0 .5em;
+}

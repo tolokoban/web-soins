@@ -7,7 +7,9 @@ import Theme from "./tfw/theme"
 import WebService from "./tfw/web-service"
 
 console.info("location.hostname=", location.hostname);
-WebService.setRoot("https://web-soins.com/");
+if (location.hostname !== 'localhost') {
+    WebService.setRoot("https://web-soins.com/");
+}
 
 ReactDOM.render(
     <Login />,

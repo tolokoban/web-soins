@@ -9,7 +9,7 @@ import Structure from "../structure"
 import Structures from "./structures"
 import StatsConfig from "./stats-config"
 import Stats from "./stats"
-import { IState, IAction } from "../types"
+import { IState, IAction, IStatsConfig } from "../types"
 
 function dispatch(action: IAction) {
     store.dispatch(action);
@@ -43,10 +43,15 @@ function reducer(state: IState | undefined = INITIAL_STATE, action: IAction): IS
 const store = createStore(reducer);
 
 function addStat(state: IState, action: IAction): IState {
-    const hash = JSON.stringify(state.statsConfig);
-    const stats = state.stats.filter(s => JSON.stringify(s) !== hash);
+    const h = hash(state.statsConfig);
+    console.info("hash=", hash, state.stats.map(s => JSON.stringify(s)));
+    const stats = state.stats.filter(s => hash(s) !== h);
     stats.push({ ...state.statsConfig });
     return { ...state, stats };
+}
+
+function hash(sc: IStatsConfig): string {
+    return `${sc.statsType}/${sc.dateMin}-${sc.dateMax}`;
 }
 
 function initStatsConfig(state: IState, action: IAction): IState {

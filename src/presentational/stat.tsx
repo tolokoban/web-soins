@@ -5,6 +5,7 @@ import Flex from "../tfw/layout/flex"
 import Icon from "../tfw/view/icon"
 import Combo from "../tfw/view/combo"
 import Button from "../tfw/view/button"
+import FileAPI from "../tfw/fileapi"
 import Structure from "../structure"
 import StatService from "../service/stat"
 
@@ -12,6 +13,8 @@ import Intl from "../tfw/intl"
 const _ = Intl.make(require("./stat.yaml"));
 
 import "./stat.css"
+
+const DEFAULT_COLORS = ["#b37036", "#cc7529", "#e67717", "#ff7700", "#765"];
 
 type TDataFromService = { [key: string]: IOccurences };
 
@@ -48,6 +51,23 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
         this.setState({ dataFromService });
     }
 
+    private export() {
+        const data: TDataFromService | undefined = this.state.dataFromService;
+        if (!data) return;
+        const { keys, values } = getFieldsKeysAndValues(data, this.props.structure);
+        const output: string[] = ["Code du champ\tNom du champ\tValeur\tOccurences"];
+        keys.forEach((fieldKey: string, idx: number) => {
+            const fieldCaption = values[idx];
+            const occurences = data[fieldKey].occ;
+            occurences.forEach(([caption, count]: [string, number]) => {
+                output.push(`${fieldKey}\t${fieldCaption}\t${caption}\t${count}`);
+            })
+        });
+
+        const filename = "statistics.xls";
+        FileAPI.saveAs(new Blob([output.join("\n")], { type: "text/csv" }), filename);
+    }
+
     render() {
         const data: TDataFromService | undefined = this.state.dataFromService;
         let content = null;
@@ -74,26 +94,40 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
                         })
                     }</Combo>
                 <br />
-                <center><Pie values={getValuesForPie(occurences)} /></center>
+                <center>
+                    <Pie colors={DEFAULT_COLORS}
+                        values={getValuesForPie(occurences)} />
+                </center>
                 <div>{
                     occurences.occ.map(([caption, count], index) => {
+                        const colorIndex = Math.min(DEFAULT_COLORS.length - 1, index);
+                        const color = DEFAULT_COLORS[colorIndex];
                         return (
                             <Flex key={index}
                                 justifyContent="space-between"
                                 alignItems="center"
                                 dir="row"
-                                classes={[
-                                    index % 2 ? "thm-bg1" : "thm-bg2",
-                                    index > 3 ? "grey" : ""
-                                ]}
-                            >
-                                <div>{caption}</div>
+                                classes={index % 2 ? "thm-bg1" : "thm-bg2"}>
+                                <Flex
+                                    justifyContent="space-between"
+                                    wide={false}
+                                    dir="row"
+                                    alignItems="center">
+                                    <div className="bullet" style={{
+                                        background: color
+                                    }}></div>
+                                    <span>{caption}</span>
+                                </Flex>
                                 <div><b>{count}</b></div>
                             </Flex>
                         )
                     })
                 }</div>
-                <Button wide={true} icon={export} label={_("export")} />
+                <Button
+                    wide={true}
+                    icon="export"
+                    label={_("export")}
+                    onClick={() => this.export()} />
             </div >);
         }
 
@@ -142,6 +176,5 @@ function getValuesForPie(occurences: IOccurences, sectors: number = 4): number[]
         total += count;
     }
     if (sum > total) values.push(sum - total);
-    console.info("values=", values);
     return values;
 }
