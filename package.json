@@ -23,6 +23,7 @@
     "build": "react-app-rewired build",
     "deploy": "gh-pages -b gh-pages -d build",
     "php": "cp -rvf backend/tfw/* ../../www/cameroun-server/tfw",
+    "tfw": "cp -rvf src/tfw/* ../tfw-react-components/src/tfw",
     "test": "react-app-rewired test",
     "test:dbg": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "eject": "react-scripts eject"
