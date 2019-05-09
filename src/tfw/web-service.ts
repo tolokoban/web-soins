@@ -85,7 +85,7 @@ async function callService(name: string, args: {}): Promise<ICallResponse> {
     data.append("i", JSON.stringify(args));
     const
         url = `${gRoot}tfw/svc.php`,
-        init = { method: "POST", body: data },
+        init = { method: "POST", body: data, credentials: "include" },
         response = await fetch(url, init);
     if (response.ok) {
         return {
