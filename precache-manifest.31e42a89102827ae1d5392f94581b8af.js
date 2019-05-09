@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/web-soins/static/js/runtime~main.f4afb8b4.js"
   },
   {
-    "revision": "84a40ca20895167db449",
-    "url": "/web-soins/static/js/main.93a225b9.chunk.js"
+    "revision": "a37213fa4823206fd47a",
+    "url": "/web-soins/static/js/main.390f1b85.chunk.js"
   },
   {
     "revision": "d864a1d85ba5ec6e1636",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/web-soins/static/js/2.80a0c5da.chunk.js"
   },
   {
-    "revision": "84a40ca20895167db449",
+    "revision": "a37213fa4823206fd47a",
     "url": "/web-soins/static/css/main.7dca6971.chunk.css"
   },
   {
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/web-soins/static/css/2.ac04411f.chunk.css"
   },
   {
-    "revision": "ee26ab200461f00c88c123238641b3d6",
+    "revision": "2c89007ecc6059f6bea21ce0baeeaddd",
     "url": "/web-soins/index.html"
   }
 ];
