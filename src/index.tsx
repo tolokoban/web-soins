@@ -4,6 +4,10 @@ import Login from './Login'
 import "./tfw/font/josefin.css"
 import "./index.css"
 import Theme from "./tfw/theme"
+import WebService from "./tfw/web-service"
+
+console.info("location.hostname=", location.hostname);
+WebService.setRoot("https://web-soins.com/");
 
 ReactDOM.render(
     <Login />,
