@@ -7,13 +7,20 @@ import Button from "../tfw/view/button"
 import InputDate from "../tfw/view/input-date"
 import User from "../state/user"
 import { IState, IDispatchFunction, IOrganization, ICarecenter } from "../types"
-
+import Pie from "../presentational/pie"
 import _ from "../intl";
 
 function mapStateToProps(state: IState) {
-    const stats = state.stats.map( stat => (
-        <Stat key={JSON.stringify(stat)} stat={stat}/>
-    ));
+    const stats = state.stats.map( stat => {
+        const carecenter = stat.carecenter;
+        const structureId = carecenter.id;
+        const structure = state.structures.find(s => s.id === structureId);
+        if( !structure) {
+            console.error(`There is no Structure with id=${structureId} in carecenter "${carecenter.name}"!`);
+            return null;
+        }
+        return (<Stat key={JSON.stringify(stat)} stat={stat} structure={structure}/>);
+    });
     return {
         head: state.user.nickname,
         menu: (<div>
@@ -35,6 +42,7 @@ function mapStateToProps(state: IState) {
                 onClick={() => window.location.reload()} />
         </div>),
         body: stats.length > 0 ? stats : <div>{"Toutes vos statistiques s'afficheront ici..."}</div>
+        // body: stats.length > 0 ? stats : <Pie values={[100, 78 ,24, 5]}/>
     }
 }
 

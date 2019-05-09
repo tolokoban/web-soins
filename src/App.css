@@ -15,3 +15,6 @@ div.App > div.menu ul {
 div.App > div.menu li {
   margin: 0;
 }
+*.grey {
+  opacity: .5;
+}

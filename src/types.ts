@@ -25,6 +25,13 @@ export interface ICarecenter {
     code: string;
 }
 
+export type IOccurence = [string, number];
+
+export interface IOccurences {
+    sum: number;
+    occ: IOccurence[]
+}
+
 export interface IPatientField {
     id: string;
     type: string;
@@ -36,6 +43,9 @@ export interface IStructure {
     organizationId: number;
     name: string;
     patientFields: IPatientField[];
+    formFields: {
+        [key: string]: { caption: string; type: string }
+    };
     sources: {
         exams: string;
         vaccins: string;
@@ -61,13 +71,6 @@ export interface IState {
     carecenters: ICarecenter[];
     structures: IStructure[];
     statsConfig: IStatsConfig;
-}
-
-export type IOccurence = [string, number];
-
-export interface IOccurences {
-    sum: number;
-    occ: IOccurence[]
 }
 
 export type IDispatchFunction = (action: IAction) => void;

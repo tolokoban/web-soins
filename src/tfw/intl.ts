@@ -17,7 +17,8 @@ export default class Intl {
         return { [lang || Intl.lang]: text };
     }
 
-    static toText(intl: { [key: string]: string }): string {
+    static toText(intl: { [key: string]: string }|string): string {
+        if( typeof intl === 'string') return intl;
         const text = intl[Intl.lang];
         if (typeof text === 'string') return text;
         return intl[Object.keys(intl)[0]];

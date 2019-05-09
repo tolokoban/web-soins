@@ -16,5 +16,13 @@ export default {
             patientsFieldsCaptions[patientField.id] = Intl.toText(patientField.caption);
         });
         return patientsFieldsCaptions;
+    },
+
+    getFieldCaption(key:string, structure:IStructure) {
+        if( key.charAt(0) !== '#') return key;
+        const item: {caption: string, type: string}|undefined =
+         structure.formFields[key];
+        if( !item ) return key;
+        return Intl.toText(item.caption);
     }
 }
