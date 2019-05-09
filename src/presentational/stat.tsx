@@ -4,8 +4,12 @@ import Pie from "./pie"
 import Flex from "../tfw/layout/flex"
 import Icon from "../tfw/view/icon"
 import Combo from "../tfw/view/combo"
+import Button from "../tfw/view/button"
 import Structure from "../structure"
 import StatService from "../service/stat"
+
+import Intl from "../tfw/intl"
+const _ = Intl.make(require("./stat.yaml"));
 
 import "./stat.css"
 
@@ -89,6 +93,7 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
                         )
                     })
                 }</div>
+                <Button wide={true} icon={export} label={_("export")} />
             </div >);
         }
 
