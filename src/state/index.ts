@@ -9,6 +9,7 @@ import Structure from "../structure"
 import Structures from "./structures"
 import StatsConfig from "./stats-config"
 import Stats from "./stats"
+import Hash from "../util/hash"
 import { IState, IAction, IStatsConfig } from "../types"
 
 function dispatch(action: IAction) {
@@ -29,6 +30,7 @@ function reducer(state: IState | undefined = INITIAL_STATE, action: IAction): IS
     switch (action.type) {
         case "initStatsConfig": return initStatsConfig(state, action);
         case "addStat": return addStat(state, action);
+        case "removeStat": return removeStat(state, action);
         default: return {
             user: User.reducer(state.user, action),
             stats: Stats.reducer(state.stats, action),
@@ -43,14 +45,15 @@ function reducer(state: IState | undefined = INITIAL_STATE, action: IAction): IS
 const store = createStore(reducer);
 
 function addStat(state: IState, action: IAction): IState {
-    const h = hash(state.statsConfig);
-    const stats = state.stats.filter(s => hash(s) !== h);
+    const h = Hash.statsConfig(state.statsConfig);
+    const stats = state.stats.filter(s => Hash.statsConfig(s) !== h);
     stats.push({ ...state.statsConfig });
     return { ...state, stats };
 }
 
-function hash(sc: IStatsConfig): string {
-    return `${sc.statsType}/${sc.dateMin}-${sc.dateMax}`;
+function removeStat(state: IState, action: IAction): IState {
+    const stats = state.stats.filter(s => Hash.statsConfig(s) !== action.key);
+    return { ...state, stats };
 }
 
 function initStatsConfig(state: IState, action: IAction): IState {
@@ -88,5 +91,8 @@ export default {
     },
     addStat(): IAction {
         return { type: "addStat" };
+    },
+    removeStat(key: string): IAction {
+        return { type: "removeStat", key };
     }
 }

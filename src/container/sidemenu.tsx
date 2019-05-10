@@ -7,6 +7,8 @@ import Icon from "../tfw/view/icon"
 import Flex from "../tfw/layout/flex"
 import Button from "../tfw/view/button"
 import User from "../state/user"
+import State from "../state"
+import Hash from "../util/hash"
 import { IState, IDispatchFunction, IOrganization, ICarecenter } from "../types"
 import _ from "../intl";
 
@@ -21,7 +23,11 @@ function mapStateToProps(state: IState) {
             console.error(`There is no Structure with id=${structureId} in carecenter "${carecenter.name}"!`);
             return null;
         }
-        return (<Stat key={JSON.stringify(stat)} stat={stat} structure={structure} />);
+        const key = Hash.statsConfig(stat);
+        return (<Stat key={key}
+            stat={stat}
+            onClose={() => State.dispatch(State.removeStat(key))}
+            structure={structure} />);
     });
     return {
         head: state.user.nickname,

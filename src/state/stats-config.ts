@@ -19,7 +19,15 @@ export default {
             size: "Taille",
             nationality: "Nationalité"
         },
-        carecenter: {}
+        carecenter: {
+            id: 0,
+            organizationId: 0,
+            structureId: 0,
+            patientsCount: 0,
+            consultationsCount: 0,
+            name: "",
+            code: ""
+        }
     },
 
     reducer(state: IStatsConfig, action: IAction): IStatsConfig {

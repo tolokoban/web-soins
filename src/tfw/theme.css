@@ -12,9 +12,10 @@ html {
   padding: 0;
 }
 hr {
+  display         : block;
+  width           : 100%;
   border          : none;
   height          : 1px;
-  background-image: -webkit-linear-gradient(to right, transparent, rgba(0, 0, 0, .5) 50%, transparent);
   background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, .5) 50%, transparent);
 }
 button {

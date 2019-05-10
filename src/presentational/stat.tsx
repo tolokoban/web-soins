@@ -21,6 +21,7 @@ type TDataFromService = { [key: string]: IOccurences };
 interface IStatProps {
     stat: IStatsConfig;
     structure: IStructure;
+    onClose?: () => void;
 }
 
 interface IStatState {
@@ -32,8 +33,19 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
     constructor(props: IStatProps) {
         super(props);
         this.state = { selectedField: "" };
+        this.handleClose = this.handleClose.bind(this);
     }
 
+    handleClose() {
+        const handler = this.props.onClose;
+        if (typeof handler !== 'function') return;
+        try {
+            handler();
+        } catch (ex) {
+            console.error("Error in handleClose(): ", );
+            console.error(ex);
+        }
+    }
     componentDidUpdate() {
         if (this.state.dataFromService) return;
         console.log("componentDidUpdate");
@@ -143,6 +155,7 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
                 <hr />
                 <Flex dir="row" justifyContent="flex-end">
                     <Button
+                        onClick={this.handleClose}
                         icon="close"
                         label={_("close")}
                         flat={true} />
