@@ -71,14 +71,6 @@ export default class StatsConfig extends React.Component<IStatsPatientsConfigPro
 
         return (
             <div>
-                <div><InputDate
-                    label={_("date-min")}
-                    onChange={this.handleDateMinChange}
-                    value={dateMin} /></div>
-                <div><InputDate
-                    label={_("date-max")}
-                    onChange={this.handleDateMaxChange}
-                    value={dateMax} /></div>
                 <div>{
                     Object.keys(fields).map((fieldName: string) => {
                         const fieldCaption = captions[fieldName];

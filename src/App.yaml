@@ -1,5 +1,6 @@
 en:
     cancel: Cancel
+    close: Close
     code: "Code:"
     consultations: Consultations
     consultations-count: "Consultations:"
@@ -11,9 +12,12 @@ en:
     logout: Logout
     patients: Patients
     patients-count: "Patients:"
+    stat-type: "Statistic Type"
     struct: "Structure:"
+    welcome: "To add new statistics, clic on the left pane's button bearing the following icon:"
 fr:
     cancel: Annuler
+    close: Fermer
     code: "Code :"
     consultations: Consultations
     consultations-count: "Consultations :"
@@ -25,4 +29,6 @@ fr:
     logout: Déconnexion
     patients: Patients
     patients-count: "Patients :"
+    stat-type: "Type de statistique"
     struct: "Structure :"
+    welcome: "Pour ajouter des statistiques, cliquez sur le bouton avec l'icône suivante dans le panneau de gauche : "

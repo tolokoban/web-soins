@@ -6,7 +6,7 @@ const PREFIX = "stats-config:";
 
 export default {
     INITIAL_STATE: {
-        statsType: "patients",
+        statsType: "consultations",
         dateMin: lastMonth(),
         dateMax: today(),
         patientsFields: {
@@ -40,11 +40,11 @@ export default {
         return { type: "stats-config:setType", statsType };
     },
 
-    setDateMin(date:number): IAction {
+    setDateMin(date: number): IAction {
         return { type: "stats-config:setDateMin", date };
     },
 
-    setDateMax(date:number): IAction {
+    setDateMax(date: number): IAction {
         return { type: "stats-config:setDateMax", date };
     },
 
@@ -60,7 +60,7 @@ export default {
 function setType(state: IStatsConfig, action: IAction): IStatsConfig {
     return {
         ...state,
-        statsType: action.statsType || "patients"
+        statsType: action.statsType || "consultations"
     };
 }
 
@@ -107,6 +107,11 @@ function today() {
 
 function lastMonth() {
     const today = new Date();
-    const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
-    return lastMonth.getTime();
+    if (today.getDate() !== 1) {
+        const firstDayOfCurrentMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+        return firstDayOfCurrentMonth.getTime();
+    } else {
+        const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+        return lastMonth.getTime();
+    }
 }

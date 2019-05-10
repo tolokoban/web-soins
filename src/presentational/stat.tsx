@@ -80,55 +80,59 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
             let value = this.state.selectedField;
             if (keys.indexOf(value) === -1) value = keys[0];
             const occurences = data[value];
-            content = (<div>
-                <Combo
-                    keys={keys}
-                    onChange={selectedField => {
-                        console.info("[onChange] selectedField=", selectedField);
-                        this.setState({ selectedField });
-                    }}
-                    value={value}>{
-                        values.map((val, idx) => {
-                            const key = keys[idx];
-                            return <div key={key}><b>{`${val} `}</b><small className='grey'>{key}</small></div>
-                        })
-                    }</Combo>
-                <br />
-                <center>
-                    <Pie colors={DEFAULT_COLORS}
-                        values={getValuesForPie(occurences)} />
-                </center>
-                <div>{
-                    occurences.occ.map(([caption, count], index) => {
-                        const colorIndex = Math.min(DEFAULT_COLORS.length - 1, index);
-                        const color = DEFAULT_COLORS[colorIndex];
-                        return (
-                            <Flex key={index}
-                                justifyContent="space-between"
-                                alignItems="center"
-                                dir="row"
-                                classes={index % 2 ? "thm-bg1" : "thm-bg2"}>
-                                <Flex
+            if (!occurences) {
+                content = <div>{_("no-data")}</div>;
+            } else {
+                content = (<div>
+                    <Combo
+                        keys={keys}
+                        onChange={selectedField => {
+                            console.info("[onChange] selectedField=", selectedField);
+                            this.setState({ selectedField });
+                        }}
+                        value={value}>{
+                            values.map((val, idx) => {
+                                const key = keys[idx];
+                                return <div key={key}><b>{`${val} `}</b><small className='grey'>{key}</small></div>
+                            })
+                        }</Combo>
+                    <br />
+                    <center>
+                        <Pie colors={DEFAULT_COLORS}
+                            values={getValuesForPie(occurences)} />
+                    </center>
+                    <div>{
+                        occurences.occ.map(([caption, count], index) => {
+                            const colorIndex = Math.min(DEFAULT_COLORS.length - 1, index);
+                            const color = DEFAULT_COLORS[colorIndex];
+                            return (
+                                <Flex key={index}
                                     justifyContent="space-between"
-                                    wide={false}
+                                    alignItems="center"
                                     dir="row"
-                                    alignItems="center">
-                                    <div className="bullet" style={{
-                                        background: color
-                                    }}></div>
-                                    <span>{caption}</span>
+                                    classes={index % 2 ? "thm-bg1" : "thm-bg2"}>
+                                    <Flex
+                                        justifyContent="space-between"
+                                        wide={false}
+                                        dir="row"
+                                        alignItems="center">
+                                        <div className="bullet" style={{
+                                            background: color
+                                        }}></div>
+                                        <span>{caption}</span>
+                                    </Flex>
+                                    <div><b>{count}</b></div>
                                 </Flex>
-                                <div><b>{count}</b></div>
-                            </Flex>
-                        )
-                    })
-                }</div>
-                <Button
-                    wide={true}
-                    icon="export"
-                    label={_("export")}
-                    onClick={() => this.export()} />
-            </div >);
+                            )
+                        })
+                    }</div>
+                    <Button
+                        wide={true}
+                        icon="export"
+                        label={_("export")}
+                        onClick={() => this.export()} />
+                </div >);
+            }
         }
 
         const stat: IStatsConfig = this.props.stat;
@@ -136,6 +140,13 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
             <div className="presentational-stat thm-ele-card thm-bg1">
                 <div className="thm-bgPD">{`${stat.carecenter.name}, du ${formatDate(stat.dateMin)} au ${formatDate(stat.dateMax)}`}</div>
                 <div>{content}</div>
+                <hr />
+                <Flex dir="row" justifyContent="flex-end">
+                    <Button
+                        icon="close"
+                        label={_("close")}
+                        flat={true} />
+                </Flex>
             </div>
         );
     }

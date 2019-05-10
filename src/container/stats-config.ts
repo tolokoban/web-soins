@@ -18,6 +18,7 @@ function mapDispatchToProps(dispatch: IDispatchFunction) {
         },
 
         onDateMinChange(date: number) {
+            console.info("[onDateMinChange] date=", date);
             dispatch(Actions.setDateMin(date));
         },
 

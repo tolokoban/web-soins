@@ -44,9 +44,7 @@ const store = createStore(reducer);
 
 function addStat(state: IState, action: IAction): IState {
     const h = hash(state.statsConfig);
-    console.info("hash:", h, state.stats.map(s => hash(s)));
-    //const stats = state.stats.filter(s => hash(s) !== h);
-    const stats = state.stats.filter(s => true);
+    const stats = state.stats.filter(s => hash(s) !== h);
     stats.push({ ...state.statsConfig });
     return { ...state, stats };
 }

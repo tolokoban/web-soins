@@ -14,7 +14,13 @@ export default {
      */
     login,
     /**
+     * @return {boolean} `true` if we are working on localhost.
+     */
+    isLocalhost,
+    /**
      * Change the web server that will answer our queries.
+     * @param {string} root
+     * @return {undefined}
      */
     setRoot
 };
@@ -141,4 +147,9 @@ function setRoot(root: string) {
     if( gRoot.charAt(gRoot.length-1) !== '/') {
         gRoot += "/";
     }
+}
+
+
+function isLocalhost() {
+    return location.hostname === 'localhost';
 }

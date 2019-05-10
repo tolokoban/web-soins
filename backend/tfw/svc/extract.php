@@ -22,6 +22,11 @@ function execService( $args ) {
     if( !array_key_exists( 'end', $args ) ) return -3;
     $begin = intVal($args['begin']);
     $end = intVal($args['end']);
+    if( $end < $begin ) {
+        $tmp = $begin;
+        $begin = $end;
+        $end = $tmp;
+    }
 
     $result = [];
 
@@ -33,7 +38,7 @@ function execService( $args ) {
          . "AND A.patient = P.id "
          . "AND C.admission = A.id "
          . "AND C.enter >= ? "
-         . "AND C.enter < ? "    
+         . "AND C.enter < ? "
          . "GROUP BY P.id";
 
     $stm = \Data\query( $sql, $carecenterId, $begin, $end );
@@ -49,6 +54,9 @@ function execService( $args ) {
             $ids[] = $id;
             $patientKeysById[$row[0]] = $key;
         }
+    }
+    if( count($ids) == 0 ) {
+        return json_decode('{"patients":{},"data":{}}');
     }
 
     $sql = "SELECT D.`key`, D.`value`, P.`key` "
@@ -72,7 +80,7 @@ function execService( $args ) {
     }
 
     //====================================================================
-    
+
     $sql = "SELECT C.id, D.key, D.value, P.id, C.enter "
          . "FROM " . \Data\Consultation\name() ." AS C, "
          . \Data\Data\name() ." AS D, "

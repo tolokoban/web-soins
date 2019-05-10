@@ -2,7 +2,9 @@ import React from "react"
 import castArray from "../tfw/converter/array"
 import castString from "../tfw/converter/string"
 import castInteger from "../tfw/converter/integer"
-import Tabstrip from "../tfw/layout/tabstrip"
+import Flex from "../tfw/layout/flex"
+import Combo from "../tfw/view/combo"
+import InputDate from "../tfw/view/input-date"
 import StatsPatientsConfig from "../container/stats-patients-config"
 import { IStatsConfig } from "../types"
 import _ from "../intl"
@@ -30,22 +32,55 @@ export default class StatsConfig extends React.Component<IStatsConfigProps, {}> 
     handleDateMinChange(date: number) {
         const handler = this.props.onDateMinChange;
         if (typeof handler !== 'function') return;
-        handler(date);
+        try {
+            handler(date);
+        } catch (ex) {
+            console.error("Error in handleDateMinChange(date): ", date);
+            console.error(ex);
+        }
     }
 
     handleDateMaxChange(date: number) {
         const handler = this.props.onDateMaxChange;
         if (typeof handler !== 'function') return;
-        handler(date);
+        try {
+            handler(date);
+        } catch (ex) {
+            console.error("Error in handleDateMaxChange(date): ", date);
+            console.error(ex);
+        }
     }
 
     render() {
         const p = this.props;
-        const type = castString(p.statsType, "patients");
-        const value = type === "patients" ? 0 : 1;
+        const type = castString(p.statsType, "consultations");
         const dateMin = castInteger(p.dateMin, Date.now());
         const dateMax = castInteger(p.dateMax, Date.now());
+        const types = ["consultations", "patients"];
 
+        return (<div>
+            <Combo
+                wide={true}
+                label={_("stat-type")}
+                keys={types}
+                value={type}
+            >{
+                    types.map(type => (
+                        <div key={type}>{_(type)}</div>
+                    ))
+                }</Combo>
+            <Flex>
+                <div><InputDate
+                    label={_("date-min")}
+                    onChange={this.handleDateMinChange}
+                    value={dateMin} /></div>
+                <div><InputDate
+                    label={_("date-max")}
+                    onChange={this.handleDateMaxChange}
+                    value={dateMax} /></div>
+            </Flex>
+        </div>);
+        /*
         return (
             <Tabstrip
                 value={value}
@@ -57,6 +92,6 @@ export default class StatsConfig extends React.Component<IStatsConfigProps, {}> 
                     dateMax={dateMax} />
                 <div>Not implemented yet!</div>
             </Tabstrip>
-        )
+        )*/
     }
 }

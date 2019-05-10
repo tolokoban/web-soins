@@ -1,4 +1,8 @@
 en:
+    close: Close
     export: "Export to Spreadsheet"
+    no-data: "There is no data for this period!"
 fr:
+    close: Fermer
     export: "Exporter vers un tableur"
+    no-data: "Il n'y a aucune donnée sur cette période !"
