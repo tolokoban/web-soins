@@ -1,8 +1,8 @@
 {
-  "name": "react-test",
-  "version": "0.1.0",
+  "name": "web-soins",
+  "version": "0.2.0",
   "private": true,
-  "proxy": "http://localhost/www/cameroun-server",
+  "proxy": "http://localhost/web-soins",
   "homepage": "https://tolokoban.github.io/web-soins",
   "dependencies": {
     "@types/jest": "^24.0.12",
@@ -22,7 +22,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "deploy": "gh-pages -b gh-pages -d build",
-    "php": "cp -rvf backend/tfw/* ../../www/cameroun-server/tfw",
+    "php": "cp -rvf backend/tfw/* ~/www/web-soins/tfw",
     "tfw": "cp -rvf src/tfw/* ../tfw-react-components/src/tfw",
     "test": "react-app-rewired test",
     "test:dbg": "node --inspect-brk ./node_modules/.bin/jest --runInBand",

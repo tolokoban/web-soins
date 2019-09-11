@@ -1,7 +1,7 @@
 <?php
 $ROLE = '';  // Everyone can access this service.
 
-/**
+/*
    First step:
    -----------
    Call tfw.Install("cameroun_").
@@ -34,7 +34,7 @@ $ROLE = '';  // Everyone can access this service.
 function execService($args) {
     error_log("tfw.Install: " . json_encode($args));
     $configFile = "./php/@db.cfg.inc";
-    
+
     if( is_string( $args ) ) {
         if( file_exists( $configFile ) ) return 0;
         error_log("[tfw.Install] Config file does not exist: $configFile");
