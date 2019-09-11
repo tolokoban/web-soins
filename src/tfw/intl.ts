@@ -1,3 +1,5 @@
+import { IIntlText, IIntlOrString } from "./types"
+
 interface ITranslations {
     [language: string]: { [key: string]: string }
 }
@@ -13,15 +15,33 @@ export default class Intl {
         return instance.translate.bind(instance);
     }
 
-    static toIntl(text: string, lang: string|null = null): { [key: string]: string } {
+    static toIntl(text: IIntlOrString | undefined, lang: string | null = null): IIntlText {        
+        if (!text) return { [lang || Intl.lang]: "" };
+        if (typeof text !== 'string') return text;
         return { [lang || Intl.lang]: text };
     }
 
-    static toText(intl: { [key: string]: string }|string): string {
-        if( typeof intl === 'string') return intl;
-        const text = intl[Intl.lang];
+    static toText(intl: IIntlOrString | undefined, lang?: string | undefined): string {
+        if (!intl) return "";
+        if (typeof intl === 'string') return intl;
+        if (typeof lang === 'undefined') lang = Intl.lang;
+        const text = intl[lang];
         if (typeof text === 'string') return text;
-        return intl[Object.keys(intl)[0]];
+        const defaultText = intl[Object.keys(intl)[0]];
+        if (typeof defaultText === 'string') return defaultText;
+        return "";
+    }
+
+    static addTextToIntl(lang: string, text: string, intl: IIntlOrString): IIntlText {
+        intl = Intl.toIntl(intl, lang);
+        intl[lang] = text;
+        const result: IIntlText = {};
+        for (const key of Object.keys(intl)) {
+            const val = intl[key];
+            if (val.trim().length === 0) continue;
+            result[key] = val;
+        }
+        return result;
     }
 
     static get lang() { return gCurrentLanguage; }

@@ -5,6 +5,7 @@ import castBoolean from "../converter/boolean"
 import castStringArray from "../converter/string-array"
 import Touchable from "../behavior/touchable"
 import Icon from "./icon"
+import Label from "./label"
 import Gesture from "../gesture"
 import EscapeHandler from "../escape-handler"
 
@@ -20,7 +21,7 @@ interface IComboProps {
 export default class Combo extends React.Component<IComboProps, {}> {
     readonly touchable: Touchable;
 
-    ref = React.createRef<HTMLDivElement>()
+    ref = React.createRef<HTMLButtonElement>()
     list = React.createRef<HTMLDivElement>()
     button = React.createRef<HTMLDivElement>()
 
@@ -37,7 +38,6 @@ export default class Combo extends React.Component<IComboProps, {}> {
     }
 
     handleClick(event: React.MouseEvent) {
-        console.info("tap combo =>", event);
         this.expand();
     }
 
@@ -134,7 +134,6 @@ export default class Combo extends React.Component<IComboProps, {}> {
                 event.stopPropagation();
                 return;
         }
-        console.log(">>", event.key);
     }
 
     expand() {
@@ -159,12 +158,10 @@ export default class Combo extends React.Component<IComboProps, {}> {
             document.removeEventListener("keydown", handleKeyboard, true);
         });
         Gesture(screen).on({ tap: () => {
-            console.log("EscapeHandler");
             EscapeHandler.fire()
         }});
         Gesture(bigList).on({
             tap: evt => {
-                console.info("tap bigList =>", evt);
                 if (!evt || typeof evt.y === 'undefined') return;
                 const scroll = bigList.scrollTop;
                 const index = Math.floor((evt.y + scroll) / 32);
@@ -192,7 +189,7 @@ export default class Combo extends React.Component<IComboProps, {}> {
         const wide = castBoolean(p.wide, false);
         const keys = ensureGoodKeys(p.keys, children);
         const value = castString(p.value, keys[0]);
-        const classes = ["tfw-view-combo", "thm-bg3", "thm-ele-button"];
+        const classes = ["tfw-view-combo"];
         const items = children.map(item => {
             const key = item.key;
             return (<div className="item" key={key} > {item} </div>);
@@ -206,8 +203,8 @@ export default class Combo extends React.Component<IComboProps, {}> {
 
         return (
             <button ref={this.ref} className={classes.join(" ")}>
-                {label.length > 0 ? <header className="thm-bgPD">{label}</header> : null}
-                <div ref={this.button} className="button">
+                {label.length > 0 ? <Label label={label}/> : null}
+                <div ref={this.button} className="button thm-bg3 thm-ele-button">
                     <div className="list-container"
                         style={{
                             transform: `translateY(-${32 * index}px)`

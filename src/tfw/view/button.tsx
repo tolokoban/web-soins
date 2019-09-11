@@ -74,7 +74,7 @@ export default class Button extends React.Component<IButtonProps, {}> {
                 {icon.length > 0
                     ? <Icon content={icon}
                         animate={wait}
-                        size={`${small ? 20 : 28}px`} />
+                        size={`${small ? 1.375 : 1.875}rem`} />
                     : null}
                 {label.length > 0
                     ? <div className="text" > {label} </div>

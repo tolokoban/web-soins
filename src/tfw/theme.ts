@@ -1,9 +1,13 @@
+import "./theme.css"
+import Color from "./color"
+
 /**
  * Manage CSS styles.
  */
 export default {
     register: registerTheme,
     apply: applyTheme,
+    get: getTheme,
     bg0: makeGetCurrentColor("bg0"),
     bg1: makeGetCurrentColor("bg1"),
     bg2: makeGetCurrentColor("bg2"),
@@ -14,7 +18,11 @@ export default {
     bgS: makeGetCurrentColor("bgS"),
     bgSD: makeGetCurrentColor("bgSD"),
     bgSL: makeGetCurrentColor("bgSL"),
-    isDark
+    black: makeGetCurrentColor("black"),
+    white: makeGetCurrentColor("white"),
+    isDark,
+    setFontSize,
+    normalize: completeWithDefaultValues
 };
 
 interface IStyle {
@@ -43,11 +51,23 @@ interface IStyle {
     [key: string]: string | undefined;
 };
 
+interface ITheme {
+    bg0: string,
+    bg1: string,
+    bg2: string,
+    bg3: string,
+    bgP: string,
+    bgPL: string,
+    bgPD: string,
+    bgS: string,
+    bgSL: string,
+    bgSD: string,
+    black: string,
+    white: string
+}
+
 
 //################################################################################
-
-import "./theme.css"
-import Color from "./color"
 
 interface IThemes {
     css: { [name: string]: HTMLStyleElement };
@@ -88,7 +108,7 @@ function registerTheme(themeName: string, _style: IStyle) {
 function codeText(themeName: string, style: IStyle) {
     let codeCSS = '';
     for (let depth = 1; depth <= 10; depth++) {
-        THEME_COLOR_NAMES.forEach(function(colorName) {
+        for (const colorName of THEME_COLOR_NAMES) {
             const fgColorName = `fg${colorName}`;
             const bgColorName = `bg${colorName}`;
             const styleFgColorName: string = style[fgColorName] as string;
@@ -126,22 +146,35 @@ function codeText(themeName: string, style: IStyle) {
                     + " .thm-svg-stroke0"
                     + " { stroke: " + styleFgColorName + " }\n";
             }
-        });
+        }
     }
     return codeCSS;
 }
 
+const ALPHA_HEXA = "123456789ABCDE";
 function codeVariables(themeName: string, style: IStyle) {
     let codeCSS = "body.dom-theme-" + themeName + '{\n';
     THEME_COLOR_NAMES.forEach(function(colorName) {
         const s = style[`bg${colorName}`] as string;
         codeCSS += `  --thm-bg${colorName}: ${s};\n`;
+        for (const a of ALPHA_HEXA) {
+            codeCSS += `  --thm-bg${colorName}-${a}: ${s}${a}${a};\n`;
+        }
         COLOR.parse(s);
         const pen = COLOR.luminanceStep() ? style.black : style.white;
         codeCSS += `  --thm-fg${colorName}: ${pen};\n`;
+        for (const a of ALPHA_HEXA) {
+            codeCSS += `  --thm-fg${colorName}-${a}: ${pen}${a}${a};\n`;
+        }
     });
+    style.white = normalize(style.white);
+    style.black = normalize(style.black);
     codeCSS += `  --thm-white: ${style.white};\n`;
     codeCSS += `  --thm-black: ${style.black};\n`;
+    for (const letter of ALPHA_HEXA) {
+        codeCSS += `  --thm-white-${letter}: ${style.white}${letter}${letter};\n`;
+        codeCSS += `  --thm-black-${letter}: ${style.black}${letter}${letter};\n`;
+    }
     codeCSS += "}\n";
     return codeCSS;
 }
@@ -156,6 +189,8 @@ function codeBackground(themeName: string, style: IStyle) {
             + " { color: " + style[`fg${colorName}`] + " }\n";
         codeCSS += "body.dom-theme-" + themeName + " .thm-bg" + colorName
             + " { background-color: " + style[`bg${colorName}`] + " }\n";
+        codeCSS += `body.dom-theme-${themeName} .thm-bg${colorName}-text`
+            + " { background-color: " + style[`fg${colorName}`] + " }\n";
         codeCSS += "body.dom-theme-" + themeName + " .thm-bg" + colorName + "-bottom"
             + " { background: linear-gradient(to top,"
             + style[`bg${colorName}`] + ",transparent) }\n";
@@ -223,6 +258,10 @@ function applyTheme(name: string, target: HTMLElement = document.body) {
     }
     THEMES.current = name;
     body.classList.add(`dom-theme-${THEMES.current}`);
+}
+
+function getTheme(name: string = "default"): ITheme {
+    return THEMES.vars[name] as ITheme;
 }
 
 function completeBackgrounds(style: IStyle) {
@@ -373,8 +412,21 @@ function isThemeGloballyDark(): boolean {
     return vars.$isDark;
 }
 
-function makeGetCurrentColor(colorName: string) : ()=>string {
+function makeGetCurrentColor(colorName: string): () => string {
     return () => THEMES.vars[THEMES.current || "default"][colorName];
+}
+
+function setFontSize(size: "small" | "medium" | "large") {
+    const html = document.documentElement;
+    html.classList.remove(`thm-font-size-small`);
+    html.classList.remove(`thm-font-size-medium`);
+    html.classList.remove(`thm-font-size-large`);
+    html.classList.add(`thm-font-size-${size}`);
+}
+
+function normalize(hexa: string): string {
+    const color = new Color(hexa);
+    return color.stringify();
 }
 
 registerTheme("default", { bgP: "#1e90ff" });

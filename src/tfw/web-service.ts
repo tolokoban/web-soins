@@ -18,11 +18,10 @@ export default {
      */
     isLocalhost,
     /**
-     * Change the web server that will answer our queries.
-     * @param {string} root
-     * @return {undefined}
+     * @param {string} root - URL of another webserver.
+     * @return {WebService} an instance of a WebService bound to another webserver.
      */
-    setRoot
+    create
 };
 
 export enum EnumWebServiceError {
@@ -53,10 +52,6 @@ const gLastSuccessfulLogin: { username: string, password: string } = {
     username: "", password: ""
 };
 
-// If you want to redirect all the queries to another web server,
-// use setRoot().
-let gRoot = "";
-
 class User {
     constructor(
         private _email: string,
@@ -74,47 +69,61 @@ class User {
     }
 }
 
-async function exec(name: string, args: any = null): Promise<any> {
-    const response: ICallResponse = await callService(name, args);
-    if (response.code === EnumWebServiceError.OK) {
-        const obj = JSON.parse(response.data);
-        return obj;
-    } else {
-        throw response;
-    }
-}
-
-async function callService(name: string, args: {}): Promise<ICallResponse> {
-    console.log("callServiceName", name, args);
-    const data = new FormData();
-    data.append("s", name);
-    data.append("i", JSON.stringify(args));
-    const
-        url = `${gRoot}tfw/svc.php`,
-        init = { method: "POST", body: data, credentials: "include" },
-        response = await fetch(url, init);
-    if (response.ok) {
-        return {
-            code: EnumWebServiceError.OK,
-            data: await response.text()
+class WebService {
+    constructor(private root: string = "") {
+        if (this.root.charAt(this.root.length - 1) !== '/') {
+            this.root += "/";
         }
     }
-    return {
-        code: EnumWebServiceError.HTTP_ERROR,
-        data: response.statusText
-    }
-}
 
-async function login(username: string, password: string): Promise<User> {
-    const challenge = await exec("tfw.login.Challenge", username);
-    const h = hash(challenge, password);
-    const response = await exec("tfw.login.Response", h);
-    if (typeof response === 'number') {
-        throw response;
+    getAbsoluteUrl(url: string): string {
+        if( typeof url !== 'string' ) return url;
+        if( url.startsWith("https://") || url.startsWith("http://") )
+            return url;
+        return `${this.root}${url}`;
     }
-    gLastSuccessfulLogin.username = username;
-    gLastSuccessfulLogin.password = password;
-    return new User(response.login, response.name, response.roles);
+
+    async exec(name: string, args: any = null): Promise<any> {
+        const response: ICallResponse = await this.callService(name, args);
+        if (response.code === EnumWebServiceError.OK) {
+            const obj = JSON.parse(response.data);
+            return obj;
+        } else {
+            throw response;
+        }
+    }
+
+    async login(username: string, password: string): Promise<User> {
+        const challenge = await this.exec("tfw.login.Challenge", username);
+        const h = hash(challenge, password);
+        const response = await this.exec("tfw.login.Response", h);
+        if (typeof response === 'number') {
+            throw response;
+        }
+        gLastSuccessfulLogin.username = username;
+        gLastSuccessfulLogin.password = password;
+        return new User(response.login, response.name, response.roles);
+    }
+
+    private async callService(name: string, args: {}): Promise<ICallResponse> {
+        const data = new FormData();
+        data.append("s", name);
+        data.append("i", JSON.stringify(args));
+        const
+            url = `${this.root}tfw/svc.php`,
+            init: RequestInit = { method: "POST", body: data, credentials: "include" },
+            response = await fetch(url, init);
+        if (response.ok) {
+            return {
+                code: EnumWebServiceError.OK,
+                data: await response.text()
+            }
+        }
+        return {
+            code: EnumWebServiceError.HTTP_ERROR,
+            data: response.statusText
+        }
+    }
 }
 
 function hash(code: number[], pwd: string): number[] {
@@ -141,15 +150,24 @@ function hash(code: number[], pwd: string): number[] {
     return output;
 }
 
+//==================
+// Default instance
+//------------------
 
-function setRoot(root: string) {
-    gRoot = root.trim();
-    if( gRoot.charAt(gRoot.length-1) !== '/') {
-        gRoot += "/";
-    }
+const gInstance = new WebService();
+
+async function exec(name: string, args: any = null): Promise<any> {
+    return await gInstance.exec(name, args);
 }
 
+async function login(username: string, password: string): Promise<User> {
+    return gInstance.login(username, password);
+}
 
-function isLocalhost() {
+function isLocalhost(): boolean {
     return location.hostname === 'localhost';
+}
+
+function create(root: string): WebService {
+    return new WebService(root);
 }

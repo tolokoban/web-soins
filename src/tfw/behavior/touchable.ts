@@ -33,12 +33,12 @@ export default class Touchable {
         this.onTap = castFunction(args.onTap);
     }
 
-    fire(evt) {
+    fire() {
         if (!this.enabled) return;
 
         const handler = this.onTap;
         if (typeof handler === 'function') {
-            handler(evt);
+            handler();
         }
     }
 
@@ -50,7 +50,7 @@ export default class Touchable {
         const that = this;
         if (typeof element === 'undefined') return;
         Gesture(element).on({
-            keydown(evt) {
+            keydown(evt: any) {
                 if (!that.enabled) return;
 
                 const key = evt.key;
@@ -65,15 +65,9 @@ export default class Touchable {
                 if (!that.enabled) return;
             },
 
-            up(evt) {
-                if (!that.removeTouchDisk) return;
-                that.removeTouchDisk();
-                delete that.removeTouchDisk;
-            },
-
             tap(evt) {
                 if (!that.enabled) return;
-                that.fire(evt);
+                that.fire();
 
                 const rect = element.getBoundingClientRect();
                 const style = window.getComputedStyle(element);

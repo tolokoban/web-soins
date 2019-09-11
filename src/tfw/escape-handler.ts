@@ -27,7 +27,7 @@ export function add(listener: THandler) {
 export function fire() {
     if( handlers.length === 0 ) return;
     const handler = handlers.pop();
-    handler();
+    if (typeof handler === 'function') handler();
 }
 
 function addKeyboardListener() {
