@@ -8,7 +8,7 @@ We use a docker image from [mettrayner](https://github.com/mattrayner/docker-lam
 
 ```
 docker run -p "8888:80" -v ~/www:/app -v ~/mysql:/var/lib/mysql mattrayner/lamp:latest-1804
-firefox localhost:8888/phpMyAdmin
+firefox localhost:8888/phpmyadmin
 ```
 
 * Apache 2.4.29
