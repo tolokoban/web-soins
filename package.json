@@ -2,7 +2,7 @@
   "name": "web-soins",
   "version": "0.2.0",
   "private": true,
-  "proxy": "http://localhost/web-soins",
+  "proxy": "http://localhost:8888/web-soins",
   "homepage": "https://tolokoban.github.io/web-soins",
   "dependencies": {
     "@types/jest": "^24.0.12",

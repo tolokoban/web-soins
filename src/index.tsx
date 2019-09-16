@@ -5,15 +5,13 @@ import "./tfw/font/josefin.css"
 import "./index.css"
 import Theme from "./tfw/theme"
 import WebService from "./tfw/web-service"
+import Install from './install'
 
 console.info("location.hostname=", location.hostname);
 if (location.hostname !== 'localhost') {
     WebService.setRoot("https://web-soins.com/");
 }
 
-ReactDOM.render(
-    <Login />,
-    document.getElementById('LOGIN'));
 
 Theme.register("soin", {
     white: "#fda", black: "#420",
@@ -22,3 +20,16 @@ Theme.register("soin", {
     bgS: "#ff9f30", bgSD: "#ff7f00", bgSL: "#ffbf60"
 });
 Theme.apply("soin");
+
+async function start() {
+    const isInstallationOK = await Install.check("soins")
+    if (!isInstallationOK) {
+        window.location.reload()
+    }
+
+    ReactDOM.render(
+        <Login />,
+        document.getElementById('LOGIN'));
+}
+
+start()
