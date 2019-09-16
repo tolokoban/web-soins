@@ -7,7 +7,7 @@ Statistics collector for remote hostpitals
 We use a docker image from [mettrayner](https://github.com/mattrayner/docker-lamp/edit/master/README.md).
 
 ```
-docker run -p "8888:80" -v ~/www:/app mattrayner/lamp:latest-1804
+docker run -p "8888:80" -v ~/www:/app -v ~/mysql:/var/lib/mysql mattrayner/lamp:latest-1804
 firefox localhost:8888/phpMyAdmin
 ```
 
