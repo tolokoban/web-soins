@@ -9,8 +9,13 @@ const _ = Intl.make(require("./install.yaml"))
 import "./install.view.css"
 
 interface IInstallProps {
-    prefix: string
+    prefix: string,
+    onUpdate: (state: IInstallState) => void
 }
+
+type IStateAttributes = "databaseHost" | "databaseName"
+    | "databaseLogin" | "databasePassword"
+    | "appAdminLogin" | "appAdminPassword" | "appAdminPasswordBis"
 
 export interface IInstallState {
     databaseHost: string,
@@ -19,6 +24,7 @@ export interface IInstallState {
     databasePassword: string,
     appAdminLogin: string,
     appAdminPassword: string
+    appAdminPasswordBis: string
 }
 
 export default class Install extends React.Component<IInstallProps, IInstallState> {
@@ -30,17 +36,35 @@ export default class Install extends React.Component<IInstallProps, IInstallStat
             databaseLogin: '',
             databasePassword: '',
             appAdminLogin: 'admin',
-            appAdminPassword: ''
+            appAdminPassword: '',
+            appAdminPasswordBis: ''
+        }
+    }
+
+    fire = () => {
+        this.props.onUpdate(this.state)
+    }
+
+    on(attributeName: IStateAttributes) {
+        return (value: string) => {
+            const state = { [attributeName]: value }
+            this.setState(state, this.fire)
         }
     }
 
     render() {
-        const { databaseHost } = this.state
+        const { databaseHost, databaseName, databaseLogin, databasePassword } = this.state
 
         return (<div className="Install">
             <fieldset>
                 <legend>{_('database')}</legend>
-                <Input label={_('host')} value={databaseHost}/>
+                <Input label={_('host')} value={databaseHost}
+                    onChange={this.on('databaseHost')}/>
+                <Input label={_('name')} value={databaseName}
+                    onChange={this.on('databaseName')}/>
+                <br/>
+                <Input label={_('db-usr')} value={databaseLogin}/>
+                <Input label={_('db-pwd')} value={databasePassword}/>
             </fieldset>
             <fieldset>
                 <legend>{_('siteadmin')}</legend>

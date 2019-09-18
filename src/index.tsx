@@ -22,10 +22,12 @@ Theme.register("soin", {
 Theme.apply("soin");
 
 async function start() {
+    console.log("Before install check")
     const isInstallationOK = await Install.check("soins")
     if (!isInstallationOK) {
         window.location.reload()
     }
+    console.log("After install check")
 
     ReactDOM.render(
         <Login />,
