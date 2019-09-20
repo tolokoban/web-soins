@@ -7,7 +7,7 @@ Statistics collector for remote hostpitals
 We use a docker image from [mettrayner](https://github.com/mattrayner/docker-lamp/edit/master/README.md).
 
 ```
-docker run -p "8888:80" -v ~/www:/app -v ~/mysql:/var/lib/mysql mattrayner/lamp:latest-1804
+docker run -p "8888:80" -v ~/www:/app -v ~/databases:/var/lib/mysql mattrayner/lamp:latest-1804
 firefox localhost:8888/phpmyadmin
 ```
 
@@ -83,11 +83,11 @@ The below example can be added to your `~/.bash_profile` file to add the alias c
 function launchdockerwithparams {
     APACHE_PORT=80
     MYSQL_PORT_COMMAND=""
-    
+
     if ! [[ -z "$1" ]]; then
         APACHE_PORT=$1
     fi
-    
+
     if ! [[ -z "$2" ]]; then
         MYSQL_PORT_COMMAND="-p \"$2:3306\""
     fi
