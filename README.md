@@ -7,9 +7,25 @@ Statistics collector for remote hostpitals
 We use a docker image from [mettrayner](https://github.com/mattrayner/docker-lamp/edit/master/README.md).
 
 ```
-docker run -p "8888:80" -v ~/www:/app -v ~/databases:/var/lib/mysql mattrayner/lamp:latest-1804
-firefox localhost:8888/phpmyadmin
+docker run -p "7474:80" \
+           -v ~/www:/app \
+           -v ~/databases:/var/lib/mysql \
+           mattrayner/lamp:latest-1804
+firefox localhost:7474/phpmyadmin
 ```
+
+If you get an error like this:
+```
+docker: Got permission denied while trying to connect to the Docker daemon socket...
+See 'docker run --help'.
+```
+
+You must add your user in `docker` group:
+```
+sudo usermod -a -G docker $USER
+```
+
+
 
 * Apache 2.4.29
 * MySQL 5.7.26

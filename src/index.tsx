@@ -22,19 +22,16 @@ Theme.register("soin", {
 Theme.apply("soin");
 
 async function start() {
-    try {
-        const isInstallationOK = await Install.check("soins")
-        if (!isInstallationOK) {
-            window.location.reload()
-        }
+    console.log("Before install check")
+    const isInstallationOK = await Install.check("soins")
+    if (!isInstallationOK) {
+        window.location.reload()
+    }
+    console.log("After install check")
 
-        ReactDOM.render(
-            <Login />,
-            document.getElementById('LOGIN'));
-    }
-    catch( ex ) {
-        console.error("Unable to start App!", ex)
-    }
+    ReactDOM.render(
+        <Login />,
+        document.getElementById('LOGIN'));
 }
 
 start()
