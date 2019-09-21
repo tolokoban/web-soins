@@ -65,6 +65,12 @@ export default class Touchable {
                 if (!that.enabled) return;
             },
 
+            up(evt) {
+                if (!that.removeTouchDisk) return;
+                that.removeTouchDisk();
+                delete that.removeTouchDisk;
+            },
+
             tap(evt) {
                 if (!that.enabled) return;
                 that.fire();

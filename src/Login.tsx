@@ -18,45 +18,47 @@ const AsyncStart = import("./main");
 interface ILoginState {
     lang: string;
     email: string;
+    password: string;
 }
 
 export default class App extends React.Component<{}, ILoginState> {
-    private username: string;
-    private password: string;
-
     constructor(props: {}) {
         super(props);
         this.state = Storage.local.get(
-            "web-soins/login", { lang: Intl.lang, username: "eric" });
+            "web-soins/login", { lang: Intl.lang, email: "eric", password: "" });
+    }
 
-        this.handleLogin = this.handleLogin.bind(this);
-        this.handleUsernameChange = this.handleUsernameChange.bind(this);
-        this.handlePasswordChange = this.handlePasswordChange.bind(this);
-        this.handleLanguageChange = this.handleLanguageChange.bind(this);
-        this.username = "";
-        this.password = "";
+    componentDidMount() {
         if (WebService.isLocalhost()) {
-            setTimeout(() => {
-                this.username = "eric";
-                this.password = "cires";
-                this.handleLogin();
-            }, 100);
+            this.setState({
+                email: "eric",
+                password: "eric"
+            }, this.handleLogin)
         }
     }
 
     componentDidUpdate() {
-        Storage.local.set("web-soins/login", this.state);
+        Storage.local.set("web-soins/login", { lang: this.state.lang, email: this.state.email });
     }
 
-    handleLanguageChange(value: string) {
+    handleLanguageChange = (value: string) => {
         Intl.lang = value;
         this.setState({ lang: value });
     }
 
-    handleLogin() {
-        WebService.login(this.username, this.password)
+    handleLogin = () => {
+        const { email, password } = this.state
+        WebService.login(email, password)
             .then((user: IUser) => this.start(user))
             .catch(err => this.badLogin(err));
+    }
+
+    handleUsernameChange = (email: string) => {
+        this.setState({ email })
+    }
+
+    handlePasswordChange = (password: string) => {
+        this.setState({ password })
     }
 
     async start(user: IUser) {
@@ -80,14 +82,6 @@ export default class App extends React.Component<{}, ILoginState> {
         Dialog.alert(_('bad-login', this.username));
     }
 
-    handleUsernameChange(value: string) {
-        this.username = value;
-    }
-
-    handlePasswordChange(value: string) {
-        this.password = value;
-    }
-
     render() {
         return (
             <div className="app-login thm-bg0 thm-ele-dialog" >
@@ -102,12 +96,13 @@ export default class App extends React.Component<{}, ILoginState> {
                     wide={true}
                     label="Mot de passe"
                     onChange={this.handlePasswordChange}
+                    value={this.state.password}
                     size={20}
                     type="password" />
                 <Combo label="Language"
-                    value={this.state.lang}
-                    wide={true}
-                    onChange={this.handleLanguageChange}>
+                       value={this.state.lang}
+                       wide={true}
+                       onChange={this.handleLanguageChange}>
                     <div key="en" className="login-flex"><Icon content="flag-en" /> English</div>
                     <div key="fr" className="login-flex"><Icon content="flag-fr" /> French</div>
                 </Combo>

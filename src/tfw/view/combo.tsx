@@ -37,7 +37,7 @@ export default class Combo extends React.Component<IComboProps, {}> {
         this.touchable = new Touchable({ onTap: this.handleClick });
     }
 
-    handleClick(event: React.MouseEvent) {
+    handleClick() {
         this.expand();
     }
 

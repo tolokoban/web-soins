@@ -24,6 +24,7 @@
     "deploy": "gh-pages -b gh-pages -d build",
     "php": "cp -rvf backend/tfw/* ~/www/web-soins/tfw",
     "tfw": "cp -rvf src/tfw/* ../tfw-react-components/src/tfw",
+    "lamp": "docker run -p '7474:80' -v ~/www:/app -v ~/databases:/var/lib/mysql mattrayner/lamp:latest-1804",
     "test": "react-app-rewired test",
     "test:dbg": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "eject": "react-scripts eject"

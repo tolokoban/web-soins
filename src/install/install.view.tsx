@@ -1,5 +1,4 @@
 import React from "react"
-import Button from '../tfw/view/button'
 import Input from '../tfw/view/input'
 import Intl from '../tfw/intl'
 
@@ -13,9 +12,10 @@ interface IInstallProps {
     onUpdate: (state: IInstallState) => void
 }
 
-type IStateAttributes = "databaseHost" | "databaseName"
-    | "databaseLogin" | "databasePassword"
-    | "appAdminLogin" | "appAdminPassword" | "appAdminPasswordBis"
+type IStateAttributes =
+    "databaseHost" | "databaseName" |
+    "databaseLogin" | "databasePassword" |
+    "appAdminLogin" | "appAdminPassword" | "appAdminPasswordBis"
 
 export interface IInstallState {
     databaseHost: string,
@@ -54,22 +54,42 @@ export default class Install extends React.Component<IInstallProps, IInstallStat
 
     render() {
         const { databaseHost, databaseName, databaseLogin, databasePassword } = this.state
+        const { appAdminLogin, appAdminPassword, appAdminPasswordBis } = this.state
 
         return (<div className="Install">
             <fieldset>
                 <legend>{_('database')}</legend>
-                <Input label={_('host')} value={databaseHost}
-                    onChange={this.on('databaseHost')}/>
-                <Input label={_('name')} value={databaseName}
-                    onChange={this.on('databaseName')}/>
-                <br/>
-                <Input label={_('db-usr')} value={databaseLogin}/>
-                <Input label={_('db-pwd')} value={databasePassword}/>
+                <div className='flex'>
+                    <Input label={_('host')} value={databaseHost}
+                        wide={true}
+                        onChange={this.on('databaseHost')}/>
+                    <Input label={_('name')} value={databaseName}
+                        wide={true}
+                        onChange={this.on('databaseName')}/>
+                </div>
+                <div className='flex'>
+                    <Input label={_('db-usr')} value={databaseLogin}
+                        wide={true}
+                        onChange={this.on('databaseLogin')}/>
+                    <Input label={_('db-pwd')} value={databasePassword}
+                        wide={true}
+                        onChange={this.on('databasePassword')}/>
+                </div>
             </fieldset>
             <fieldset>
                 <legend>{_('siteadmin')}</legend>
+                <Input label={_('usr')} value={appAdminLogin}
+                    wide={true}
+                    onChange={this.on('appAdminLogin')}/>
+                <div className='flex'>
+                    <Input label={_('pwd')} value={appAdminPassword}
+                        wide={true} type='password'
+                        onChange={this.on('appAdminPassword')}/>
+                    <Input label={_('pwd')} value={appAdminPasswordBis}
+                        wide={true} type='password'
+                        onChange={this.on('appAdminPasswordBis')}/>
+                </div>
             </fieldset>
-            <hr/>
         </div>)
     }
 }

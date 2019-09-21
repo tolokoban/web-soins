@@ -21,17 +21,23 @@ Theme.register("soin", {
 });
 Theme.apply("soin");
 
-async function start() {
-    console.log("Before install check")
-    const isInstallationOK = await Install.check("soins")
-    if (!isInstallationOK) {
-        window.location.reload()
-    }
-    console.log("After install check")
 
-    ReactDOM.render(
-        <Login />,
-        document.getElementById('LOGIN'));
+async function start() {
+    try {
+        const isInstallationOK = await Install.check("soins")
+        console.info("isInstallationOK=", isInstallationOK);
+        if (!isInstallationOK) {
+            window.location.reload()
+        }
+
+        console.log("Render <Login/>...")
+        ReactDOM.render(
+            <Login />,
+            document.getElementById('LOGIN'));
+    }
+    catch( ex ) {
+        console.error(ex)
+    }
 }
 
 start()

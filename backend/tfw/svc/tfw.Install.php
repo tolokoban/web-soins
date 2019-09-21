@@ -11,7 +11,7 @@ $ROLE = '';  // Everyone can access this service.
    Second step:
    ------------
    Call tfw.Install({
-   token: "HCHERBBHEC",
+   prefix: "cameroun_",
    host: "127.0.0.1",
    name: "database-name",
    dbUsr: "root",
@@ -20,7 +20,8 @@ $ROLE = '';  // Everyone can access this service.
    pwd: "user-password"
    })
    The prefix is own in the session, that's why we don't provide it again.
-   Tee file "pri/install.sql" will be applyed to the database. This file is a MySQL file with these placeholders: "${PREFIX}"
+   The file "pri/install.sql" will be applyed to the database.
+   This file is a MySQL file with these placeholders: "${PREFIX}"
 
    Here are the possible results :
  *  0: Installation done successfully.
@@ -57,8 +58,10 @@ function execService($args) {
     $dbPwd = $args['dbPwd'];
 
     try {
+        error_log("[tfw.Intall] Trying to connect to $name@$host...");
         $cnx = new PDO("mysql:host=$host;dbname=$name", $dbUsr, $dbPwd);
         $cnx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        error_log("[tfw.Intall] ...Ok!");
     }
     catch (Exception $e) {
         $errCode = $e->getCode();
@@ -90,7 +93,9 @@ function execService($args) {
     $sql = str_replace( '${PASSWORD}', $pwd, $sql );
 
     try {
+        error_log("[tfw.Intall] Executing 'pri/install.sql'...");
         $cnx->exec( $sql );
+        error_log("[tfw.Intall] ...Ok!");
     }
     catch( Exception $e ) {
         $errCode = $e->getCode();

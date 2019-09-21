@@ -1,5 +1,5 @@
 # web-soins
-Statistics collector for remote hostpitals
+Statistics collector for remote hospitals
 [See it in action](https://tolokoban.github.io/web-soins/).
 
 # Local web server with Docker image
@@ -12,6 +12,13 @@ docker run -p "7474:80" \
            -v ~/databases:/var/lib/mysql \
            mattrayner/lamp:latest-1804
 firefox localhost:7474/phpmyadmin
+```
+
+To read the Apache logs:
+```
+docker ps
+docker exec -it bb6112a30d41 bash
+tail -f var/log/apache2/error.log
 ```
 
 If you get an error like this:

@@ -7,7 +7,7 @@
  * )
  *
  * Deals with three basic events : DOWN, UP and MOVE.
- * If the device has several input mouses, we will return
+ * If the device has several input touches, we will return
  * only one event.
  *
  * A TBasicHandler is a synthetic event object:
