@@ -9,9 +9,11 @@ en:
     create-stat-patient: Patients Statistics
     date-min: Start Date
     date-max: End Date
+    genereting-report: Generating report...
     logout: Logout
     patients: Patients
     patients-count: "Patients:"
+    report: "To add an annual report, clic on the left pane's button bearing the following icon:"
     stat-type: "Statistic Type"
     struct: "Structure:"
     welcome: "To add new statistics, clic on the left pane's button bearing the following icon:"
@@ -26,9 +28,11 @@ fr:
     create-stat-patient: Stats patients
     date-min: Date de début
     date-max: Date de fin
+    genereting-report: Rapport en cours de réalisation...
     logout: Déconnexion
     patients: Patients
     patients-count: "Patients :"
+    report: "Pour éditer un rapport annuel, cliquez sur le bouton avec l'icône suivante dans le panneau de gauche :"
     stat-type: "Type de statistique"
     struct: "Structure :"
     welcome: "Pour ajouter des statistiques, cliquez sur le bouton avec l'icône suivante dans le panneau de gauche : "

@@ -57,6 +57,8 @@ function mapStateToProps(state: IState) {
             >
                 <div>{_("welcome")}</div>
                 <Icon content="stat" />
+                <div>{_("report")}</div>
+                <Icon content="report" />
             </Flex>
         )
     }

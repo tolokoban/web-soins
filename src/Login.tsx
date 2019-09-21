@@ -29,11 +29,14 @@ export default class App extends React.Component<{}, ILoginState> {
     }
 
     componentDidMount() {
+        const password = Storage.session.get("web-soins/password", "")
+        if (!password || password.length ===0) return
+
         if (WebService.isLocalhost()) {
-            this.setState({
-                email: "eric",
-                password: "eric"
-            }, this.handleLogin)
+            this.setState(
+                { email: "eric", password },
+                this.handleLogin
+            )
         }
     }
 
@@ -62,6 +65,8 @@ export default class App extends React.Component<{}, ILoginState> {
     }
 
     async start(user: IUser) {
+        Storage.session.set("web-soins/password", this.state.password)
+        
         const elem = document.getElementById("LOGIN");
         if (elem) elem.classList.add("hide");
         const applicationStarter = await AsyncStart;
@@ -77,9 +82,8 @@ export default class App extends React.Component<{}, ILoginState> {
     }
 
     badLogin(err: {}) {
-        const elem = document.getElementById("LOGIN");
         console.log("err:", err);
-        Dialog.alert(_('bad-login', this.username));
+        Dialog.alert(_('bad-login', this.state.email));
     }
 
     render() {
@@ -95,7 +99,9 @@ export default class App extends React.Component<{}, ILoginState> {
                 <Input
                     wide={true}
                     label="Mot de passe"
+                    focus={true}
                     onChange={this.handlePasswordChange}
+                    onEnterPressed={this.handleLogin}
                     value={this.state.password}
                     size={20}
                     type="password" />

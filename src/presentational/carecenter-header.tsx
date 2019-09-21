@@ -1,9 +1,10 @@
 import * as React from "react"
 import { ICarecenter, IStructure } from "../types"
 import Button from "../tfw/view/button"
+import Report from '../report'
+import _ from "../intl";
 
 import "./carecenter-header.css"
-import _ from "../intl";
 
 
 interface ICarecenterHeaderProps {
@@ -19,16 +20,20 @@ export default class CarecenterHeader extends React.Component<ICarecenterHeaderP
         this.handleStatClick = this.handleStatClick.bind(this);
     }
 
-    handleStatClick() {
+    handleStatClick = () => {
         const handler = this.props.onStatClick;
         if (typeof handler !== 'function') return;
         handler(this.props.carecenter);
     }
 
-    handleStructClick() {
+    handleStructClick = () => {
         const handler = this.props.onStructClick;
         if (typeof handler !== 'function') return;
         handler(this.props.carecenter);
+    }
+
+    handleReportClick = () => {
+        Report.generate()
     }
 
     render() {
@@ -57,6 +62,7 @@ export default class CarecenterHeader extends React.Component<ICarecenterHeaderP
             </div>
             <div className="buttons">
                 <Button icon="stat" small={true} onClick={this.handleStatClick} /><br />
+                <Button icon="report" small={true} onClick={this.handleReportClick} /><br />
                 {/*<Button icon="sitemap" small={true}
                     enabled={structure ? true : false}
                     onClick={this.handleStructClick} />*/}
