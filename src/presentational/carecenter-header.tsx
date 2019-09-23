@@ -33,7 +33,8 @@ export default class CarecenterHeader extends React.Component<ICarecenterHeaderP
     }
 
     handleReportClick = () => {
-        Report.generate()
+        const { carecenter } = this.props
+        Report.generate({ carecenter: carecenter.id })
     }
 
     render() {
