@@ -7,7 +7,8 @@ Statistics collector for remote hospitals
 We use a docker image from [mettrayner](https://github.com/mattrayner/docker-lamp/edit/master/README.md).
 
 ```
-docker run -p "7474:80" \
+docker run --name LAMP
+           -p "7474:80" \
            -v ~/www:/app \
            -v ~/databases:/var/lib/mysql \
            mattrayner/lamp:latest-1804
@@ -17,7 +18,7 @@ firefox localhost:7474/phpmyadmin
 To read the Apache logs:
 ```
 docker ps
-docker exec -it bb6112a30d41 bash
+docker exec -it LAMP bash
 tail -f var/log/apache2/error.log
 ```
 
