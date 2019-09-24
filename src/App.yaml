@@ -9,7 +9,7 @@ en:
     create-stat-patient: Patients Statistics
     date-min: Start Date
     date-max: End Date
-    genereting-report: Generating report...
+    generating-report: Generating report...
     logout: Logout
     patients: Patients
     patients-count: "Patients:"
@@ -28,7 +28,7 @@ fr:
     create-stat-patient: Stats patients
     date-min: Date de début
     date-max: Date de fin
-    genereting-report: Rapport en cours de réalisation...
+    generating-report: Rapport en cours de réalisation...
     logout: Déconnexion
     patients: Patients
     patients-count: "Patients :"

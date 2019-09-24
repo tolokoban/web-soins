@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<office:document xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ooo="http://openoffice.org/2004/office" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.spreadsheet">
- <office:meta><meta:editing-cycles>27</meta:editing-cycles><meta:print-date>2018-11-08T11:56:22</meta:print-date><meta:creation-date>2017-06-09T18:11:41</meta:creation-date><dc:date>2019-09-24T17:38:16.555263745</dc:date><dc:language>fr-FR</dc:language><meta:editing-duration>PT7H25M4S</meta:editing-duration><meta:generator>LibreOffice/6.3.1.2$Linux_X86_64 LibreOffice_project/522b3d05dbc14df140b4b4e8cb5fa288e6bf2465</meta:generator><meta:document-statistic meta:table-count="2" meta:cell-count="281" meta:object-count="0"/><meta:user-defined meta:name="AppVersion">14.0300</meta:user-defined><meta:user-defined meta:name="DocSecurity" meta:value-type="float">0</meta:user-defined><meta:user-defined meta:name="HyperlinksChanged" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="LinksUpToDate" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="ScaleCrop" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="ShareDoc" meta:value-type="boolean">false</meta:user-defined></office:meta>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.spreadsheet">
+ <office:meta><meta:editing-cycles>49</meta:editing-cycles><meta:print-date>2018-11-08T11:56:22</meta:print-date><meta:creation-date>2017-06-09T18:11:41</meta:creation-date><dc:date>2019-09-24T22:48:03.924936271</dc:date><dc:language>fr-FR</dc:language><meta:editing-duration>PT10H52M18S</meta:editing-duration><meta:generator>LibreOffice/6.0.7.3$Linux_X86_64 LibreOffice_project/00m0$Build-3</meta:generator><meta:document-statistic meta:table-count="2" meta:cell-count="395" meta:object-count="0"/><meta:user-defined meta:name="AppVersion">14.0300</meta:user-defined><meta:user-defined meta:name="DocSecurity" meta:value-type="float">0</meta:user-defined><meta:user-defined meta:name="HyperlinksChanged" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="LinksUpToDate" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="ScaleCrop" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="ShareDoc" meta:value-type="boolean">false</meta:user-defined></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="VisibleAreaTop" config:type="int">0</config:config-item>
    <config:config-item config:name="VisibleAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="VisibleAreaWidth" config:type="int">33833</config:config-item>
-   <config:config-item config:name="VisibleAreaHeight" config:type="int">78076</config:config-item>
+   <config:config-item config:name="VisibleAreaWidth" config:type="int">30982</config:config-item>
+   <config:config-item config:name="VisibleAreaHeight" config:type="int">78105</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view1</config:config-item>
      <config:config-item-map-named config:name="Tables">
       <config:config-item-map-entry config:name="item du rapport">
-       <config:config-item config:name="CursorPositionX" config:type="int">4</config:config-item>
-       <config:config-item config:name="CursorPositionY" config:type="int">39</config:config-item>
+       <config:config-item config:name="CursorPositionX" config:type="int">1</config:config-item>
+       <config:config-item config:name="CursorPositionY" config:type="int">68</config:config-item>
        <config:config-item config:name="HorizontalSplitMode" config:type="short">0</config:config-item>
        <config:config-item config:name="VerticalSplitMode" config:type="short">0</config:config-item>
        <config:config-item config:name="HorizontalSplitPosition" config:type="int">0</config:config-item>
@@ -23,7 +23,7 @@
        <config:config-item config:name="PositionLeft" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionRight" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionTop" config:type="int">73</config:config-item>
-       <config:config-item config:name="PositionBottom" config:type="int">18</config:config-item>
+       <config:config-item config:name="PositionBottom" config:type="int">54</config:config-item>
        <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
        <config:config-item config:name="ZoomValue" config:type="int">150</config:config-item>
        <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
@@ -50,7 +50,7 @@
       </config:config-item-map-entry>
      </config:config-item-map-named>
      <config:config-item config:name="ActiveTable" config:type="string">item du rapport</config:config-item>
-     <config:config-item config:name="HorizontalScrollbarWidth" config:type="int">1831</config:config-item>
+     <config:config-item config:name="HorizontalScrollbarWidth" config:type="int">1823</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ZoomValue" config:type="int">150</config:config-item>
      <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
@@ -58,7 +58,7 @@
      <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
      <config:config-item config:name="ShowNotes" config:type="boolean">true</config:config-item>
      <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
-     <config:config-item config:name="GridColor" config:type="int">12632256</config:config-item>
+     <config:config-item config:name="GridColor" config:type="long">12632256</config:config-item>
      <config:config-item config:name="ShowPageBreaks" config:type="boolean">true</config:config-item>
      <config:config-item config:name="HasColumnRowHeaders" config:type="boolean">true</config:config-item>
      <config:config-item config:name="HasSheetTabs" config:type="boolean">true</config:config-item>
@@ -76,28 +76,14 @@
    </config:config-item-map-indexed>
   </config:config-item-set>
   <config:config-item-set config:name="ooo:configuration-settings">
-   <config:config-item config:name="IsRasterAxisSynchronized" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="IsSnapToRaster" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="RasterResolutionX" config:type="int">1270</config:config-item>
    <config:config-item config:name="SyntaxStringRef" config:type="short">7</config:config-item>
-   <config:config-item config:name="RasterIsVisible" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="RasterSubdivisionY" config:type="int">1</config:config-item>
-   <config:config-item config:name="HasSheetTabs" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="ShowNotes" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="IsDocumentShared" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="RasterSubdivisionX" config:type="int">1</config:config-item>
-   <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="SaveThumbnail" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="ShowPageBreaks" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="GridColor" config:type="int">12632256</config:config-item>
-   <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="EmbedLatinScriptFonts" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="HasColumnRowHeaders" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="RasterResolutionY" config:type="int">1270</config:config-item>
-   <config:config-item config:name="LinkUpdateMode" config:type="short">3</config:config-item>
-   <config:config-item config:name="AutoCalculate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
+   <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrinterSetup" config:type="base64Binary">nQH+/0Jyb3RoZXJfSExfMzE1MENEV19zZXJpZXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ1VQUzpCcm90aGVyX0hMXzMxNTBDRFdfc2VyaWVzAAAWAAMAvgAAAAAAAAAEAAhSAAAEdAAASm9iRGF0YSAxCnByaW50ZXI9QnJvdGhlcl9ITF8zMTUwQ0RXX3NlcmllcwpvcmllbnRhdGlvbj1Qb3J0cmFpdApjb3BpZXM9MQpjb2xsYXRlPWZhbHNlCm1hcmdpbmRhanVzdG1lbnQ9MCwwLDAsMApjb2xvcmRlcHRoPTI0CnBzbGV2ZWw9MApwZGZkZXZpY2U9MQpjb2xvcmRldmljZT0wClBQRENvbnRleERhdGEKUGFnZVNpemU6QTQAABIAQ09NUEFUX0RVUExFWF9NT0RFDwBEdXBsZXhNb2RlOjpPZmY=</config:config-item>
+   <config:config-item config:name="PrinterName" config:type="string">Brother_HL_3150CDW_series</config:config-item>
    <config:config-item-map-indexed config:name="ForbiddenCharacters">
     <config:config-item-map-entry>
      <config:config-item config:name="Language" config:type="string">en</config:config-item>
@@ -107,19 +93,27 @@
      <config:config-item config:name="EndLine" config:type="string"/>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
-   <config:config-item config:name="PrinterName" config:type="string">PDF</config:config-item>
-   <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrinterSetup" config:type="base64Binary">jwH+/1BERgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ1VQUzpQREYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAMArAAAAAAAAAAIAFZUAAAkbQAASm9iRGF0YSAxCnByaW50ZXI9UERGCm9yaWVudGF0aW9uPVBvcnRyYWl0CmNvcGllcz0xCmNvbGxhdGU9ZmFsc2UKbWFyZ2luZGFqdXN0bWVudD0wLDAsMCwwCmNvbG9yZGVwdGg9MjQKcHNsZXZlbD0wCnBkZmRldmljZT0xCmNvbG9yZGV2aWNlPTAKUFBEQ29udGV4RGF0YQpQYWdlU2l6ZTpMZXR0ZXIAABIAQ09NUEFUX0RVUExFWF9NT0RFEwBEdXBsZXhNb2RlOjpVbmtub3du</config:config-item>
-   <config:config-item config:name="EmbedOnlyUsedFonts" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="EmbedComplexScriptFonts" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
-   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="EmbedAsianScriptFonts" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AutoCalculate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="LinkUpdateMode" config:type="short">3</config:config-item>
+   <config:config-item config:name="HasColumnRowHeaders" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="GridColor" config:type="long">12632256</config:config-item>
+   <config:config-item config:name="ShowPageBreaks" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsOutlineSymbolsSet" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="IsDocumentShared" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ShowNotes" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="HasSheetTabs" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="RasterSubdivisionY" config:type="int">1</config:config-item>
+   <config:config-item config:name="RasterIsVisible" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RasterResolutionX" config:type="int">1270</config:config-item>
+   <config:config-item config:name="RasterResolutionY" config:type="int">1270</config:config-item>
+   <config:config-item config:name="IsSnapToRaster" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RasterSubdivisionX" config:type="int">1</config:config-item>
+   <config:config-item config:name="IsRasterAxisSynchronized" config:type="boolean">true</config:config-item>
   </config:config-item-set>
  </office:settings>
  <office:scripts>
@@ -134,7 +128,6 @@
   <style:font-face style:name="Arial1" svg:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable"/>
   <style:font-face style:name="Liberation Sans" svg:font-family="&apos;Liberation Sans&apos;" style:font-family-generic="swiss" style:font-pitch="variable"/>
   <style:font-face style:name="DejaVu Sans" svg:font-family="&apos;DejaVu Sans&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
-  <style:font-face style:name="FreeSans" svg:font-family="FreeSans" style:font-family-generic="system" style:font-pitch="variable"/>
   <style:font-face style:name="Noto Sans CJK SC" svg:font-family="&apos;Noto Sans CJK SC&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
  </office:font-face-decls>
  <office:styles>
@@ -468,91 +461,66 @@
   </style:style>
  </office:styles>
  <office:automatic-styles>
-  <style:style style:name="co6" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="173.14pt"/>
+  <style:style style:name="co1" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="241.85pt"/>
   </style:style>
-  <style:style style:name="co7" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="81.44pt"/>
-  </style:style>
-  <style:style style:name="co8" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="82.4pt"/>
-  </style:style>
-  <style:style style:name="co9" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="75.91pt"/>
-  </style:style>
-  <style:style style:name="co10" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="80.56pt"/>
-  </style:style>
-  <style:style style:name="co11" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="58.34pt"/>
-  </style:style>
-  <style:style style:name="co12" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="322.64pt"/>
-  </style:style>
-  <style:style style:name="co13" style:family="table-column">
+  <style:style style:name="co2" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="142.5pt"/>
   </style:style>
-  <style:style style:name="co14" style:family="table-column">
+  <style:style style:name="co3" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="153.35pt"/>
   </style:style>
-  <style:style style:name="co15" style:family="table-column">
+  <style:style style:name="co4" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="55.56pt"/>
   </style:style>
-  <style:style style:name="co16" style:family="table-column">
+  <style:style style:name="co5" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="49.04pt"/>
   </style:style>
+  <style:style style:name="co6" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="64.01pt"/>
+  </style:style>
+  <style:style style:name="co7" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="173.14pt"/>
+  </style:style>
+  <style:style style:name="co8" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="81.44pt"/>
+  </style:style>
+  <style:style style:name="co9" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="82.4pt"/>
+  </style:style>
+  <style:style style:name="co10" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="75.91pt"/>
+  </style:style>
+  <style:style style:name="co11" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="80.56pt"/>
+  </style:style>
+  <style:style style:name="co12" style:family="table-column">
+   <style:table-column-properties fo:break-before="auto" style:column-width="58.34pt"/>
+  </style:style>
+  <style:style style:name="ro1" style:family="table-row">
+   <style:table-row-properties style:row-height="12.81pt" fo:break-before="auto" style:use-optimal-row-height="true"/>
+  </style:style>
   <style:style style:name="ro2" style:family="table-row">
-   <style:table-row-properties style:row-height="15.99pt" fo:break-before="auto" style:use-optimal-row-height="false"/>
+   <style:table-row-properties style:row-height="13.01pt" fo:break-before="auto" style:use-optimal-row-height="true"/>
   </style:style>
   <style:style style:name="ro3" style:family="table-row">
-   <style:table-row-properties style:row-height="15pt" fo:break-before="auto" style:use-optimal-row-height="false"/>
+   <style:table-row-properties style:row-height="15.99pt" fo:break-before="auto" style:use-optimal-row-height="false"/>
   </style:style>
   <style:style style:name="ro4" style:family="table-row">
-   <style:table-row-properties style:row-height="12.81pt" fo:break-before="auto" style:use-optimal-row-height="true"/>
+   <style:table-row-properties style:row-height="15pt" fo:break-before="auto" style:use-optimal-row-height="false"/>
   </style:style>
   <style:style style:name="ro5" style:family="table-row">
    <style:table-row-properties style:row-height="17.01pt" fo:break-before="auto" style:use-optimal-row-height="false"/>
   </style:style>
+  <style:style style:name="ta1" style:family="table" style:master-page-name="PageStyle_5f_item_20_du_20_rapport">
+   <style:table-properties table:display="true" style:writing-mode="lr-tb"/>
+  </style:style>
   <style:style style:name="ta2" style:family="table" style:master-page-name="PageStyle_5f_variables_20_de_20_la_20_base_20_">
    <style:table-properties table:display="true" style:writing-mode="lr-tb"/>
   </style:style>
-  <style:style style:name="ta3" style:family="table" style:master-page-name="PageStyle_5f_item_20_du_20_rapport">
-   <style:table-properties table:display="true" style:writing-mode="lr-tb"/>
-  </style:style>
-  <number:number-style style:name="N2">
-   <number:number number:decimal-places="2" loext:min-decimal-places="2" number:min-integer-digits="1"/>
+  <number:number-style style:name="N4">
+   <number:number number:decimal-places="2" loext:min-decimal-places="2" number:min-integer-digits="1" number:grouping="true"/>
   </number:number-style>
-  <style:style style:name="ce40" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties fo:background-color="#b2b2b2" style:diagonal-bl-tr="none" style:diagonal-tl-br="none" fo:border="0.74pt solid #000000" style:rotation-align="none"/>
-   <style:text-properties fo:color="#00000a" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="bold" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-name-complex="Arial" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="ce42" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties style:diagonal-bl-tr="none" style:diagonal-tl-br="none" fo:border="0.74pt solid #000000" style:rotation-align="none"/>
-  </style:style>
-  <style:style style:name="ce45" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties fo:background-color="#ffffff" style:diagonal-bl-tr="none" style:diagonal-tl-br="none" style:text-align-source="fix" style:repeat-content="false" fo:wrap-option="no-wrap" fo:border="0.74pt solid #000000" style:direction="ltr" style:rotation-angle="0" style:rotation-align="none" style:shrink-to-fit="false" style:vertical-align="bottom" loext:vertical-justify="auto"/>
-   <style:paragraph-properties fo:text-align="start" css3t:text-justify="auto" fo:margin-left="0pt" style:writing-mode="page"/>
-   <style:text-properties style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="ce47" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties style:rotation-align="none"/>
-   <style:text-properties style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="ce50" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties style:diagonal-bl-tr="none" style:diagonal-tl-br="none" style:text-align-source="fix" style:repeat-content="false" fo:wrap-option="no-wrap" fo:border="0.74pt solid #000000" style:direction="ltr" style:rotation-angle="0" style:rotation-align="none" style:shrink-to-fit="false" style:vertical-align="bottom" loext:vertical-justify="auto"/>
-   <style:paragraph-properties fo:text-align="center" css3t:text-justify="auto" fo:margin-left="0pt" style:writing-mode="page"/>
-   <style:text-properties style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="ce53" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties fo:background-color="#b2b2b2" style:diagonal-bl-tr="none" style:diagonal-tl-br="none" style:text-align-source="fix" style:repeat-content="false" fo:wrap-option="no-wrap" fo:border="0.74pt solid #000000" style:direction="ltr" style:rotation-angle="0" style:rotation-align="none" style:shrink-to-fit="false" style:vertical-align="bottom" loext:vertical-justify="auto"/>
-   <style:paragraph-properties fo:text-align="center" css3t:text-justify="auto" fo:margin-left="0pt" style:writing-mode="page"/>
-   <style:text-properties style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="bold" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-name-complex="Arial" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="ce55" style:family="table-cell" style:parent-style-name="Default">
-   <style:table-cell-properties style:diagonal-bl-tr="none" style:diagonal-tl-br="none" style:text-align-source="fix" style:repeat-content="false" fo:wrap-option="no-wrap" fo:border="0.74pt solid #000000" style:direction="ltr" style:rotation-angle="0" style:rotation-align="none" style:shrink-to-fit="false" style:vertical-align="bottom" loext:vertical-justify="auto"/>
-   <style:paragraph-properties fo:text-align="center" css3t:text-justify="auto" fo:margin-left="0pt" style:writing-mode="page"/>
-   <style:text-properties style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="bold" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-name-complex="Arial" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="bold"/>
-  </style:style>
   <style:style style:name="ce2" style:family="table-cell" style:parent-style-name="Default">
    <style:table-cell-properties fo:background-color="#b2b2b2" style:diagonal-bl-tr="none" style:diagonal-tl-br="none" style:text-align-source="value-type" style:repeat-content="false" fo:wrap-option="wrap" fo:border="0.74pt solid #000000" style:direction="ltr" style:rotation-angle="0" style:rotation-align="none" style:shrink-to-fit="false" style:vertical-align="bottom" loext:vertical-justify="auto"/>
    <style:paragraph-properties css3t:text-justify="auto" fo:margin-left="0pt" style:writing-mode="page"/>
@@ -643,6 +611,11 @@
    <style:paragraph-properties fo:text-align="center" css3t:text-justify="auto" fo:margin-left="0pt" style:writing-mode="page"/>
    <style:text-properties style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="bold" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-name-complex="Arial" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="bold"/>
   </style:style>
+  <style:style style:name="ce44" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N4">
+   <style:table-cell-properties style:diagonal-bl-tr="none" style:diagonal-tl-br="none" style:text-align-source="fix" style:repeat-content="false" fo:wrap-option="no-wrap" fo:border="0.74pt solid #000000" style:direction="ltr" style:rotation-angle="0" style:rotation-align="none" style:shrink-to-fit="false" style:vertical-align="bottom" loext:vertical-justify="auto"/>
+   <style:paragraph-properties fo:text-align="center" css3t:text-justify="auto" fo:margin-left="0pt" style:writing-mode="page"/>
+   <style:text-properties style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
   <style:style style:name="ce22" style:family="table-cell" style:parent-style-name="Default">
    <style:table-cell-properties style:diagonal-bl-tr="none" style:diagonal-tl-br="none" style:text-align-source="fix" style:repeat-content="false" fo:background-color="transparent" fo:wrap-option="no-wrap" fo:border="0.74pt solid #000000" style:direction="ltr" style:rotation-angle="0" style:rotation-align="none" style:shrink-to-fit="false" style:vertical-align="bottom" loext:vertical-justify="auto"/>
    <style:paragraph-properties fo:text-align="center" css3t:text-justify="auto" fo:margin-left="0pt" style:writing-mode="page"/>
@@ -713,6 +686,9 @@
    </style:footer-style>
   </style:page-layout>
   <style:style style:name="T1" style:family="text">
+   <style:text-properties style:font-name="Arial" fo:font-size="10pt" fo:font-weight="normal" style:text-underline-style="none" style:text-underline-color="font-color" style:text-line-through-type="none" fo:font-style="normal" style:text-outline="false" fo:text-shadow="none" style:text-line-through-mode="continuous" fo:language="en" fo:country="US" style:language-asian="zh" style:country-asian="CN" style:language-complex="hi" style:country-complex="IN" style:font-name-asian="Noto Sans CJK SC" style:font-name-complex="Arial" style:font-size-asian="10pt" style:font-size-complex="10pt" style:font-weight-asian="normal" style:font-weight-complex="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+  </style:style>
+  <style:style style:name="T2" style:family="text">
    <style:text-properties style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:text-position="0% 100%" style:font-name="Arial1" fo:font-size="10pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:font-size-asian="10pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial1" style:font-size-complex="10pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
  </office:automatic-styles>
@@ -733,7 +709,7 @@
      <text:p><text:sheet-name>???</text:sheet-name><text:s/>(<text:title>???</text:title>)</text:p>
     </style:region-left>
     <style:region-right>
-     <text:p><text:date style:data-style-name="N2" text:date-value="2019-09-24">00/00/0000</text:date>, <text:time style:data-style-name="N2" text:time-value="15:13:07.612535407">00:00:00</text:time></text:p>
+     <text:p><text:date style:data-style-name="N2" text:date-value="2019-09-24">00/00/0000</text:date>, <text:time style:data-style-name="N2" text:time-value="19:20:41.623767491">00:00:00</text:time></text:p>
     </style:region-right>
    </style:header>
    <style:header-left style:display="false"/>
@@ -750,11 +726,11 @@
   </style:master-page>
   <style:master-page style:name="PageStyle_5f_item_20_du_20_rapport" style:display-name="PageStyle_item du rapport" style:page-layout-name="pm4">
    <style:header>
-    <text:p><text:span text:style-name="T1"><text:sheet-name>???</text:sheet-name></text:span></text:p>
+    <text:p><text:span text:style-name="T2"><text:sheet-name>???</text:sheet-name></text:span></text:p>
    </style:header>
    <style:header-left style:display="false"/>
    <style:footer>
-    <text:p><text:span text:style-name="T1">Page </text:span><text:span text:style-name="T1"><text:page-number>1</text:page-number></text:span></text:p>
+    <text:p><text:span text:style-name="T2">Page </text:span><text:span text:style-name="T2"><text:page-number>1</text:page-number></text:span></text:p>
    </style:footer>
    <style:footer-left style:display="false"/>
   </style:master-page>
@@ -764,14 +740,14 @@
    <table:calculation-settings table:case-sensitive="false" table:automatic-find-labels="false" table:use-regular-expressions="false" table:use-wildcards="true">
     <table:iteration table:maximum-difference="0.0001"/>
    </table:calculation-settings>
-   <table:table table:name="item du rapport" table:style-name="ta3">
+   <table:table table:name="item du rapport" table:style-name="ta1">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <table:table-column table:style-name="co12" table:default-cell-style-name="ce41"/>
-    <table:table-column table:style-name="co13" table:number-columns-repeated="3" table:default-cell-style-name="ce15"/>
-    <table:table-column table:style-name="co14" table:default-cell-style-name="ce15"/>
-    <table:table-column table:style-name="co15" table:default-cell-style-name="ce15"/>
-    <table:table-column table:style-name="co16" table:number-columns-repeated="58" table:default-cell-style-name="ce41"/>
-    <table:table-row table:style-name="ro4">
+    <table:table-column table:style-name="co1" table:default-cell-style-name="ce41"/>
+    <table:table-column table:style-name="co2" table:number-columns-repeated="3" table:default-cell-style-name="ce15"/>
+    <table:table-column table:style-name="co3" table:default-cell-style-name="ce15"/>
+    <table:table-column table:style-name="co4" table:default-cell-style-name="ce15"/>
+    <table:table-column table:style-name="co5" table:number-columns-repeated="58" table:default-cell-style-name="ce41"/>
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
       <text:p>Description des patientes :</text:p>
      </table:table-cell>
@@ -792,14 +768,14 @@
      </table:table-cell>
      <table:table-cell table:style-name="ce25" table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce3" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de patientes</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce17" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de patientes qui ont ouvert un dossier (nouvelles patientes)</text:p>
      </table:table-cell>
@@ -820,7 +796,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de consultation de nouveau cas</text:p>
      </table:table-cell>
@@ -830,7 +806,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>- VIH+</text:p>
      </table:table-cell>
@@ -840,7 +816,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>(nombre de consultation de cas de suivi)</text:p>
      </table:table-cell>
@@ -850,7 +826,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre total de consultation (Nouveaux cas + suivis)</text:p>
      </table:table-cell>
@@ -860,7 +836,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>- Dans la salle de gynecologie</text:p>
      </table:table-cell>
@@ -870,7 +846,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>- Strategie avancée</text:p>
      </table:table-cell>
@@ -880,14 +856,14 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce3" office:value-type="string" calcext:value-type="string">
       <text:p>Distribution des patientes en fonction du sexe</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce17" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Femmes</text:p>
      </table:table-cell>
@@ -906,7 +882,7 @@
      <table:table-cell table:style-name="ce46"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Hommes</text:p>
      </table:table-cell>
@@ -925,121 +901,112 @@
      <table:table-cell table:style-name="ce46"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce3" office:value-type="string" calcext:value-type="string">
       <text:p>Distribution des patientes en fonction de l’âge</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce17" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro2">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>0-24 ans</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
       <text:p>{{newPatients [Y,1,1] [Y,4,1] filter:[age 0 25]}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,4,1] [Y,7,1]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,4,1] [Y,7,1] filter:[age 0 25]</text:span>}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,7,1] [Y,10,1]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,7,1] [Y,10,1] filter:[age 0 25]</text:span>}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,10,1] [Y,12,32]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,10,1] [Y,12,32] filter:[age 0 25]</text:span>}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro2">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>25-50 ans</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
       <text:p>{{newPatients [Y,1,1] [Y,4,1] filter:[age 25 50]}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,4,1] [Y,7,1]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,4,1] [Y,7,1] filter:[age 25 50]</text:span>}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,7,1] [Y,10,1]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,7,1] [Y,10,1] filter:[age 25 50]</text:span>}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,10,1] [Y,12,32]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,10,1] [Y,12,32] filter:[age 25 50]</text:span>}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro2">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>51 ans et plus</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
       <text:p>{{newPatients [Y,1,1] [Y,4,1] filter:[age 50 999]}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,4,1] [Y,7,1]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,4,1] [Y,7,1] filter:[age 50 999]</text:span>}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,7,1] [Y,10,1]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,7,1] [Y,10,1] filter:[age 50 999]</text:span>}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{newPatients [Y,10,1] [Y,12,32]}}</text:p>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{newPatients [Y,10,1] [Y,12,32] filter:[age 50 999]</text:span>}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce6" office:value-type="string" calcext:value-type="string">
       <text:p>Distribution des patientes en fonction de l’origine géographique</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce19" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce7" office:value-type="string" calcext:value-type="string">
       <text:p>Akonolinga ville</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce7" office:value-type="string" calcext:value-type="string">
       <text:p>Akonolinga rurale</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce7" office:value-type="string" calcext:value-type="string">
       <text:p>Département</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce7" office:value-type="string" calcext:value-type="string">
       <text:p>Hors département</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce7"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce6" office:value-type="string" calcext:value-type="string">
       <text:p>Description des références</text:p>
      </table:table-cell>
@@ -1060,89 +1027,89 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Accueil</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>SRH</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Hôpital</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Centres de Santé</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Radio</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Agents communautaires</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Affiches/flyers</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Communiqués</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Bouche à oreille</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>UPEC</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Autres</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce7"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Description des consultations :</text:p>
      </table:table-cell>
@@ -1163,14 +1130,25 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro2">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de jours de consultations</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] group:day}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{visits [Y,4,1] [Y,7,1] group:day</text:span>}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{visits [Y,7,1] [Y,10,1] group:day</text:span>}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string"><text:p><text:span text:style-name="T1">{{visits [Y,10,1] [Y,13,1] group:day</text:span>}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B39:.E39])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de consultations totale</text:p>
      </table:table-cell>
@@ -1186,165 +1164,379 @@
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
       <text:p>{{visits [Y,10,1] [Y,13,1]}}</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46"/>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B40:.E40])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Moyenne de consultations par jour de consultation</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:formula="of:=[.B39]/[.B40]" office:value-type="string" office:string-value="" calcext:value-type="error">
+     <table:table-cell table:style-name="ce44" table:formula="of:=[.B40]/[.B39]" office:value-type="string" office:string-value="" calcext:value-type="error">
       <text:p>#VALUE!</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:formula="of:=[.C39]/[.C40]" office:value-type="string" office:string-value="" calcext:value-type="error">
+     <table:table-cell table:style-name="ce44" table:formula="of:=[.C40]/[.C39]" office:value-type="string" office:string-value="" calcext:value-type="error">
       <text:p>#VALUE!</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:formula="of:=[.D39]/[.D40]" office:value-type="string" office:string-value="" calcext:value-type="error">
+     <table:table-cell table:style-name="ce44" table:formula="of:=[.D40]/[.D39]" office:value-type="string" office:string-value="" calcext:value-type="error">
       <text:p>#VALUE!</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46"/>
-     <table:table-cell table:style-name="ce46" table:formula="of:=[.F39]/[.F40]" office:value-type="string" office:string-value="" calcext:value-type="error">
+     <table:table-cell table:style-name="ce44" table:formula="of:=[.E40]/[.E39]" office:value-type="string" office:string-value="" calcext:value-type="error">
+      <text:p>#VALUE!</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce44" table:formula="of:=[.F40]/[.F39]" office:value-type="string" office:string-value="" calcext:value-type="error">
       <text:p>#DIV/0!</text:p>
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de premières consultations</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de consultations de suivi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Motif de la consultation</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce51" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Ecoulements génitaux</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#GENITAL-LEAK}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#GENITAL-LEAK}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#GENITAL-LEAK}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#GENITAL-LEAK}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B46:.E46])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Ulcères génitales</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#GENITAL-ULCER}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#GENITAL-ULCER}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#GENITAL-ULCER}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#GENITAL-ULCER}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B47:.E47])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Douleurs pelviennes</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#PELVIC-PAIN}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#PELVIC-PAIN}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#PELVIC-PAIN}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#PELVIC-PAIN}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B48:.E48])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Dépistage cancer du col</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#CERVICAL-CANCER-SCREENING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#CERVICAL-CANCER-SCREENING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#CERVICAL-CANCER-SCREENING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#CERVICAL-CANCER-SCREENING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B49:.E49])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Planning Familial</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#FAMILY-PLANNING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#FAMILY-PLANNING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#FAMILY-PLANNING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#FAMILY-PLANNING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B50:.E50])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Troubles du cycle menstruel/métrorragies</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#CYCLE-DISORDER-OR-METRORRAGIE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#CYCLE-DISORDER-OR-METRORRAGIE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#CYCLE-DISORDER-OR-METRORRAGIE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#CYCLE-DISORDER-OR-METRORRAGIE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B51:.E51])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Désir de grossesse/infertilité</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#PREGNANCY-WISH}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#PREGNANCY-WISH}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#PREGNANCY-WISH}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#PREGNANCY-WISH}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B52:.E52])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Dépistage VIH/HepB</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#VIH-HEPB-SCREENING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#VIH-HEPB-SCREENING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#VIH-HEPB-SCREENING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#VIH-HEPB-SCREENING}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B53:.E53])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Agression sexuelle/viol</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#DIAGNOSIS-SEXUAL-ASSAULT-RAPE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#DIAGNOSIS-SEXUAL-ASSAULT-RAPE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#DIAGNOSIS-SEXUAL-ASSAULT-RAPE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#DIAGNOSIS-SEXUAL-ASSAULT-RAPE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B54:.E54])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Complications grossesse</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#PREGNANCY-COMPLICATION}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#PREGNANCY-COMPLICATION}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#PREGNANCY-COMPLICATION}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#PREGNANCY-COMPLICATION}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B55:.E55])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Problèmes mammaires</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#BREAST-PROBLEM}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#BREAST-PROBLEM}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#BREAST-PROBLEM}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#BREAST-PROBLEM}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B56:.E56])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Post partum</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#POST-PARTUM}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#POST-PARTUM}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#POST-PARTUM}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#POST-PARTUM}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B57:.E57])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Dysfonctionnement sexuel</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#SEXUAL-DYSFUNCTION}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#SEXUAL-DYSFUNCTION}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#SEXUAL-DYSFUNCTION}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#SEXUAL-DYSFUNCTION}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B58:.E58])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Traitement</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION:#TREATMENT}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,4,1] [Y,7,1] filter:{MOTIF-CONSULTATION:#TREATMENT}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,7,1] [Y,10,1] filter:{MOTIF-CONSULTATION:#TREATMENT}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,10,1] [Y,13,1] filter:{MOTIF-CONSULTATION:#TREATMENT}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B59:.E59])" office:value-type="float" office:value="0" calcext:value-type="float">
+      <text:p>0</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Autre</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" table:formula="of:=[.B40]-SUM([.B46:.B59])" office:value-type="string" office:string-value="" calcext:value-type="error">
+      <text:p>#VALUE!</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=[.C40]-SUM([.C46:.C59])" office:value-type="string" office:string-value="" calcext:value-type="error">
+      <text:p>#VALUE!</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=[.D40]-SUM([.D46:.D59])" office:value-type="string" office:string-value="" calcext:value-type="error">
+      <text:p>#VALUE!</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=[.E40]-SUM([.E46:.E59])" office:value-type="string" office:string-value="" calcext:value-type="error">
+      <text:p>#VALUE!</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:formula="of:=SUM([.B60:.E60])" office:value-type="string" office:string-value="" calcext:value-type="error">
+      <text:p>#VALUE!</text:p>
+     </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Diagnostics</text:p>
      </table:table-cell>
@@ -1365,257 +1557,353 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce9" office:value-type="string" calcext:value-type="string">
       <text:p>Pathologies Infectieuses</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Vaginite</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-VAGINITIS:1}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Cervicite</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-VERVICITE:1}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Vaginite plus cervicite</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" table:formula="of:=[.B64]+[.B65]" office:value-type="string" office:string-value="" calcext:value-type="error">
+      <text:p>#VALUE!</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Gonocoque</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{GONOCOQUE:#POSITIVE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Clamydia</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{CLAMYDIA:#POSITIVE}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Ulcères</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Herpes</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Syphilis</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Condylomes</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>PID</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>HIV </text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>HVB</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>HVC</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>HPV</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Schistosomiase génitale féminine</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Cystite</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Uretrite</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce9" office:value-type="string" calcext:value-type="string">
       <text:p>Pathologie tumoral</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Dysplasie au VIA VILI</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Cancer du sein</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce9" office:value-type="string" calcext:value-type="string">
       <text:p>Autres</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Planification familial</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Conseil planification familial</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Trouble du cycle</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Agression sexuelle</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce35" office:value-type="string" calcext:value-type="string">
       <text:p>Avortement spontané</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Avortement induit</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Fistule</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Infertilité</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Dysfonctionnement sexuel</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Infection puerperale/post partum</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Hémorragie du post partum</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Grossesse extrautérine</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Autres</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
+     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Description des activités</text:p>
      </table:table-cell>
@@ -1636,54 +1924,54 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre d’examen du col cervical VIA/VILI</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Biopsies effectuées</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Thermoablation</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Conisations</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Hyterectomie </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Autres cas reférés Warthein</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Examens d’imagerie médicale</text:p>
      </table:table-cell>
@@ -1704,33 +1992,33 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce11" office:value-type="string" calcext:value-type="string">
       <text:p>Echographie pelvienne*</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce11" office:value-type="string" calcext:value-type="string">
       <text:p>Echographie obstétricale*</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Autres</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Examens biologiques ( nombre d’examen)</text:p>
      </table:table-cell>
@@ -1751,7 +2039,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Sérologie VIH*</text:p>
      </table:table-cell>
@@ -1759,7 +2047,7 @@
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Sérologie VIH* positive</text:p>
      </table:table-cell>
@@ -1767,112 +2055,112 @@
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce11" office:value-type="string" calcext:value-type="string">
       <text:p>HBsAg</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce11" office:value-type="string" calcext:value-type="string">
       <text:p>HBsAg positif</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>VDRL</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>VDRL positif</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>TPHA</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>TPHA positif</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Test grossesse</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Test grossesse positif</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce9" office:value-type="string" calcext:value-type="string">
       <text:p>GenXpert</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>HPV</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>HPV positif</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Gonocoque</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Gonocoque positif</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Chlamydia</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Chlamydia positif</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro2">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Contraception </text:p>
      </table:table-cell>
@@ -1893,145 +2181,145 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro2">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce12" office:value-type="string" calcext:value-type="string">
       <text:p>Consultaiton avec <text:s/>conseil pour le PF</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce22" table:number-columns-repeated="5"/>
      <table:table-cell table:style-name="ce26" table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>COC nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>COC ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>PSP nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>PSP ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Injectable nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Injectable ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Implant nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Implant ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>DIU nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>DIU ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Ligature trompes</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Vasectomie</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Préservatif feminin nouveau </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Préservatif feminin ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Préservatifs masculins nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Préservatifs masculins ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Contraceptif d&apos;urgence nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Contraceptif d&apos;urgence ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Description des ressources</text:p>
      </table:table-cell>
@@ -2052,26 +2340,26 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de jours travaillés par l’infirmière</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de jours travaillés par le médecin</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Description des activité de sensibilisation</text:p>
      </table:table-cell>
@@ -2092,54 +2380,54 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Intra-hospitaliers</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>UPEC</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Centres de Santé</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Communautaire</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Radio</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Affiches et flyers distribués</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5"/>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Resultats biopsie</text:p>
      </table:table-cell>
@@ -2160,61 +2448,61 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>LSIL/CIN1</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>HSIL/CIN2/3</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Cancer microinvasif</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Cancer invasit</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Pas de dysplasie cervicale</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4" table:number-rows-repeated="2">
+    <table:table-row table:style-name="ro1" table:number-rows-repeated="2">
      <table:table-cell table:style-name="ce14"/>
      <table:table-cell table:style-name="ce24" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4" table:number-rows-repeated="1048405">
+    <table:table-row table:style-name="ro1" table:number-rows-repeated="1048405">
      <table:table-cell table:number-columns-repeated="64"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:number-columns-repeated="64"/>
     </table:table-row>
    </table:table>
    <table:table table:name="variables de la base " table:style-name="ta2">
-    <table:table-column table:style-name="co6" table:default-cell-style-name="ce38"/>
-    <table:table-column table:style-name="co7" table:default-cell-style-name="ce54"/>
+    <table:table-column table:style-name="co7" table:default-cell-style-name="ce38"/>
     <table:table-column table:style-name="co8" table:default-cell-style-name="ce54"/>
     <table:table-column table:style-name="co9" table:default-cell-style-name="ce54"/>
     <table:table-column table:style-name="co10" table:default-cell-style-name="ce54"/>
-    <table:table-column table:style-name="co11" table:number-columns-repeated="59" table:default-cell-style-name="ce41"/>
-    <table:table-row table:style-name="ro2">
+    <table:table-column table:style-name="co11" table:default-cell-style-name="ce54"/>
+    <table:table-column table:style-name="co12" table:number-columns-repeated="59" table:default-cell-style-name="ce41"/>
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Contraception prescrite</text:p>
      </table:table-cell>
@@ -2232,32 +2520,32 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="59"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Pilule combinée</text:p>
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="63"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Contraceptif injectable (Depo-provera)</text:p>
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="63"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Implant (Norplant)</text:p>
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="63"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Préservatifs masculins</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="59"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4" table:number-rows-repeated="3">
+    <table:table-row table:style-name="ro1" table:number-rows-repeated="3">
      <table:table-cell table:style-name="ce35" table:number-columns-repeated="5"/>
      <table:table-cell table:style-name="Default" table:number-columns-repeated="59"/>
     </table:table-row>
@@ -2279,7 +2567,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="59"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Test VIH effectué </text:p>
      </table:table-cell>
@@ -2291,7 +2579,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="61"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Résultat test VIH </text:p>
      </table:table-cell>
@@ -2306,7 +2594,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="60"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro4">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Test confirmation VIH</text:p>
      </table:table-cell>
@@ -2321,7 +2609,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="60"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Test Chlamydia effectué </text:p>
      </table:table-cell>
@@ -2334,7 +2622,7 @@
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="2"/>
      <table:table-cell table:number-columns-repeated="59"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro1">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Résultat Chlamydia </text:p>
      </table:table-cell>

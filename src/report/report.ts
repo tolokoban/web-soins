@@ -24,24 +24,23 @@ async function doGenerate(extraData: {}) {
     const placeholders: HTMLElement[] = []
     findPlaceholders(doc.documentElement, placeholders)
 
-    const data = await WS.exec(
-        "report",
-        placeholders
-            .map((elem: HTMLElement) => {
-                const content = (elem.textContent || '{}').trim().substr(1)
-                try {
-                    return {
-                        ...PermissiveJSON.parse(content.substr(0, content.length - 1)),
-                        ...extraData
-                    }
+    const query = placeholders
+        .map((elem: HTMLElement) => {
+            const content = (elem.textContent || '{}').trim().substr(1)
+            try {
+                return {
+                    ...PermissiveJSON.parse(content.substr(0, content.length - 1)),
+                    ...extraData
                 }
-                catch (ex) {
-                    console.error(ex)
-                    console.info("elem=", elem);
-                    return { [0]: 'echo', [1]: content }
-                }
-            })
-    )
+            }
+            catch (ex) {
+                console.error(ex)
+                console.info("elem=", elem);
+                return { [0]: 'echo', [1]: content }
+            }
+        })
+    console.info("query=", query);
+    const data = await WS.exec("report", query)
     console.info("data=", data);
 
     data.forEach((text: string, index: number) => {
@@ -52,11 +51,9 @@ async function doGenerate(extraData: {}) {
             // We must tell Calc that this content is a number.
             const parent = elem.parentElement
             if (!parent) return
-            const container = parent.parentElement
-            if (!container) return
-            container.setAttribute("office:value-type", "float")
-            container.setAttribute("calcext:value-type", "float")
-            container.setAttribute("office:value", text)
+            parent.setAttribute("office:value-type", "float")
+            parent.setAttribute("calcext:value-type", "float")
+            parent.setAttribute("office:value", text)
         }
     })
 
@@ -70,15 +67,15 @@ async function doGenerate(extraData: {}) {
 function findPlaceholders(element: HTMLElement, placeholders: HTMLElement[]) {
     switch (element.nodeType) {
         case Node.ELEMENT_NODE:
-            for (const child of element.childNodes) {
-                findPlaceholders(child, placeholders)
+            if (element.nodeName === 'text:p') {
+                const content = (element.textContent || '').trim()
+                if (content.startsWith('{{') && content.endsWith('}}')) {
+                    placeholders.push(element)
+                }
+            } else {
+                for (const child of element.childNodes) {
+                    findPlaceholders(child, placeholders)
+                }
             }
-            break
-        case Node.TEXT_NODE:
-            const content = (element.textContent || '').trim()
-            if (content.startsWith('{{') && content.endsWith('}}')) {
-                placeholders.push(element)
-            }
-            break
     }
 }

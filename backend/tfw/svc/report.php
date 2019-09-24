@@ -61,8 +61,6 @@ function newPatients($args)
             $secPerYear = 365.25 * 24 * 3600;
             $maxAge = $begin - intval($filter[1] * $secPerYear);
             $minAge = $begin - intval($filter[2] * $secPerYear);
-            error_log(json_encode($args));
-            error_log("begin = $begin, max = $maxAge, min = $minAge");
             $stm = \Data\query(
                 "SELECT A.id "
                 . "FROM `soin_admission` AS A, `soin_patientField` AS F "
@@ -186,14 +184,45 @@ function visits(&$args)
     $begin = parseDate($args[1]);
     $end = parseDate($args[2]);
 
-    error_log($carecenterId, $begin, $end);
+    $countField = 'C.id';
+    if (array_key_exists('group', $args)) {
+        $countField = 'DISTINCT(DATE_FORMAT(FROM_UNIXTIME(C.enter), "%Y%j"))';
+    }
 
     if (array_key_exists('filter', $args)) {
-        $filter = $args['filter'];
-        return -1;
+        $filter = [];
+        foreach ($args['filter'] as $key => $value) {
+            if (is_array($value)) {
+                $filter[] = "(D.key='#$key' AND D.value IN ("
+                    . implode(
+                        ',',
+                        array_map(function($item) { return json_encode($item); }, $value)
+                    )
+                    . "))";
+            } else {
+                $filter[] = "(D.key='#$key' AND D.value='$value')";
+            }
+        }
+
+        $stm = \Data\query(
+            "SELECT COUNT($countField) "
+            . "FROM `soin_consultation` As C, `soin_admission` AS A, `soin_patient` AS P, `soin_data` AS D "
+            . "WHERE C.admission = A.id "
+            . "AND D.consultation = C.id "
+            . "AND(" . implode(' OR ', $filter) . ") "
+            . "AND A.patient = P.id "
+            . "AND P.carecenter = ? "
+            . "AND A.enter >= ? "
+            . "AND A.enter < ? ",
+            $carecenterId,
+            $begin,
+            $end
+        );
+        $row = $stm->fetch();
+        return intval($row[0]);
     } else {
         $stm = \Data\query(
-            "SELECT COUNT(C.id) "
+            "SELECT COUNT($countField) "
             . "FROM `soin_consultation` As C, `soin_admission` AS A, `soin_patient` AS P "
             . "WHERE C.admission = A.id "
             . "AND A.patient = P.id "

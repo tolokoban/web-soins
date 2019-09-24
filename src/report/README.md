@@ -32,3 +32,9 @@ __Age__ is a special case because it is a range of ages taken in the specified t
 
 ### Filtered by attributes
 `{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION: #GENITAL-LEAK}}}`
+
+### Grouping by days
+`{{visits [Y,1,1] [Y,4,1] group:day}}`
+
+You can mix grouping and filtering together:
+`{{visits [Y,1,1] [Y,4,1] filter:{MOTIF-CONSULTATION: #GENITAL-LEAK} group:day}}`
