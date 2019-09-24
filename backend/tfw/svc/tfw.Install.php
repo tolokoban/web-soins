@@ -51,6 +51,7 @@ function execService($args) {
         }
     }
 
+    $createDatabase = $args['createDatabase'];
     $prefix = $args['prefix'] . '_';
     $host = $args['host'];
     $name = $args['name'];
@@ -78,33 +79,36 @@ function execService($args) {
         return $e->getMessage();
     }
 
-    $installFile = "./pri/install.sql";
-    if( !file_exists( $installFile ) ) return -5;
+    if ($createDatabase) {
+        $installFile = "./pri/install.sql";
+        if( !file_exists( $installFile ) ) return -5;
 
-    $date = date('Ymd');
-    $usr = $args['usr'];
-    $pwd = $args['pwd'];
+        $date = date('Ymd');
+        $usr = $args['usr'];
+        $pwd = $args['pwd'];
 
-    $sql = file_get_contents( $installFile );
+        $sql = file_get_contents( $installFile );
 
-    $sql = str_replace( '${PREFIX}', $prefix, $sql );
-    $sql = str_replace( '${DATE}', $date, $sql );
-    $sql = str_replace( '${USER}', $usr, $sql );
-    $sql = str_replace( '${PASSWORD}', $pwd, $sql );
+        $sql = str_replace( '${PREFIX}', $prefix, $sql );
+        $sql = str_replace( '${DATE}', $date, $sql );
+        $sql = str_replace( '${USER}', $usr, $sql );
+        $sql = str_replace( '${PASSWORD}', $pwd, $sql );
 
-    try {
-        error_log("[tfw.Intall] Executing 'pri/install.sql'...");
-        $cnx->exec( $sql );
-        error_log("[tfw.Intall] ...Ok!");
-    }
-    catch( Exception $e ) {
-        $errCode = $e->getCode();
-        switch( $errCode ) {
-            case '42S01': return -6;  // DB is not empty.
+        try {
+            error_log("[tfw.Intall] Executing 'pri/install.sql'...");
+            $cnx->exec( $sql );
+            error_log("[tfw.Intall] ...Ok!");
         }
-        error_log("Error #" . $e->getCode());
-        error_log($e->getMessage());
-        return $e->getMessage();
+        catch( Exception $e ) {
+            $errCode = $e->getCode();
+            switch( $errCode ) {
+                case '42S01': return -6;  // DB is not empty.
+                case '23000': return -6;  // DB is not empty.
+            }
+            error_log("Error #" . $e->getCode());
+            error_log($e->getMessage());
+            return $e->getMessage();
+        }
     }
 
     $dbUsr = $args['dbUsr'];

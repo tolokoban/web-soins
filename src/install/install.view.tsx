@@ -1,4 +1,5 @@
 import React from "react"
+import Checkbox from '../tfw/view/checkbox'
 import Input from '../tfw/view/input'
 import Intl from '../tfw/intl'
 
@@ -18,6 +19,7 @@ type IStateAttributes =
     "appAdminLogin" | "appAdminPassword" | "appAdminPasswordBis"
 
 export interface IInstallState {
+    createDatabase: boolean,
     databaseHost: string,
     databaseName: string,
     databaseLogin: string,
@@ -31,6 +33,7 @@ export default class Install extends React.Component<IInstallProps, IInstallStat
     constructor( props: IInstallProps ) {
         super( props );
         this.state = {
+            createDatabase: true,
             databaseHost: 'localhost',
             databaseName: '',
             databaseLogin: '',
@@ -50,6 +53,10 @@ export default class Install extends React.Component<IInstallProps, IInstallStat
             const state = { [attributeName]: value }
             this.setState(state, this.fire)
         }
+    }
+
+    handleCreateDatabaseChanged = (createDatabase: boolean) => {
+        this.setState({ createDatabase })
     }
 
     render() {
@@ -76,20 +83,26 @@ export default class Install extends React.Component<IInstallProps, IInstallStat
                         onChange={this.on('databasePassword')}/>
                 </div>
             </fieldset>
-            <fieldset>
-                <legend>{_('siteadmin')}</legend>
-                <Input label={_('usr')} value={appAdminLogin}
-                    wide={true}
-                    onChange={this.on('appAdminLogin')}/>
-                <div className='flex'>
-                    <Input label={_('pwd')} value={appAdminPassword}
-                        wide={true} type='password'
-                        onChange={this.on('appAdminPassword')}/>
-                    <Input label={_('pwd')} value={appAdminPasswordBis}
-                        wide={true} type='password'
-                        onChange={this.on('appAdminPasswordBis')}/>
-                </div>
-            </fieldset>
+            <Checkbox label="Create database structure"
+                value={this.state.createDatabase}
+                onChange={this.handleCreateDatabaseChanged}/>
+            {
+                !this.state.createDatabase ? null :
+                <fieldset>
+                    <legend>{_('siteadmin')}</legend>
+                    <Input label={_('usr')} value={appAdminLogin}
+                        wide={true}
+                        onChange={this.on('appAdminLogin')}/>
+                    <div className='flex'>
+                        <Input label={_('pwd')} value={appAdminPassword}
+                            wide={true} type='password'
+                            onChange={this.on('appAdminPassword')}/>
+                        <Input label={_('pwd')} value={appAdminPasswordBis}
+                            wide={true} type='password'
+                            onChange={this.on('appAdminPasswordBis')}/>
+                    </div>
+                </fieldset>
+            }
         </div>)
     }
 }

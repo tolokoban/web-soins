@@ -24,7 +24,7 @@ Theme.apply("soin");
 
 async function start() {
     try {
-        const isInstallationOK = await Install.check("soins")
+        const isInstallationOK = await Install.check("soin")
         console.info("isInstallationOK=", isInstallationOK);
         if (!isInstallationOK) {
             window.location.reload()

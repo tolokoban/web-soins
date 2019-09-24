@@ -29,6 +29,7 @@ async function check(tablesPrefix: string): Promise<boolean> {
         }
 
         let installState: IInstallState = {
+            createDatabase: true,
             databaseHost: 'localhost',
             databaseName: '',
             databaseLogin: '',
@@ -40,6 +41,7 @@ async function check(tablesPrefix: string): Promise<boolean> {
 
         const onClose = async () => {
             const databaseConnectionStatus = await WS.exec("tfw.Install", {
+                createDatabase: installState.createDatabase,
                 prefix: tablesPrefix,
                 host: installState.databaseHost,
                 name: installState.databaseName,
