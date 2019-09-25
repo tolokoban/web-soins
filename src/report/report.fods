@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.spreadsheet">
- <office:meta><meta:editing-cycles>49</meta:editing-cycles><meta:print-date>2018-11-08T11:56:22</meta:print-date><meta:creation-date>2017-06-09T18:11:41</meta:creation-date><dc:date>2019-09-24T22:48:03.924936271</dc:date><dc:language>fr-FR</dc:language><meta:editing-duration>PT10H52M18S</meta:editing-duration><meta:generator>LibreOffice/6.0.7.3$Linux_X86_64 LibreOffice_project/00m0$Build-3</meta:generator><meta:document-statistic meta:table-count="2" meta:cell-count="395" meta:object-count="0"/><meta:user-defined meta:name="AppVersion">14.0300</meta:user-defined><meta:user-defined meta:name="DocSecurity" meta:value-type="float">0</meta:user-defined><meta:user-defined meta:name="HyperlinksChanged" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="LinksUpToDate" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="ScaleCrop" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="ShareDoc" meta:value-type="boolean">false</meta:user-defined></office:meta>
+<office:document xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ooo="http://openoffice.org/2004/office" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.spreadsheet">
+ <office:meta><meta:editing-cycles>63</meta:editing-cycles><meta:print-date>2018-11-08T11:56:22</meta:print-date><meta:creation-date>2017-06-09T18:11:41</meta:creation-date><dc:date>2019-09-25T08:59:18.591892910</dc:date><dc:language>fr-FR</dc:language><meta:editing-duration>PT11H14M1S</meta:editing-duration><meta:generator>LibreOffice/6.3.1.2$Linux_X86_64 LibreOffice_project/522b3d05dbc14df140b4b4e8cb5fa288e6bf2465</meta:generator><meta:document-statistic meta:table-count="2" meta:cell-count="386" meta:object-count="0"/><meta:user-defined meta:name="AppVersion">14.0300</meta:user-defined><meta:user-defined meta:name="DocSecurity" meta:value-type="float">0</meta:user-defined><meta:user-defined meta:name="HyperlinksChanged" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="LinksUpToDate" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="ScaleCrop" meta:value-type="boolean">false</meta:user-defined><meta:user-defined meta:name="ShareDoc" meta:value-type="boolean">false</meta:user-defined></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="VisibleAreaTop" config:type="int">0</config:config-item>
    <config:config-item config:name="VisibleAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="VisibleAreaWidth" config:type="int">30982</config:config-item>
-   <config:config-item config:name="VisibleAreaHeight" config:type="int">78105</config:config-item>
+   <config:config-item config:name="VisibleAreaHeight" config:type="int">78076</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view1</config:config-item>
      <config:config-item-map-named config:name="Tables">
       <config:config-item-map-entry config:name="item du rapport">
        <config:config-item config:name="CursorPositionX" config:type="int">1</config:config-item>
-       <config:config-item config:name="CursorPositionY" config:type="int">68</config:config-item>
+       <config:config-item config:name="CursorPositionY" config:type="int">96</config:config-item>
        <config:config-item config:name="HorizontalSplitMode" config:type="short">0</config:config-item>
        <config:config-item config:name="VerticalSplitMode" config:type="short">0</config:config-item>
        <config:config-item config:name="HorizontalSplitPosition" config:type="int">0</config:config-item>
@@ -23,7 +23,7 @@
        <config:config-item config:name="PositionLeft" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionRight" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionTop" config:type="int">73</config:config-item>
-       <config:config-item config:name="PositionBottom" config:type="int">54</config:config-item>
+       <config:config-item config:name="PositionBottom" config:type="int">69</config:config-item>
        <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
        <config:config-item config:name="ZoomValue" config:type="int">150</config:config-item>
        <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
@@ -50,7 +50,7 @@
       </config:config-item-map-entry>
      </config:config-item-map-named>
      <config:config-item config:name="ActiveTable" config:type="string">item du rapport</config:config-item>
-     <config:config-item config:name="HorizontalScrollbarWidth" config:type="int">1823</config:config-item>
+     <config:config-item config:name="HorizontalScrollbarWidth" config:type="int">1831</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ZoomValue" config:type="int">150</config:config-item>
      <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
@@ -58,7 +58,7 @@
      <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
      <config:config-item config:name="ShowNotes" config:type="boolean">true</config:config-item>
      <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
-     <config:config-item config:name="GridColor" config:type="long">12632256</config:config-item>
+     <config:config-item config:name="GridColor" config:type="int">12632256</config:config-item>
      <config:config-item config:name="ShowPageBreaks" config:type="boolean">true</config:config-item>
      <config:config-item config:name="HasColumnRowHeaders" config:type="boolean">true</config:config-item>
      <config:config-item config:name="HasSheetTabs" config:type="boolean">true</config:config-item>
@@ -76,14 +76,28 @@
    </config:config-item-map-indexed>
   </config:config-item-set>
   <config:config-item-set config:name="ooo:configuration-settings">
+   <config:config-item config:name="IsRasterAxisSynchronized" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="IsSnapToRaster" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RasterResolutionX" config:type="int">1270</config:config-item>
    <config:config-item config:name="SyntaxStringRef" config:type="short">7</config:config-item>
-   <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
-   <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrinterSetup" config:type="base64Binary">nQH+/0Jyb3RoZXJfSExfMzE1MENEV19zZXJpZXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ1VQUzpCcm90aGVyX0hMXzMxNTBDRFdfc2VyaWVzAAAWAAMAvgAAAAAAAAAEAAhSAAAEdAAASm9iRGF0YSAxCnByaW50ZXI9QnJvdGhlcl9ITF8zMTUwQ0RXX3NlcmllcwpvcmllbnRhdGlvbj1Qb3J0cmFpdApjb3BpZXM9MQpjb2xsYXRlPWZhbHNlCm1hcmdpbmRhanVzdG1lbnQ9MCwwLDAsMApjb2xvcmRlcHRoPTI0CnBzbGV2ZWw9MApwZGZkZXZpY2U9MQpjb2xvcmRldmljZT0wClBQRENvbnRleERhdGEKUGFnZVNpemU6QTQAABIAQ09NUEFUX0RVUExFWF9NT0RFDwBEdXBsZXhNb2RlOjpPZmY=</config:config-item>
-   <config:config-item config:name="PrinterName" config:type="string">Brother_HL_3150CDW_series</config:config-item>
+   <config:config-item config:name="RasterIsVisible" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RasterSubdivisionY" config:type="int">1</config:config-item>
+   <config:config-item config:name="HasSheetTabs" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ShowNotes" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="IsDocumentShared" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RasterSubdivisionX" config:type="int">1</config:config-item>
+   <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="SaveThumbnail" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ShowPageBreaks" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="GridColor" config:type="int">12632256</config:config-item>
+   <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedLatinScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="HasColumnRowHeaders" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="RasterResolutionY" config:type="int">1270</config:config-item>
+   <config:config-item config:name="LinkUpdateMode" config:type="short">3</config:config-item>
+   <config:config-item config:name="AutoCalculate" config:type="boolean">true</config:config-item>
    <config:config-item-map-indexed config:name="ForbiddenCharacters">
     <config:config-item-map-entry>
      <config:config-item config:name="Language" config:type="string">en</config:config-item>
@@ -93,27 +107,19 @@
      <config:config-item config:name="EndLine" config:type="string"/>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
-   <config:config-item config:name="AutoCalculate" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="LinkUpdateMode" config:type="short">3</config:config-item>
-   <config:config-item config:name="HasColumnRowHeaders" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="GridColor" config:type="long">12632256</config:config-item>
-   <config:config-item config:name="ShowPageBreaks" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="IsOutlineSymbolsSet" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="IsDocumentShared" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ShowNotes" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrinterName" config:type="string">PDF</config:config-item>
+   <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrinterSetup" config:type="base64Binary">jwH+/1BERgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ1VQUzpQREYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAMArAAAAAAAAAAIAFZUAAAkbQAASm9iRGF0YSAxCnByaW50ZXI9UERGCm9yaWVudGF0aW9uPVBvcnRyYWl0CmNvcGllcz0xCmNvbGxhdGU9ZmFsc2UKbWFyZ2luZGFqdXN0bWVudD0wLDAsMCwwCmNvbG9yZGVwdGg9MjQKcHNsZXZlbD0wCnBkZmRldmljZT0xCmNvbG9yZGV2aWNlPTAKUFBEQ29udGV4RGF0YQpQYWdlU2l6ZTpMZXR0ZXIAABIAQ09NUEFUX0RVUExFWF9NT0RFEwBEdXBsZXhNb2RlOjpVbmtub3du</config:config-item>
+   <config:config-item config:name="EmbedOnlyUsedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="EmbedComplexScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
+   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedAsianScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
    <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="HasSheetTabs" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="RasterSubdivisionY" config:type="int">1</config:config-item>
-   <config:config-item config:name="RasterIsVisible" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="RasterResolutionX" config:type="int">1270</config:config-item>
-   <config:config-item config:name="RasterResolutionY" config:type="int">1270</config:config-item>
-   <config:config-item config:name="IsSnapToRaster" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="RasterSubdivisionX" config:type="int">1</config:config-item>
-   <config:config-item config:name="IsRasterAxisSynchronized" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="IsOutlineSymbolsSet" config:type="boolean">true</config:config-item>
   </config:config-item-set>
  </office:settings>
  <office:scripts>
@@ -128,6 +134,7 @@
   <style:font-face style:name="Arial1" svg:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable"/>
   <style:font-face style:name="Liberation Sans" svg:font-family="&apos;Liberation Sans&apos;" style:font-family-generic="swiss" style:font-pitch="variable"/>
   <style:font-face style:name="DejaVu Sans" svg:font-family="&apos;DejaVu Sans&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
+  <style:font-face style:name="FreeSans" svg:font-family="FreeSans" style:font-family-generic="system" style:font-pitch="variable"/>
   <style:font-face style:name="Noto Sans CJK SC" svg:font-family="&apos;Noto Sans CJK SC&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
  </office:font-face-decls>
  <office:styles>
@@ -477,39 +484,33 @@
    <style:table-column-properties fo:break-before="auto" style:column-width="49.04pt"/>
   </style:style>
   <style:style style:name="co6" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="64.01pt"/>
-  </style:style>
-  <style:style style:name="co7" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="173.14pt"/>
   </style:style>
-  <style:style style:name="co8" style:family="table-column">
+  <style:style style:name="co7" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="81.44pt"/>
   </style:style>
-  <style:style style:name="co9" style:family="table-column">
+  <style:style style:name="co8" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="82.4pt"/>
   </style:style>
-  <style:style style:name="co10" style:family="table-column">
+  <style:style style:name="co9" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="75.91pt"/>
   </style:style>
-  <style:style style:name="co11" style:family="table-column">
+  <style:style style:name="co10" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="80.56pt"/>
   </style:style>
-  <style:style style:name="co12" style:family="table-column">
+  <style:style style:name="co11" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="58.34pt"/>
   </style:style>
   <style:style style:name="ro1" style:family="table-row">
    <style:table-row-properties style:row-height="12.81pt" fo:break-before="auto" style:use-optimal-row-height="true"/>
   </style:style>
   <style:style style:name="ro2" style:family="table-row">
-   <style:table-row-properties style:row-height="13.01pt" fo:break-before="auto" style:use-optimal-row-height="true"/>
-  </style:style>
-  <style:style style:name="ro3" style:family="table-row">
    <style:table-row-properties style:row-height="15.99pt" fo:break-before="auto" style:use-optimal-row-height="false"/>
   </style:style>
-  <style:style style:name="ro4" style:family="table-row">
+  <style:style style:name="ro3" style:family="table-row">
    <style:table-row-properties style:row-height="15pt" fo:break-before="auto" style:use-optimal-row-height="false"/>
   </style:style>
-  <style:style style:name="ro5" style:family="table-row">
+  <style:style style:name="ro4" style:family="table-row">
    <style:table-row-properties style:row-height="17.01pt" fo:break-before="auto" style:use-optimal-row-height="false"/>
   </style:style>
   <style:style style:name="ta1" style:family="table" style:master-page-name="PageStyle_5f_item_20_du_20_rapport">
@@ -518,6 +519,9 @@
   <style:style style:name="ta2" style:family="table" style:master-page-name="PageStyle_5f_variables_20_de_20_la_20_base_20_">
    <style:table-properties table:display="true" style:writing-mode="lr-tb"/>
   </style:style>
+  <number:number-style style:name="N2">
+   <number:number number:decimal-places="2" loext:min-decimal-places="2" number:min-integer-digits="1"/>
+  </number:number-style>
   <number:number-style style:name="N4">
    <number:number number:decimal-places="2" loext:min-decimal-places="2" number:min-integer-digits="1" number:grouping="true"/>
   </number:number-style>
@@ -709,7 +713,7 @@
      <text:p><text:sheet-name>???</text:sheet-name><text:s/>(<text:title>???</text:title>)</text:p>
     </style:region-left>
     <style:region-right>
-     <text:p><text:date style:data-style-name="N2" text:date-value="2019-09-24">00/00/0000</text:date>, <text:time style:data-style-name="N2" text:time-value="19:20:41.623767491">00:00:00</text:time></text:p>
+     <text:p><text:date style:data-style-name="N2" text:date-value="2019-09-25">00/00/0000</text:date>, <text:time style:data-style-name="N2" text:time-value="08:37:26.575306411">00:00:00</text:time></text:p>
     </style:region-right>
    </style:header>
    <style:header-left style:display="false"/>
@@ -913,7 +917,7 @@
      <table:table-cell table:style-name="ce17" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro2">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>0-24 ans</text:p>
      </table:table-cell>
@@ -929,7 +933,7 @@
      <table:table-cell table:style-name="ce46"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro2">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>25-50 ans</text:p>
      </table:table-cell>
@@ -945,7 +949,7 @@
      <table:table-cell table:style-name="ce46"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro2">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>51 ans et plus</text:p>
      </table:table-cell>
@@ -1130,7 +1134,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro2">
+    <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Nombre de jours de consultations</text:p>
      </table:table-cell>
@@ -1619,7 +1623,7 @@
       <text:p>Ulcères</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-ULCÈRE:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1629,7 +1633,7 @@
       <text:p>Herpes</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-HERPES:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1638,10 +1642,7 @@
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Syphilis</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -1649,7 +1650,7 @@
       <text:p>Condylomes</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-CONDYLOME:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1659,7 +1660,7 @@
       <text:p>PID</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-PID:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1669,7 +1670,7 @@
       <text:p>HIV </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-VIH:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1679,7 +1680,7 @@
       <text:p>HVB</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{HBV:#POSITIVE}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1689,7 +1690,7 @@
       <text:p>HVC</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{HCV:#POSITIVE}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1699,7 +1700,7 @@
       <text:p>HPV</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{HPV-TEST:#POSITIVE}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1709,7 +1710,7 @@
       <text:p>Schistosomiase génitale féminine</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-GENITAL-SCHISTOSOMIASIS:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1718,20 +1719,14 @@
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Cystite</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Uretrite</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -1745,10 +1740,7 @@
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Dysplasie au VIA VILI</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -1756,7 +1748,7 @@
       <text:p>Cancer du sein</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-BREAST-CANCER:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1772,20 +1764,14 @@
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Planification familial</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Conseil planification familial</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -1793,7 +1779,7 @@
       <text:p>Trouble du cycle</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-CYCLE-DISORDERS:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1803,7 +1789,7 @@
       <text:p>Agression sexuelle</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-SEXUAL-ASSAULT-RAPE:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1813,7 +1799,7 @@
       <text:p>Avortement spontané</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-SPONTANEOUS-ABORTION:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1823,7 +1809,7 @@
       <text:p>Avortement induit</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-INDUCED-ABORTION:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1833,7 +1819,7 @@
       <text:p>Fistule</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-FISTULA:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1843,7 +1829,7 @@
       <text:p>Infertilité</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-INFERTILITY:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1853,7 +1839,7 @@
       <text:p>Dysfonctionnement sexuel</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{DIAGNOSIS-SEXUAL-DYSFUNCTION:1}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1863,7 +1849,7 @@
       <text:p>Infection puerperale/post partum</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{CONSULTATION-SYNTHESIS:#PUERPERAL-INFECTION}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
      <table:table-cell table:number-columns-repeated="58"/>
@@ -1872,30 +1858,21 @@
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Hémorragie du post partum</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
       <text:p>Grossesse extrautérine</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
       <text:p>Autres</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce46" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{:}}}</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce46" table:number-columns-repeated="4"/>
+     <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -2160,7 +2137,7 @@
      <table:table-cell table:style-name="ce46" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro2">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Contraception </text:p>
      </table:table-cell>
@@ -2181,105 +2158,105 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro3">
+    <table:table-row table:style-name="ro2">
      <table:table-cell table:style-name="ce12" office:value-type="string" calcext:value-type="string">
       <text:p>Consultaiton avec <text:s/>conseil pour le PF</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce22" table:number-columns-repeated="5"/>
      <table:table-cell table:style-name="ce26" table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>COC nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>COC ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>PSP nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>PSP ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Injectable nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Injectable ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Implant nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Implant ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>DIU nouveau</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>DIU ancien</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Ligature trompes</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Vasectomie</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Préservatif feminin nouveau </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce54" table:number-columns-repeated="5"/>
      <table:table-cell table:number-columns-repeated="58"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell table:style-name="ce38" office:value-type="string" calcext:value-type="string">
       <text:p>Préservatif feminin ancien</text:p>
      </table:table-cell>
@@ -2496,13 +2473,13 @@
     </table:table-row>
    </table:table>
    <table:table table:name="variables de la base " table:style-name="ta2">
-    <table:table-column table:style-name="co7" table:default-cell-style-name="ce38"/>
+    <table:table-column table:style-name="co6" table:default-cell-style-name="ce38"/>
+    <table:table-column table:style-name="co7" table:default-cell-style-name="ce54"/>
     <table:table-column table:style-name="co8" table:default-cell-style-name="ce54"/>
     <table:table-column table:style-name="co9" table:default-cell-style-name="ce54"/>
     <table:table-column table:style-name="co10" table:default-cell-style-name="ce54"/>
-    <table:table-column table:style-name="co11" table:default-cell-style-name="ce54"/>
-    <table:table-column table:style-name="co12" table:number-columns-repeated="59" table:default-cell-style-name="ce41"/>
-    <table:table-row table:style-name="ro3">
+    <table:table-column table:style-name="co11" table:number-columns-repeated="59" table:default-cell-style-name="ce41"/>
+    <table:table-row table:style-name="ro2">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>Contraception prescrite</text:p>
      </table:table-cell>
@@ -2520,19 +2497,19 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="59"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Pilule combinée</text:p>
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="63"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Contraceptif injectable (Depo-provera)</text:p>
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="63"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Implant (Norplant)</text:p>
      </table:table-cell>
@@ -2549,7 +2526,7 @@
      <table:table-cell table:style-name="ce35" table:number-columns-repeated="5"/>
      <table:table-cell table:style-name="Default" table:number-columns-repeated="59"/>
     </table:table-row>
-    <table:table-row table:style-name="ro5">
+    <table:table-row table:style-name="ro4">
      <table:table-cell table:style-name="ce33" office:value-type="string" calcext:value-type="string">
       <text:p>IST</text:p>
      </table:table-cell>
@@ -2567,7 +2544,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="59"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Test VIH effectué </text:p>
      </table:table-cell>
@@ -2579,7 +2556,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="61"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Résultat test VIH </text:p>
      </table:table-cell>
@@ -2594,7 +2571,7 @@
      </table:table-cell>
      <table:table-cell table:number-columns-repeated="60"/>
     </table:table-row>
-    <table:table-row table:style-name="ro4">
+    <table:table-row table:style-name="ro3">
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Test confirmation VIH</text:p>
      </table:table-cell>

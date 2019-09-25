@@ -38,6 +38,15 @@ export interface IPatientField {
     caption: { [key: string]: string }
 }
 
+export interface IFormField {
+    id: number,
+    caption: string,
+    tags: string[],
+    children: {
+        [key: string]: IFormField
+    }
+}
+
 export interface IStructure {
     id: number;
     organizationId: number;
@@ -46,6 +55,9 @@ export interface IStructure {
     formFields: {
         [key: string]: { caption: string; type: string }
     };
+    forms: {
+        [key: string]: IFormField
+    },
     sources: {
         exams: string;
         vaccins: string;

@@ -1,8 +1,11 @@
+import React from "react"
+
 import PermissiveJSON from '../tfw/permissive-json'
-import Placeholder from '../util/placeholder'
 import FileAPI from '../tfw/fileapi'
+import Button from '../tfw/view/button'
 import Dialog from '../tfw/factory/dialog'
 import Util from '../tfw/util'
+import ReportView from './report-view'
 import WS from '../tfw/web-service'
 import _ from "../intl";
 
@@ -13,12 +16,26 @@ export default { generate }
 
 
 async function generate(extraData: {}) {
-    Dialog.wait(_("generating-report"), doGenerate(extraData))
+    const onFilesChange = async (files: FileList) => {
+        for(const file of files) {
+            const content = await Util.loadTextFromFile(file)
+            Dialog.wait(_("generating-report"), doGenerate(content, extraData))
+        }
+        dialog.hide()
+    }
+
+    const dialog = Dialog.show({
+        content: <ReportView
+                    carecenter={extraData.carecenter}
+                    onFilesChange={onFilesChange}/>,
+        footer: <Button label="Close" icon="cancel" onClick={() => dialog.hide()}/>
+    })
+
 }
 
 
-async function doGenerate(extraData: {}) {
-    const content = await Util.loadTextFromURL(LibreOfficeCalcTemplate)
+async function doGenerate(content: string, extraData: {}) {
+    //const content = await Util.loadTextFromURL(LibreOfficeCalcTemplate)
     const domParser = new DOMParser();
     const doc = domParser.parseFromString(content, "application/xml");
     const placeholders: HTMLElement[] = []
