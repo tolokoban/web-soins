@@ -39,12 +39,23 @@ export interface IPatientField {
 }
 
 export interface IFormField {
-    id: number,
+    id: string,
+    type?: string,
     caption: string,
     tags: string[],
     children: {
         [key: string]: IFormField
     }
+}
+
+export interface IType {
+    id: string,
+    caption?: string,
+    children: ITypes
+}
+
+export interface ITypes {
+    [key: string]: IType
 }
 
 export interface IStructure {
@@ -58,6 +69,7 @@ export interface IStructure {
     forms: {
         [key: string]: IFormField
     },
+    types: ITypes,
     sources: {
         exams: string;
         vaccins: string;

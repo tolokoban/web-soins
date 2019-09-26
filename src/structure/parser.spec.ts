@@ -7,6 +7,7 @@ describe("structure/parser", () => {
             {
                 "#PATIENT-NAME": {
                     id: "#PATIENT-NAME",
+                    children: {},
                     caption: "Nom du patient"
                 }
             }
@@ -16,6 +17,7 @@ describe("structure/parser", () => {
             {
                 "#PATIENT-GENDER": {
                     id: "#PATIENT-GENDER",
+                    children: {},
                     caption: "Sexe",
                     type: "#GENDER"
                 }
@@ -26,6 +28,7 @@ describe("structure/parser", () => {
             {
                 "#PATIENT-SECONDNAME": {
                     id: "#PATIENT-SECONDNAME",
+                    children: {},
                     caption: "Pseudo",
                     tags: ["OPTIONAL"]
                 }
