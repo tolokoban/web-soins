@@ -1,0 +1,21 @@
+div.report-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.report-icons-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.report-icons-container > div > *:first-child {
+    border-radius: 100%;
+    background: var(--thm-bg3);
+    box-shadow: 0 4px 8px rgba(0,0,0,.5);
+    margin: 1rem;
+    padding: 1rem;
+}

@@ -2,6 +2,7 @@ import React from "react"
 
 import PermissiveJSON from '../tfw/permissive-json'
 import FileAPI from '../tfw/fileapi'
+import Icon from '../tfw/view/icon'
 import Button from '../tfw/view/button'
 import Dialog from '../tfw/factory/dialog'
 import Util from '../tfw/util'
@@ -11,11 +12,30 @@ import _ from "../intl";
 
 import LibreOfficeCalcTemplate from './report.fods'
 
+import "./report.css"
 
 export default { generate }
 
 
 async function generate(extraData: {}) {
+    Dialog.alert(<div className="report-icons-container">
+        <div>
+            <Icon content="report" size={96} onClick={() => generateFromTemplate(extraData)}/>
+            <div>Rapport annuel</div>
+        </div>
+        <div>
+            <Icon content="file" size={96} onClick={() => generateFromUserProvidedFile(extraData)}/>
+            <div><i>Générique...</i></div>
+        </div>
+    </div>)
+}
+
+async function generateFromTemplate(extraData: {}) {
+    const content = await Util.loadTextFromURL(LibreOfficeCalcTemplate)
+    doGenerate(content, extraData)
+}
+
+function generateFromUserProvidedFile(extraData: {}) {
     const onFilesChange = async (files: FileList) => {
         for(const file of files) {
             const content = await Util.loadTextFromFile(file)
@@ -30,7 +50,6 @@ async function generate(extraData: {}) {
                     onFilesChange={onFilesChange}/>,
         footer: <Button label="Close" icon="cancel" onClick={() => dialog.hide()}/>
     })
-
 }
 
 
