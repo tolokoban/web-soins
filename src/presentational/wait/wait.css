@@ -1,0 +1,10 @@
+div.webSoins-Wait {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.webSoins-Wait > *:last-child {
+    margin-left: 1rem;
+}
