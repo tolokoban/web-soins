@@ -1,6 +1,7 @@
 import * as React from "react"
 import { connect } from 'react-redux'
 import CarecenterHeader from "./carecenter-header"
+import Wait from "../presentational/wait"
 import Stat from "../presentational/stat"
 import Sidemenu from "../tfw/layout/sidemenu"
 import Icon from "../tfw/view/icon"
@@ -9,6 +10,7 @@ import Button from "../tfw/view/button"
 import User from "../state/user"
 import State from "../state"
 import Hash from "../util/hash"
+
 import { IState, IDispatchFunction, IOrganization, ICarecenter } from "../types"
 import _ from "../intl";
 
@@ -34,14 +36,7 @@ function mapStateToProps(state: IState) {
         menu: (<div>
             <ul>{state.organizations.map((organization: IOrganization) => (
                 <li key={organization.id}>{organization.name}<ul>{
-                    state.carecenters.filter((carecenter: ICarecenter) =>
-                        carecenter.organizationId === organization.id)
-                        .map((carecenter: ICarecenter) => (
-                            <CarecenterHeader
-                                key={carecenter.id}
-                                carecenter={carecenter}
-                                structures={state.structures} />
-                        ))
+                    renderCareCenterHeader(state, organization)
                 }</ul></li>
             ))
             }</ul>
@@ -62,6 +57,19 @@ function mapStateToProps(state: IState) {
             </Flex>
         )
     }
+}
+
+function renderCareCenterHeader(state: IState, organization: IOrganization) {
+    const carecentersOfOrganization = state.carecenters.filter((carecenter: ICarecenter) =>
+        carecenter.organizationId === organization.id)
+    if (carecentersOfOrganization.length === 0) return <Wait/>
+
+    return carecentersOfOrganization.map((carecenter: ICarecenter) => (
+        <CarecenterHeader
+            key={carecenter.id}
+            carecenter={carecenter}
+            structures={state.structures} />
+    ))
 }
 
 function mapDispatchToProps(dispatch: IDispatchFunction) {

@@ -31,8 +31,11 @@ async function generate(extraData: {}) {
 }
 
 async function generateFromTemplate(extraData: {}) {
-    const content = await Util.loadTextFromURL(LibreOfficeCalcTemplate)
-    doGenerate(content, extraData)
+    const content = await Dialog.wait(
+        _('loading-report'),
+        Util.loadTextFromURL(LibreOfficeCalcTemplate)
+    )
+    Dialog.wait(_("generating-report"), doGenerate(content, extraData))
 }
 
 function generateFromUserProvidedFile(extraData: {}) {
