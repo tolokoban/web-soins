@@ -8,12 +8,12 @@ self.__precacheManifest = [
     "url": "/web-soins/static/media/josefin.7270440b.woff2"
   },
   {
-    "revision": "c34c5ecd15f65ea826c0",
-    "url": "/web-soins/static/js/runtime~main.8bd15847.js"
+    "revision": "1de396edafbcd0d2efc3",
+    "url": "/web-soins/static/js/runtime~main.ed7a8c49.js"
   },
   {
-    "revision": "eac2c479f61edeb7fe75",
-    "url": "/web-soins/static/js/main.9be60d69.chunk.js"
+    "revision": "821a4ae6861996aa27b3",
+    "url": "/web-soins/static/js/main.7690cf1b.chunk.js"
   },
   {
     "revision": "6a916074ba26c487aa7c",
@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/web-soins/static/js/3.ccb06a98.chunk.js"
   },
   {
-    "revision": "beafa122dab8d8846738",
-    "url": "/web-soins/static/js/2.b0a9a0b8.chunk.js"
+    "revision": "c1e03d10645458d5dbb2",
+    "url": "/web-soins/static/js/2.4d72bb06.chunk.js"
   },
   {
-    "revision": "eac2c479f61edeb7fe75",
+    "revision": "821a4ae6861996aa27b3",
     "url": "/web-soins/static/css/main.7e78915e.chunk.css"
   },
   {
-    "revision": "beafa122dab8d8846738",
-    "url": "/web-soins/static/css/2.bbad4c78.chunk.css"
+    "revision": "c1e03d10645458d5dbb2",
+    "url": "/web-soins/static/css/2.0eab30d5.chunk.css"
   },
   {
-    "revision": "2f75486d8052583e18007b6f8232ae41",
+    "revision": "c950f4cb71d87b08c457e1d9d99c0327",
     "url": "/web-soins/index.html"
   }
 ];
