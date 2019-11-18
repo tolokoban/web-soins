@@ -51,15 +51,15 @@ function execService( $args ) {
 }
 
 function getData($patientId) {
-    return []
+    return [];
 }
 
 function getAdmissions($patientId) {
-    return []
+    return [];
 }
 
 function getVaccins($patientId) {
-    return []
+    return [];
 }
 
 
