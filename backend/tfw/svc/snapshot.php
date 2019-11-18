@@ -73,7 +73,7 @@ function getConsultations($admissionId) {
             "enter" => intVal($consultation["enter"]),
             "exit" => intVal($consultation["exit"]),
             "data" => getData($consultationId)
-        ]
+        ];
     }
     return $consultations;
 }
@@ -97,7 +97,7 @@ function getVaccins($patientId) {
             "key" => $vaccin["key"],
             "date" => intVal($vaccin["date"]),
             "lot" => $vaccin["lot"]
-        ]
+        ];
     }
     return $vaccins;
 }
