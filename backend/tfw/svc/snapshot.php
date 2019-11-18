@@ -25,20 +25,21 @@ function execService( $args ) {
     $output["index"]["count"] = count($patientIds);
     foreach ($patientIds as $patientId) {
         $patient = \Data\Patient\get($patientId);
-        $output["index"]["records"][$patient["key"]] = [
+        $key = "" . $patient["key"];
+        $output["index"]["records"][$key] = [
             "id" => $patient["key"]
         ];
         $fieldIds = \Data\Patient\getFields($patientId);
         foreach ($fieldIds as $fieldId) {
             $field = Data\PatientField\get($fieldId);
-            $output["index"]["records"][$patient[$key]][$field["key"]] =
+            $output["index"]["records"][$key][$field["key"]] =
                 $field["value"];
         }
         $output["list"][$patient["key"]] = [
-            "id" => $patient["key"],
+            "id" => $key,
             "created" => intVal($patient["created"]),
             "edited" => intVal($patient["edited"]),
-            "data" => getData($patientId),
+            "data" => $output["index"]["records"][$key],
             "admission" => getAdmissions($patientId),
             "vaccins" => getVaccins($patientId),
             "exams" => [],
@@ -50,16 +51,55 @@ function execService( $args ) {
     return $output;
 }
 
-function getData($patientId) {
-    return [];
+function getAdmissions($patientId) {
+    $admissions = [];
+    $admissionIds = \Data\Patient\getAdmissions($patientId);
+    foreach ($admissionIds as $admissionId) {
+        $admission = \Data\Admission\get($admissionId);
+        $admissions[] = [
+            "enter" => intVal($admission["enter"]),
+            "visits" => getConsultations($admissionId)
+        ];
+    }
+    return $admissions;
 }
 
-function getAdmissions($patientId) {
-    return [];
+function getConsultations($admissionId) {
+    $consultations = [];
+    $consultationIds = \Data\Admission\getConsultations($admissionId);
+    foreach ($consultationIds as $consultationId) {
+        $consultation = \Data\Consultation\get($consultationId);
+        $consultations[] = [
+            "enter" => intVal($consultation["enter"]),
+            "exit" => intVal($consultation["exit"]),
+            "data" => getData($consultationId)
+        ]
+    }
+    return $consultations;
+}
+
+function getData($consultationId) {
+    $datas = [];
+    $dataIds = \Data\Consultation\getDatas($consultationId);
+    foreach ($dataIds as $dataId) {
+        $data = \Data\Data\get($dataId);
+        $datas[$data["key"]] = $data["value"];
+    }
+    return $datas;
 }
 
 function getVaccins($patientId) {
-    return [];
+    $vaccins = [];
+    $vaccinIds = \Data\Patient\getVaccins($patientId);
+    foreach ($vaccinIds as $vaccinId) {
+        $vaccin = \Data\Vaccin\get($vaccinId);
+        $vaccins[] = [
+            "key" => $vaccin["key"],
+            "date" => intVal($vaccin["date"]),
+            "lot" => $vaccin["lot"]
+        ]
+    }
+    return $vaccins;
 }
 
 
