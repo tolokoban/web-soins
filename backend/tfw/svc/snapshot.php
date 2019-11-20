@@ -40,7 +40,7 @@ function execService( $args ) {
             "created" => intVal($patient["created"]),
             "edited" => intVal($patient["edited"]),
             "data" => $output["index"]["records"][$key],
-            "admission" => getAdmissions($patientId),
+            "admissions" => getAdmissions($patientId),
             "vaccins" => getVaccins($patientId),
             "exams" => [],
             "picture" => null,
