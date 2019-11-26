@@ -64,9 +64,6 @@ export default class CarecenterHeader extends React.Component<ICarecenterHeaderP
             <div className="buttons">
                 <Button icon="stat" small={true} onClick={this.handleStatClick} /><br />
                 <Button icon="report" small={true} onClick={this.handleReportClick} /><br />
-                {/*<Button icon="sitemap" small={true}
-                    enabled={structure ? true : false}
-                    onClick={this.handleStructClick} />*/}
             </div>
         </div>);
     }
