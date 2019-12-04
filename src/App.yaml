@@ -9,12 +9,16 @@ en:
     create-stat-patient: Patients Statistics
     date-min: Start Date
     date-max: End Date
+    execute-query: Execute Query
+    filter: Filter
     generating-report: Generating report...
+    hint-report-templates: "Report templates are spreadsheet saved as <b>Flat XML Spreadsheet</b> with placeholders like the following ones:"
     loading: Loading in progress...
     loading-report: Loading report template...
     logout: Logout
     patients: Patients
     patients-count: "Patients:"
+    query-in-progress: Query in progress...
     report: "To add an annual report, clic on the left pane's button bearing the following icon:"
     stat-type: "Statistic Type"
     struct: "Structure:"
@@ -30,12 +34,16 @@ fr:
     create-stat-patient: Stats patients
     date-min: Date de début
     date-max: Date de fin
+    execute-query: Executer la requête
+    filter: Filtre
     generating-report: Rapport en cours de réalisation...
+    hint-report-templates: "Les modèles de rapports sont des fichier <b>Open Office Calc Flat XML Spreadsheet</b> avec des requêtes intégrées comme celles-ci:"
     loading: Chargement en cours...
     loading-report: Chargement du modèle de rapport...
     logout: Déconnexion
     patients: Patients
     patients-count: "Patients :"
+    query-in-progress: Requête en cours...
     report: "Pour éditer un rapport annuel, cliquez sur le bouton avec l'icône suivante dans le panneau de gauche :"
     stat-type: "Type de statistique"
     struct: "Structure :"

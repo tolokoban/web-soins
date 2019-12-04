@@ -1,0 +1,11 @@
+div.presentational-ConsultationQuery textarea {
+    width: 100%;
+    font-size: 90%;
+    background: #fff;
+    color: #000;
+}
+
+div.presentational-ConsultationQuery textarea.invalid {
+    background: #fee;
+    color: #800;
+}

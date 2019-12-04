@@ -98,3 +98,17 @@ export interface IState {
 }
 
 export type IDispatchFunction = (action: IAction) => void;
+
+
+export type IFilter = IFilterGroup | IFilterTest
+
+type IFilterGroup = [
+  "OR" | "AND",
+  ...IFilter[]
+]
+
+type IFilterTest = [
+  "=" | "!=",
+  string,            // Key
+  string | string[]  // Value
+]
