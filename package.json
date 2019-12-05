@@ -1,6 +1,6 @@
 {
   "name": "web-soins",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "proxy": "http://localhost:7474/web-soins",
   "homepage": "https://tolokoban.github.io/web-soins",
