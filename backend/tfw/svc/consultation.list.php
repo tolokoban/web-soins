@@ -11,21 +11,20 @@ include_once("./data.php");
  * {
  *   fields: ["#VIH", "#GEOGRAPHICAL-ORIGIN"],
  *   patients: {
- *     "7fgN": {
+ *     "7fgN": [
  *       [
- *         [
- *           4812455023,   // enter
- *           "#POSITIVE",  // "#VIH"
- *           "#CM"         // "#GEOGRAPHICAL-ORIGIN"
- *         ],
- *         ...
- *       ]
- *     },
+ *         4812455023,   // enter
+ *         "#POSITIVE",  // "#VIH"
+ *         "#CM"         // "#GEOGRAPHICAL-ORIGIN"
+ *       ],
+ *       ...
+ *     ],
  *     ...
  *   }
  * }
  */
-function execService( $args ) {
+function execService($args)
+{
     $consultationIds = $args;
 
     // Associative array used as a set for data keys.
@@ -42,29 +41,33 @@ function execService( $args ) {
         . "FROM " . \Data\Data\name() . " "
         . "WHERE consultation IN (" . implode(',', $consultationIds) . ") "
         . "ORDER BY consultation, `key`");
-    while($row = $stm->fetch()) {
+    while ($row = $stm->fetch()) {
         $id = $row['consultation'];
-        if (!is_set($consultationsFields[$id])) {
+        if (!isset($consultationsFields[$id])) {
             $consultationsFields[$id] = [];
         }
         $key = $row['key'];
         $value = $row['value'];
         $consultationsFields[$id][$key] = $value;
-        if (!is_set($fields[$key])) {
+        if (!isset($fields[$key])) {
             // Not matter what value we set: we only care about the field name.
             $fields[$key] = 0;
         }
     }
+    // Convert $fields from associative to straight array.
+    $fields = array_keys($fields);
 
     // Retrieving consultation enter date and patient key.
     $stm = \Data\query("SELECT C.`id` as `id`, C.`enter` as `enter`, P.`key` as `key` "
         . "FROM " . \Data\Consultation\name() . " as C, "
+        . \Data\Admission\name() . " as A, "
         . \Data\Patient\name() . " as P "
-        . "WHERE C.`patient`=P.`id` "
+        . "WHERE C.`admission`=A.`id` "
+        . "AND A.`patient`=P.`id` "
         . "AND C.`id` IN (" . implode(',', $consultationIds) . ")");
-    while($row = $stm->fetch()) {
+    while ($row = $stm->fetch()) {
         $key = $row['key'];
-        if (!is_set($patientsConsultations[$key])) {
+        if (!isset($patientsConsultations[$key])) {
             $patientsConsultations[$key] = [];
         }
         $consultationId = $row['id'];
@@ -75,33 +78,53 @@ function execService( $args ) {
     return [
         "fields" => $fields,
         "patients" => getPatientsOutput(
-            $fields, $consultationsFields, $consultationsDateAndPatient
+            $fields,
+            $consultationsFields,
+            $patientsConsultations
         )
     ];
 }
 
 /**
- * @param $fields: { [field-key: string]: 0 }
- * @param $consultationsFields: { [consultation-id: string]: {[key: string]: string} }
- * @param $consultationsDateAndPatient:
- * { [patient-key: string]: {[consultaton-id: string]: number} }
+ * @param fields: { [field-key: string]: 0 }
+ * @param consultationsFields: { [consultation-id: string]: {[key: string]: string} }
+ * @param $patientsConsultations:
+ * { [patient-key: string]: { [consultaton-id: string]: number} }
  *
- * Return something like that:
+ * @return
  * {
- *   "7fgN": {
+ *   "7fgN": [
  *     [
- *       [
- *         4812455023,   // enter
- *         "#POSITIVE",  // "#VIH"
- *         "#CM"         // "#GEOGRAPHICAL-ORIGIN"
- *       ],
- *       ...
- *     ]
- *   },
+ *       4812455023,   // enter
+ *       "#POSITIVE",  // "#VIH"
+ *       "#CM"         // "#GEOGRAPHICAL-ORIGIN"
+ *     ],
+ *     ...
+ *   ],
  *   ...
  * }
  */
-function getPatientsOutput(&$fields, &$consultationsFields, &$consultationsDateAndPatient) {
+function getPatientsOutput(&$fields, &$consultationsFields, &$patientsConsultations)
+{
+    $output = [];
+    foreach ($patientsConsultations as $patientKey => $consultation) {
+        // $consultation: { [consultaton-id: string]: number} }
+        // $patient: [number, ...string][]
+        $patient = [];
+        foreach ($consultation as $consultationId => $consultationDate) {
+            $item = [$consultationDate];
+            $currentConsultationFields = $consultationsFields[$consultationId];
+            foreach ($fields as $fieldKey) {
+                if (array_key_exists($fieldKey, $currentConsultationFields)) {
+                    $item[] = $currentConsultationFields[$fieldKey];
+                } else {
+                    $item[] = '';
+                }
+            }
+            $patient[] = $item;
+        }
+        $output[$patientKey] = $patient;
+    }
 
+    return $output;
 }
-?>

@@ -1,4 +1,5 @@
 import React from "react"
+import SaveAs from 'save-as'
 import InputFile from '../tfw/view/input-file'
 import State from '../state'
 import { IFilter } from '../types'
@@ -42,16 +43,37 @@ export default class ReportView extends React.Component<IReportViewProps, IRepor
         this.props.onFilesChange(files)
     }
 
+    private async queryConsultations(filter: IFilter, minDate: number, maxDate: number) {
+      const ids = await QueryService.getConsultationIds({
+        filter, minDate, maxDate
+      })
+      const result = await QueryService.getConsultationsFields(ids)
+      const header = `"Patient","Consultation Date ",${result.fields.map(f => `"${f}"`).join(',')}`
+      const body = Object.keys(result.patients).map(
+        patientKey => result.patients[patientKey].map(
+          tail => removeSquareBrakets(JSON.stringify([patientKey, convertToDate(tail[0]), ...tail.slice(1)]))
+        ).join("\n")
+      ).join("\n")
+      return `${header}\n${body}`
+    }
+
     private handleQueryClick = async (filter: IFilter, minDate: number, maxDate: number) => {
         console.info("filter=", filter);
         console.info("minDate=", minDate);
         console.info("maxDate=", maxDate);
-        const ids = await Dialog.wait(
-            _('query-in-progress'),
-            QueryService.getConsultationIds({
-                filter, minDate, maxDate
-            }))
-        console.info("ids=", ids);
+        const csvContent = await Dialog.wait(
+          _('query-in-progress'),
+          this.queryConsultations(filter, minDate, maxDate)
+        )
+        const file = new Blob(
+          [csvContent],
+          { type: 'text/csv;charset=utf-8' }
+        )
+        SaveAs(file, `consultations.${
+          convertToDate(minDate / 1000)
+        }.${
+          convertToDate(maxDate / 1000)
+        }.csv`)
     }
 
     render() {
@@ -87,4 +109,21 @@ export default class ReportView extends React.Component<IReportViewProps, IRepor
             }</div>
         </div>)
     }
+}
+
+
+function removeSquareBrakets(text: string): string {
+  return text.substr(1, text.length - 2)
+}
+
+
+function convertToDate(secondsSinceEpoch: number): string {
+  const date = new Date(secondsSinceEpoch * 1000)
+  const yy = date.getFullYear()
+  let mm = `${date.getMonth() + 1}`
+  let dd = `${date.getDate()}`
+  while (mm.length < 2) mm = `0${mm}`
+  while (dd.length < 2) dd = `0${dd}`
+
+  return `${yy}-${mm}-${dd}`
 }
