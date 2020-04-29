@@ -4,6 +4,14 @@ $ROLE = "";
 include_once("./data.php");
 
 /**
+ * Most of the time, users don't record consultations the very day.
+ * Instead, they wait for a quiet day and record a bunch of them in one go.
+ * That's why we added a PatientField with key "#CONSULTATION-DATE", just
+ * because it was impossible to select another date of the current one.
+ *
+ * Now, we want to remove this PatientField and fix the "consultation.enter"
+ * SQL field with the value of the "#CONSULTATION-DATE" PatientField.
+ *
  * Input:
  * {
  *   patientKey: string,
@@ -20,8 +28,9 @@ include_once("./data.php");
  * -2: Missing argument "oldDate"
  * -3: Missing argument "newDate"
  * -4: Missing argument "data"
- * -5: Consultation not found
- */
+ * -5: Update failed
+ * -9: Consultation not found
+*/
 function execService($args)
 {
     if( !array_key_exists( 'patientKey', $args ) ) return -1;
@@ -43,13 +52,26 @@ function execService($args)
          . "AND P.key = ? "
          . "AND C.enter = ? ";
     $row = \Data\fetch( $sql, $patientKey, $oldDate );
+    if ($row == NULL) return -9;
+
     $consultationId = intval($row[0]);
     $admissionId = intval($row[1]);
 
-    // Update consultation date.
-    \Data\exec("UPDATE " . \Data\Consultation\name()
-        . " SET `enter`=? WHERE `id`=?",
-        $newDate, $consultationId);
+    try {
+        // Update consultation date.
+        \Data\exec("UPDATE " . \Data\Consultation\name()
+            . " SET `enter`=? WHERE `id`=?",
+            $newDate, $consultationId);
+        }
+    catch( Exception $ex ) {
+        error_log($ex->getMessage());
+        return -5;
+    }
+
+    // Remove "#CONSULTATION-DATE" field.
+    \Data\exec("DELETE FROM " . \Data\Data\name()
+        . " WHERE consultation=? AND `key`='#CONSULTATION-DATE'",
+        $consultationId);
 
     return 0;
 }

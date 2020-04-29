@@ -30,7 +30,7 @@ namespace Data {
         $row = $stm->fetch();
         if( !$row ) {
             error_log("[\\Data\\fetch] No data: " . json_encode(func_get_args()));
-            throw new \Exception('[Data] There is no data!', NOT_FOUND);
+            return NULL;
         }
         return $row;
     }

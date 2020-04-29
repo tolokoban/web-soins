@@ -32,6 +32,7 @@ include_once("./data.php");
  *  -3: Missing arg `dates`.
  *  -4: Invalid code for carecenter.
  *  -5: Unknown patient key.
+ *  -9: Consultation not found.
  *
  * If a string is returned, this is an exception message.
  */
@@ -64,7 +65,7 @@ function execService($args)
         return -5;
       }
 
-      @TODO The rest...
+      // @TODO The rest...
     }
     catch( Exception $ex ) {
       \Data\rollback();
