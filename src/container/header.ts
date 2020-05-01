@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Header from "../presentational/header"
+import Header from "../view/header"
 import User from "../state/user"
 import { IState, IDispatchFunction } from "../types"
 

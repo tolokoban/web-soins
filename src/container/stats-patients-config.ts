@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import StatsPatientConfig from "../presentational/stats-patients-config"
+import StatsPatientConfig from "../view/stats-patients-config"
 import Actions from "../state/stats-config"
 import { IState, IDispatchFunction } from "../types"
 

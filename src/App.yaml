@@ -1,4 +1,6 @@
 en:
+    button-reports: Reports
+    button-stats: Stats
     cancel: Cancel
     close: Close
     code: "Code:"
@@ -24,6 +26,8 @@ en:
     struct: "Structure:"
     welcome: "To add new statistics, clic on the left pane's button bearing the following icon:"
 fr:
+    button-reports: Rapports
+    button-stats: Stats
     cancel: Annuler
     close: Fermer
     code: "Code :"

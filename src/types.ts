@@ -89,12 +89,13 @@ export interface IStatsConfig {
 }
 
 export interface IState {
-    user: IUser;
-    stats: IStatsConfig[];
-    organizations: IOrganization[];
-    carecenters: ICarecenter[];
-    structures: IStructure[];
-    statsConfig: IStatsConfig;
+    user: IUser
+    stats: IStatsConfig[]
+    organizations: IOrganization[]
+    page: string
+    carecenters: ICarecenter[]
+    structures: IStructure[]
+    statsConfig: IStatsConfig
 }
 
 export type IDispatchFunction = (action: IAction) => void;
@@ -103,12 +104,12 @@ export type IDispatchFunction = (action: IAction) => void;
 export type IFilter = IFilterGroup | IFilterTest
 
 type IFilterGroup = [
-  "OR" | "AND",
+    "OR" | "AND",
   ...IFilter[]
 ]
 
 type IFilterTest = [
-  "=" | "!=",
-  string,            // Key
-  string | string[]  // Value
+    "=" | "!=",
+    string,            // Key
+    string | string[]  // Value
 ]

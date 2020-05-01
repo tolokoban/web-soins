@@ -1,18 +1,18 @@
 import * as React from "react"
 import { connect } from 'react-redux'
-import CarecenterHeader from "./carecenter-header"
-import Wait from "../presentational/wait"
-import Stat from "../presentational/stat"
-import Sidemenu from "../tfw/layout/sidemenu"
-import Icon from "../tfw/view/icon"
-import Flex from "../tfw/layout/flex"
-import Button from "../tfw/view/button"
-import User from "../state/user"
-import State from "../state"
-import Hash from "../util/hash"
+import CarecenterHeader from "../carecenter-header"
+import Wait from "../../view/wait"
+import Stat from "../../view/stat"
+import Sidemenu from "../../tfw/layout/sidemenu"
+import Icon from "../../tfw/view/icon"
+import Flex from "../../tfw/layout/flex"
+import Button from "../../tfw/view/button"
+import User from "../../state/user"
+import State from "../../state"
+import Hash from "../../util/hash"
 
-import { IState, IDispatchFunction, IOrganization, ICarecenter } from "../types"
-import _ from "../intl";
+import { IState, IDispatchFunction, IOrganization, ICarecenter } from "../../types"
+import Intl from "../../intl"
 
 import "./sidemenu.css"
 
@@ -41,7 +41,7 @@ function mapStateToProps(state: IState) {
             ))
             }</ul>
             <br /><hr /><br />
-            <Button label={_("logout")} icon="logout" wide={true}
+            <Button label={Intl.logout()} icon="logout" wide={true}
                 onClick={() => window.location.reload()} />
         </div>),
         body: stats.length > 0 ? stats : (
@@ -50,9 +50,9 @@ function mapStateToProps(state: IState) {
                 alignItems="center"
                 classes={["container-sidemenu", "welcome"]}
             >
-                <div>{_("welcome")}</div>
+                <div>{Intl.welcome()}</div>
                 <Icon content="stat" />
-                <div>{_("report")}</div>
+                <div>{Intl.report()}</div>
                 <Icon content="report" />
             </Flex>
         )

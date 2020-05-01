@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import StatsConfig from "../presentational/stats-config"
+import StatsConfig from "../view/stats-config"
 import Actions from "../state/stats-config"
 import { IState, IDispatchFunction } from "../types"
 

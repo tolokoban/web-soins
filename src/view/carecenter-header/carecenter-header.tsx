@@ -1,10 +1,13 @@
 import * as React from "react"
-import { ICarecenter, IStructure } from "../types"
-import Button from "../tfw/view/button"
-import Report from '../report'
-import _ from "../intl";
+import { ICarecenter, IStructure } from "../../types"
+import Button from "../../tfw/view/button"
+import Report from '../../report'
 
+import Intl from "../../intl"
 import "./carecenter-header.css"
+
+
+
 
 
 interface ICarecenterHeaderProps {
@@ -37,6 +40,10 @@ export default class CarecenterHeader extends React.Component<ICarecenterHeaderP
         Report.generate({ carecenter: carecenter.id })
     }
 
+    handleStructClick = () => {
+
+    }
+
     render() {
         const carecenter: ICarecenter = this.props.carecenter;
         const structure: IStructure | undefined = this.props.structures.find(s => s.id === carecenter.structureId);
@@ -45,25 +52,38 @@ export default class CarecenterHeader extends React.Component<ICarecenterHeaderP
             <div>
                 <div className="name">{carecenter.name}</div>
                 <div className="prop">
-                    <div>{_("code")}</div>
+                    <div>{Intl.code()}</div>
                     <div>{carecenter.id}-{carecenter.code}</div>
                 </div>
                 <div className="prop">
-                    <div>{_("patients-count")}</div>
+                    <div>{Intl.patientsCount()}</div>
                     <div>{carecenter.patientsCount}</div>
                 </div>
                 <div className="prop">
-                    <div>{_("consultations-count")}</div>
+                    <div>{Intl.consultationsCount()}</div>
                     <div>{carecenter.consultationsCount}</div>
                 </div>
                 <div className="prop">
-                    <div>{_("struct")}</div>
+                    <div>{Intl.struct()}</div>
                     <div>{structure ? structure.name : '...'}</div>
                 </div>
             </div>
             <div className="buttons">
-                <Button icon="stat" small={true} onClick={this.handleStatClick} /><br />
-                <Button icon="report" small={true} onClick={this.handleReportClick} /><br />
+                <Button
+                    icon="stat"
+                    label={Intl.buttonStats()}
+                    small={true}
+                    onClick={this.handleStatClick} />
+                <Button
+                    icon="report"
+                    label={Intl.buttonReports()}
+                    small={true}
+                    onClick={this.handleReportClick} /><br />
+                <Button
+                    icon="sitemap"
+                    label={Intl.struct()}
+                    small={true}
+                    onClick={this.handleStructClick} /><br />
             </div>
         </div>);
     }

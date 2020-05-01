@@ -4,6 +4,7 @@
 import { createStore } from 'redux'
 import User from "./user";
 import Organizations from "./organizations"
+import Page from "./page"
 import Carecenters from "./carecenters"
 import Structure from "../structure"
 import Structures from "./structures"
@@ -17,12 +18,13 @@ function dispatch(action: IAction) {
 }
 
 const INITIAL_STATE: IState = {
-    user: User.INITIAL_STATE,
-    organizations: Organizations.INITIAL_STATE,
     carecenters: Carecenters.INITIAL_STATE,
-    structures: Structures.INITIAL_STATE,
+    organizations: Organizations.INITIAL_STATE,
+    page: Page.INITIAL_STATE,
+    stats: Stats.INITIAL_STATE,
     statsConfig: StatsConfig.INITIAL_STATE,
-    stats: Stats.INITIAL_STATE
+    structures: Structures.INITIAL_STATE,
+    user: User.INITIAL_STATE
 };
 
 function reducer(state: IState | undefined = INITIAL_STATE, action: IAction): IState {
@@ -35,6 +37,7 @@ function reducer(state: IState | undefined = INITIAL_STATE, action: IAction): IS
             user: User.reducer(state.user, action),
             stats: Stats.reducer(state.stats, action),
             organizations: Organizations.reducer(state.organizations, action),
+            page: Page.reducer(state.page, action),
             carecenters: Carecenters.reducer(state.carecenters, action),
             structures: Structures.reducer(state.structures, action),
             statsConfig: StatsConfig.reducer(state.statsConfig, action)

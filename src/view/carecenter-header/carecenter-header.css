@@ -1,0 +1,41 @@
+div.presentational-carecenter-header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+div.presentational-carecenter-header>div.buttons {
+    min-width: 64px;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+div.presentational-carecenter-header>div.buttons> button {
+    flex: 1 1 auto;
+}
+
+div.presentational-carecenter-header div.name {
+    font-weight: bold;
+    border-bottom: 1px solid var(--thm-bgPD);
+    margin-bottom: 8px;
+}
+
+div.presentational-carecenter-header div.prop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: .5;
+    min-width: 190px;
+}
+
+div.presentational-carecenter-header div.prop>div:last-child {
+    font-weight: bold;
+    font-family: monospace;
+    margin: 0 0 0 16px;
+}
