@@ -3,32 +3,33 @@ import castString from "../tfw/converter/string"
 import castBoolean from "../tfw/converter/boolean"
 
 const PREFIX = "stats-config:";
+const INITIAL_STATE: IStatsConfig = {
+    statsType: "consultations",
+    dateMin: lastMonth(),
+    dateMax: today(),
+    patientsFields: {
+        birthday: true,
+        size: false,
+        nationality: true
+    },
+    patientsFieldsCaptions: {
+        birthday: "Date de naissance",
+        size: "Taille",
+        nationality: "Nationalité"
+    },
+    carecenter: {
+        id: 0,
+        organizationId: 0,
+        structureId: 0,
+        patientsCount: 0,
+        consultationsCount: 0,
+        name: "",
+        code: ""
+    }
+}
 
 export default {
-    INITIAL_STATE: {
-        statsType: "consultations",
-        dateMin: lastMonth(),
-        dateMax: today(),
-        patientsFields: {
-            birthday: true,
-            size: false,
-            nationality: true
-        },
-        patientsFieldsCaptions: {
-            birthday: "Date de naissance",
-            size: "Taille",
-            nationality: "Nationalité"
-        },
-        carecenter: {
-            id: 0,
-            organizationId: 0,
-            structureId: 0,
-            patientsCount: 0,
-            consultationsCount: 0,
-            name: "",
-            code: ""
-        }
-    },
+    INITIAL_STATE,
 
     reducer(state: IStatsConfig, action: IAction): IStatsConfig {
         const { type } = action;

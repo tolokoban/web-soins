@@ -88,7 +88,13 @@ export interface IStatsConfig {
     patientsFieldsCaptions: { [key: string]: string };
 }
 
+export interface IStateCurrent {
+    carecenter?: ICarecenter
+    organization?: IOrganization
+}
+
 export interface IState {
+    current: IStateCurrent
     user: IUser
     stats: IStatsConfig[]
     organizations: IOrganization[]
@@ -113,3 +119,15 @@ type IFilterTest = [
     string,            // Key
     string | string[]  // Value
 ]
+
+export interface IPatient {
+    id: number
+    key: string
+    firstName: string
+    secondName: string
+    lastName: string
+    country: string
+    sex: "M" | "F" | "?"
+    // Taille en cm.
+    size: number
+}

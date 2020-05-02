@@ -16,13 +16,15 @@ async function getConsultationIds(args: IConsultationIdsInput) {
 }
 
 interface IConsultationsFieldsOutput {
-  fields: string[],
-  patients: {
-    [key: string /* Patient's key */]: Array<[number, ...string[]]>
-  }
+    fields: string[],
+    patients: {
+        [key: string /* Patient's key */]: Array<[number, ...string[]]>
+    }
 }
 
-async function getConsultationsFields(consultationIds: number[]): Promise<IConsultationsFieldsOutput> {
-  const output = await WebService.exec("consultation.list", consultationIds)
-  return output
+async function getConsultationsFields(
+    consultationIds: number[]
+): Promise<IConsultationsFieldsOutput> {
+    const output = await WebService.exec("consultation.list", consultationIds)
+    return output
 }

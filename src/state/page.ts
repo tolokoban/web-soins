@@ -3,7 +3,7 @@ import { IAction } from "../types"
 const PREFIX = "page:"
 
 export default {
-    INITIAL_STATE: [],
+    INITIAL_STATE: "welcome",
 
     reducer(state: string, action: IAction): string {
         const { type } = action

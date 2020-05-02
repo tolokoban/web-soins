@@ -1,0 +1,23 @@
+.view-pages-Welcome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.view-pages-Welcome > svg {
+    opacity: 0;
+    transition: opacity 1s;
+    width: 66vmin;
+    height: 66vmax;
+}
+
+.view-pages-Welcome.loaded > svg {
+    opacity: 1;
+}

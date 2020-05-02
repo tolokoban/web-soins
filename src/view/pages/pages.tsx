@@ -1,16 +1,20 @@
 import React from "react"
 import Tfw from 'tfw'
+import PagePatients from '../../container/pages/patients'
+import PageReports from '../../container/pages/reports'
+import PageStats from '../../container/pages/stats'
+import PageStruct from '../../container/pages/struct'
+import PageWelcome from './welcome'
 
 import "./pages.css"
 
-const Button = Tfw.View.Button
-const Stack = Tfw.layout.Stack
+const Stack = Tfw.Layout.Stack
 
 interface IPagesProps {
     className?: string[]
     page: string
 }
-interface IPagesState {}
+interface IPagesState { }
 
 export default class Pages extends React.Component<IPagesProps, IPagesState> {
     state = {}
@@ -21,8 +25,18 @@ export default class Pages extends React.Component<IPagesProps, IPagesState> {
             ...Tfw.Converter.StringArray(this.props.className, [])
         ]
 
-        return (<Stack className={classes.join(' ')}>
-            <Button label={_('ok')} />
-        </Stack>)
+        return (
+            <Stack
+                className={classes.join(' ')}
+                fullscreen={true}
+                value={this.props.page}
+            >
+                <PageWelcome key="welcome" />
+                <PagePatients key="patients" />
+                <PageReports key="reports" />
+                <PageStats key="stats" />
+                <PageStruct key="struct" />
+            </Stack>
+        )
     }
 }

@@ -1,0 +1,43 @@
+div.view-PageHeader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div.view-PageHeader > header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 2rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 2rem;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    flex: 0 0 auto;
+    border-left: 1px solid var(--thm-white-7) ;
+}
+
+div.view-PageHeader > header > div {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.view-PageHeader > section {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    right: 0;
+    bottom: 0;
+    padding: .5rem;
+}
