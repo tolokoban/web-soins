@@ -13,7 +13,7 @@ export interface IPageHeaderProps {
     carecenter: ICarecenter
     label: string
     icon?: string
-    children: JSX.Element[]
+    children: JSX.Element
 }
 interface IPageHeaderState { }
 
@@ -23,12 +23,12 @@ export default class PageHeader extends React.Component<IPageHeaderProps, IPageH
     render() {
         const { organization, carecenter, label, icon, children } = this.props
         const classes = [
-            'view-PageHeader', 'thm-bgPD', 'thm-ele-nav',
+            'view-PageHeader', 'thm-bg0', 'thm-ele-nav',
             ...Tfw.Converter.StringArray(this.props.className, [])
         ]
 
         return (<div className={classes.join(' ')}>
-            <header>
+            <header className="thm-bgPD">
                 <div>
                     {icon && <Icon content={icon} />}
                     <div>{label}</div>

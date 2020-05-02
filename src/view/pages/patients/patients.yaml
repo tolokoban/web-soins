@@ -1,4 +1,4 @@
 en:
-    ok: Ok
+    filter: "Filter ($1 / $2)"
 fr:
-    ok: Valider
+    filter: "Filtre ($1 / $2)"

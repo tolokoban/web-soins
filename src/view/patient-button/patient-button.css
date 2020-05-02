@@ -1,0 +1,21 @@
+div.view-PatientButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 44px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+div.view-PatientButton > div {
+    margin: 0 0.5rem;
+}
+
+div.view-PatientButton > div.lastName {
+    font-weight: 900;
+}
+
+div.view-PatientButton > div.secondName {
+    opacity: 0.5;
+}

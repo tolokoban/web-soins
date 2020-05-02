@@ -1,1 +1,16 @@
-div.view-pages-Patients {}
+div.view-pages-Patients-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+}
+
+div.view-pages-Patients-list > * {
+    flex: 0 0 auto;
+}
+
+div.view-pages-Patients-list .patients-list {
+    flex: 1 1 auto;
+    max-width: 480
+}
