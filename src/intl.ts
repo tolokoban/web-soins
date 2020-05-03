@@ -11,12 +11,14 @@ class Dict {
     code() { return _('code') }
     consultations() { return _('consultations') }
     consultationsCount() { return _('consultations-count') }
+    countingReports() { return _('counting-reports') }
     createStat() { return _('create-stat') }
     createStatConsultation() { return _('create-stat-consultation') }
     createStatPatient() { return _('create-stat-patient') }
     dateMin() { return _('date-min') }
     dateMax() { return _('date-max') }
     executeQuery() { return _('execute-query') }
+    extractions() { return _('extractions') }
     filter() { return _('filter') }
     generatingReport() { return _('generating-report') }
     hintReportTemplates() { return _('hint-report-templates') }

@@ -1,0 +1,32 @@
+div.view-Section {
+    margin: 0.5rem;
+    padding: 0;
+    border: 1px solid var(--thm-black-4);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+div.view-Section .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1.5rem;
+}
+
+div.view-Section .header > * {
+    flex: 0 0 auto;
+}
+
+div.view-Section .header > *:last-child {
+    flex: 1 1 auto;
+}
+
+div.view-Section > div.body {
+    display: none;
+    padding: 0.5rem;
+}
+
+div.view-Section.expanded > div.body {
+    display: block;
+}

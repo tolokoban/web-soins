@@ -8,12 +8,14 @@ en:
     code: "Code:"
     consultations: Consultations
     consultations-count: "Consultations:"
+    counting-reports: Counting Reports
     create-stat: Create Statistics
     create-stat-consultation: Consult. Statistics
     create-stat-patient: Patients Statistics
     date-min: Start Date
     date-max: End Date
     execute-query: Execute Query
+    extractions: Extractions of Patients and Consultations
     filter: Filter
     generating-report: Generating report...
     hint-report-templates: "Report templates are spreadsheet saved as <b>Flat XML Spreadsheet</b> with placeholders like the following ones:"
@@ -37,12 +39,14 @@ fr:
     code: "Code :"
     consultations: Consultations
     consultations-count: "Consultations :"
+    counting-reports: Rapports de décomptes
     create-stat: Créer des statistiques
     create-stat-consultation: Stats consultations
     create-stat-patient: Stats patients
     date-min: Date de début
     date-max: Date de fin
     execute-query: Executer la requête
+    extractions: Extractions de patients et de consultations
     filter: Filtre
     generating-report: Rapport en cours de réalisation...
     hint-report-templates: "Les modèles de rapports sont des fichier <b>Open Office Calc Flat XML Spreadsheet</b> avec des requêtes intégrées comme celles-ci:"
