@@ -1,7 +1,7 @@
 div.view-Section {
     margin: 0.5rem;
     padding: 0;
-    border: 1px solid var(--thm-black-4);
+    border: 1px solid var(--thm-black);
     border-radius: .5rem;
     overflow: hidden;
 }

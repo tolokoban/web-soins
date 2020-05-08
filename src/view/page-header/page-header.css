@@ -18,12 +18,11 @@ div.view-PageHeader > header {
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 2rem;
     margin: 0 0 1rem 0;
     width: 100%;
     flex: 0 0 auto;
-    border-left: 1px solid var(--thm-white-7) ;
 }
 
 div.view-PageHeader > header > div {
@@ -31,6 +30,12 @@ div.view-PageHeader > header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
+}
+
+div.view-PageHeader > header > div > div.label {
+    font-variant: small-caps;
+    font-weight: 900;
 }
 
 div.view-PageHeader > section {

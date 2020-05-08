@@ -1,14 +1,17 @@
+import Tfw from 'tfw'
 import React from 'react'
-import Icon from "./tfw/view/icon"
-import Input from "./tfw/view/input"
-import Button from "./tfw/view/button"
-import Dialog from "./tfw/factory/dialog"
-import WebService from "./tfw/web-service"
 import Storage from "./tfw/storage"
 import { IUser } from "./types"
 
 import "./Login.css"
-import Combo from "./tfw/view/combo"
+
+const Icon = Tfw.View.Icon
+const Combo = Tfw.View.Combo
+const Input = Tfw.View.Input
+const Button = Tfw.View.Button
+
+const Dialog = Tfw.Factory.Dialog
+const WebService = Tfw.WebService
 
 import Intl from "./tfw/intl";
 const _ = Intl.make(require("./Login.yaml"));
@@ -66,7 +69,7 @@ export default class App extends React.Component<{}, ILoginState> {
 
     async start(user: IUser) {
         Storage.session.set("web-soins/password", this.state.password)
-        
+
         const elem = document.getElementById("LOGIN");
         if (elem) elem.classList.add("hide");
         const applicationStarter = await AsyncStart;

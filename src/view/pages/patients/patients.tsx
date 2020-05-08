@@ -1,18 +1,19 @@
 import React from "react"
 import Tfw from 'tfw'
 import PageHeader from '../../../container/page-header'
-import Intl from '../../../intl'
+import I from '../../../intl'
 import { IPatient, ICarecenter } from '../../../types'
-import PatientService from '../../../service/patient'
+import PatientService, { IConsultation as IConsultationHeader } from '../../../service/patient'
+import ConsultationService, { IConsultation } from '../../../service/consultation'
 import PatientButton from '../../patient-button'
+import Info from '../../info'
 
 import PlaceholderImage from './placeholder.jpg'
 import "./patients.css"
 
-const _ = Tfw.Intl.make(require("./patients.yaml"))
-const List = Tfw.View.List
+const Button = Tfw.View.Button
 const Input = Tfw.View.Input
-const Stack = Tfw.Layout.Stack
+const List = Tfw.View.List
 
 interface IPatientsProps {
     className?: string[]
@@ -22,13 +23,16 @@ interface IPatientsState {
     patients: IPatient[]
     filter: string
     page: string
+    patient?: IPatient
+    consultations: IConsultationHeader[]
 }
 
 export default class Patients extends React.Component<IPatientsProps, IPatientsState> {
-    state = {
+    state: IPatientsState = {
         patients: [],
         filter: "",
-        page: "list"
+        page: "list",
+        consultations: []
     }
 
     async componentDidMount() {
@@ -36,8 +40,14 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
         this.setState({ patients })
     }
 
-    private handlePatientClick = (patient: IPatient) => {
-        console.info("patient=", patient)
+    private handlePatientClick = async (patient: IPatient) => {
+        this.setState({ patient, consultations: [] })
+        const consultations = await PatientService.consultations(patient.id)
+        this.setState({ consultations })
+    }
+
+    private async showConsultation(consultation: IConsultationHeader) {
+        await ConsultationService.get(consultation.id)
     }
 
     renderPatient = (patient: IPatient) => <PatientButton
@@ -46,7 +56,7 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
     />
 
     render() {
-        const { patients, filter, page } = this.state
+        const { patients, patient, filter, consultations } = this.state
         const classes = [
             'view-pages-Patients',
             ...Tfw.Converter.StringArray(this.props.className, [])
@@ -60,25 +70,57 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
             })
 
         return (<div className={classes.join(' ')}>
-            <Stack fullscreen={true} value={page}>
-                <PageHeader key="list" label={Intl.buttonPatient()} icon="user">
-                    <div className="view-pages-Patients-list">
+            <PageHeader key="list" label={I.buttonPatient()} icon="user">
+                <div className="view-pages-Patients-list">
+                    <div className="list">
                         <Input
                             wide={true}
-                            label={_('filter', filteredPatients.length, patients.length)}
+                            label={
+                                `${I.filter()} ${
+                                    filteredPatients.length
+                                } / ${
+                                    patients.length
+                                }`}
                             value={filter}
                             onChange={filter => this.setState({ filter })} />
                         <List
                             className="patients-list"
-                            width="480px"
                             placeholder={PlaceholderImage}
                             itemHeight={48}
                             items={filteredPatients}
                             mapper={this.renderPatient}
                         />
                     </div>
-                </PageHeader>
-            </Stack>
+                    {
+                        patient &&
+                        <div className="detail thm-bg1">
+                            <header className="thm-bgPD">
+                                <Info label={I.lastName()}>{patient.lastName}</Info>
+                                <Info label={I.firstName()}>{patient.firstName}</Info>
+                                <Info label={I.secondName()}>{patient.secondName}</Info>
+                                <Info label={I.gender()}>{I.genderValue(patient.sex)}</Info>
+                                <Info label={I.size()}>{`${patient.size} cm`}</Info>
+                            </header>
+                            <section>
+                                {
+                                    consultations.map(
+                                        consultation => (
+                                            <Button
+                                                key={`consultation-${consultation.date.getTime()}`}
+                                                icon="show"
+                                                flat={true}
+                                                wide={false}
+                                                label={consultation.date.toLocaleString()}
+                                                onClick={() => this.showConsultation(consultation)}
+                                            />
+                                        )
+                                    )
+                                }
+                            </section>
+                        </div>
+                    }
+                </div>
+            </PageHeader>
         </div>)
     }
 }

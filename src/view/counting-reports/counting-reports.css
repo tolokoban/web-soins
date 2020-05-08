@@ -1,1 +1,5 @@
 div.view-CountingReports {}
+
+div.view-CountingReports .hint {
+    opacity: 0.5;
+}

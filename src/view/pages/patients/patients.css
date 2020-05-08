@@ -1,16 +1,40 @@
 div.view-pages-Patients-list {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+}
+
+div.view-pages-Patients-list>div.list {
+    flex: 0 0 auto;
+    width: 360px;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
     height: 100%;
 }
 
-div.view-pages-Patients-list > * {
-    flex: 0 0 auto;
+div.view-pages-Patients-list>div.list .patients-list {
+    flex: 1 1 auto;
 }
 
-div.view-pages-Patients-list .patients-list {
+div.view-pages-Patients-list>div.detail {
     flex: 1 1 auto;
-    max-width: 480
+}
+
+div.view-pages-Patients-list>div.detail>header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+div.view-pages-Patients-list>div.detail>section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

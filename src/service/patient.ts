@@ -1,7 +1,7 @@
 import Tfw from 'tfw'
-import WebService from "../tfw/web-service"
 import { IPatient } from "../types"
 
+const WebService = Tfw.WebService
 const castString = Tfw.Converter.String
 const castInteger = Tfw.Converter.Integer
 
@@ -10,6 +10,16 @@ const SEPARATORS = [" ", "-", "'"]
 interface IServiceResult {
     name: string
     list: Array<{ [key: string]: string }>
+}
+
+interface IConsultationsServiceReturn {
+    id: number[]
+    time: number[]
+}
+
+export interface IConsultation {
+    id: number
+    date: Date
 }
 
 export default {
@@ -38,6 +48,19 @@ export default {
             return 0
         })
         return patients
+    },
+
+    async consultations(patientId: number): Promise<IConsultation[]> {
+        const result: IConsultationsServiceReturn = await WebService.exec(
+            "patient.listConsultations", patientId)
+        const consultations: IConsultation[] = []
+        for (let k = 0; k < result.id.length; k++) {
+            consultations.push({
+                id: result.id[k],
+                date: new Date(result.time[k] * 1000)
+            })
+        }
+        return consultations
     }
 }
 

@@ -13,7 +13,7 @@ export interface IPageHeaderProps {
     carecenter: ICarecenter
     label: string
     icon?: string
-    children: JSX.Element
+    children: JSX.Element | JSX.Element[]
 }
 interface IPageHeaderState { }
 
@@ -29,12 +29,11 @@ export default class PageHeader extends React.Component<IPageHeaderProps, IPageH
 
         return (<div className={classes.join(' ')}>
             <header className="thm-bgPD">
-                <div>
+                <div className="thm-bgPL">
                     {icon && <Icon content={icon} />}
-                    <div>{label}</div>
+                    <div className="label">{label}</div>
                 </div>
-                <div>{organization.name}</div>
-                <div>{carecenter.name}</div>
+                <div>{organization.name} / {carecenter.name}</div>
             </header>
             <section>{children}</section>
         </div>)

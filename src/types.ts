@@ -106,20 +106,6 @@ export interface IState {
 
 export type IDispatchFunction = (action: IAction) => void;
 
-
-export type IFilter = IFilterGroup | IFilterTest
-
-type IFilterGroup = [
-    "OR" | "AND",
-  ...IFilter[]
-]
-
-type IFilterTest = [
-    "=" | "!=",
-    string,            // Key
-    string | string[]  // Value
-]
-
 export interface IPatient {
     id: number
     key: string
@@ -131,3 +117,39 @@ export interface IPatient {
     // Taille en cm.
     size: number
 }
+
+
+export type IFilter = IFilterGroup | IFilterTest | IFilterNot | IFilterRange | IFilterAge
+
+export type IFilterGroup = [
+    "XOR" | "OR" | "AND",
+  ...IFilter[]
+]
+
+export type IFilterTest = [
+    "EQUAL" | "DIFF",
+    string,      // Key
+    ...string[]  // Values
+]
+
+export type IFilterNot = [
+    "NOT", IFilter
+]
+
+export type IFilterRange = [
+    "RANGE",
+    // Key
+    string,
+    // Min
+    number,
+    // Max
+    number
+]
+
+export type IFilterAge = [
+    "AGE",
+    // Min
+    number,
+    // Max
+    number
+]

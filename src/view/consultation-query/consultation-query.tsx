@@ -9,7 +9,7 @@ import Storage from "../../tfw/storage"
 
 import "./consultation-query.css"
 
-import _ from "../../intl"
+import Intl from "../../intl"
 
 interface TContainerQueryProps {
     onQueryClick: (filter: IFilter, dateMin: number, dateMax: number) => void
@@ -69,21 +69,21 @@ export default class ContainerQuery extends React.Component<TContainerQueryProps
         return (<div className={classes.join(' ')}>
             <Flex>
                 <div><InputDate
-                    label={_("date-min")}
+                    label={Intl.dateMin()}
                     onChange={this.handleDateMinChange}
                     value={dateMin} /></div>
                 <div><InputDate
-                    label={_("date-max")}
+                    label={Intl.dateMax()}
                     onChange={this.handleDateMaxChange}
                     value={dateMax} /></div>
             </Flex>
-            <label>{_('filter')}</label><br/>
+            <label>{Intl.filter()}</label><br/>
             <textarea className={valid ? 'valid' : 'invalid'}
                       rows={15}
                       onChange={this.handleQueryChange}>{
                 query
             }</textarea><br/>
-            <Button icon="play" label={_('execute-query')} enabled={valid} onClick={this.handleExecuteClick}/>
+            <Button icon="play" label={Intl.executeQuery()} enabled={valid} onClick={this.handleExecuteClick}/>
         </div>)
     }
 }

@@ -17,8 +17,14 @@ en:
     execute-query: Execute Query
     extractions: Extractions of Patients and Consultations
     filter: Filter
+    firstname: Firstname
+    gender: Gender
+    gender-female: Female
+    gender-male: Male
+    gender-undefined: Undefined
     generating-report: Generating report...
     hint-report-templates: "Report templates are spreadsheet saved as <b>Flat XML Spreadsheet</b> with placeholders like the following ones:"
+    lastname: Lastname
     loading: Loading in progress...
     loading-report: Loading report template...
     logout: Logout
@@ -26,6 +32,8 @@ en:
     patients-count: "Patients:"
     query-in-progress: Query in progress...
     report: "To add an annual report, clic on the left pane's button bearing the following icon:"
+    secondname: Secondname
+    size: Size
     stat-type: "Statistic Type"
     struct: "Structure:"
     welcome: "To add new statistics, clic on the left pane's button bearing the following icon:"
@@ -48,8 +56,14 @@ fr:
     execute-query: Executer la requête
     extractions: Extractions de patients et de consultations
     filter: Filtre
+    firstname: Prénom
+    gender: Genre
+    gender-female: Féminin
+    gender-male: Masculin
+    gender-undefined: Non défini
     generating-report: Rapport en cours de réalisation...
     hint-report-templates: "Les modèles de rapports sont des fichier <b>Open Office Calc Flat XML Spreadsheet</b> avec des requêtes intégrées comme celles-ci:"
+    lastname: Nom
     loading: Chargement en cours...
     loading-report: Chargement du modèle de rapport...
     logout: Déconnexion
@@ -57,6 +71,8 @@ fr:
     patients-count: "Patients :"
     query-in-progress: Requête en cours...
     report: "Pour éditer un rapport annuel, cliquez sur le bouton avec l'icône suivante dans le panneau de gauche :"
+    secondname: Second P.
+    size: Taille
     stat-type: "Type de statistique"
     struct: "Structure :"
     welcome: "Pour ajouter des statistiques, cliquez sur le bouton avec l'icône suivante dans le panneau de gauche : "

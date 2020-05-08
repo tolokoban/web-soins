@@ -1,0 +1,12 @@
+div.view-Info {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: .5rem;
+}
+
+div.view-Info > div.label {
+    opacity: .5;
+    font-size: 80%;
+}

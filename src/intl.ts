@@ -20,8 +20,18 @@ class Dict {
     executeQuery() { return _('execute-query') }
     extractions() { return _('extractions') }
     filter() { return _('filter') }
+    firstName() { return _('firstname') }
+    gender() { return _('gender') }
+    genderValue(type: string) {
+        switch (type.trim().toUpperCase()) {
+            case 'M': return _('gender-male')
+            case 'F': return _('gender-female')
+            default: return _('gender-undefined')
+        }
+    }
     generatingReport() { return _('generating-report') }
     hintReportTemplates() { return _('hint-report-templates') }
+    lastName() { return _('lastname') }
     loading() { return _('loading') }
     loadingReport() { return _('loading-report') }
     logout() { return _('logout') }
@@ -29,6 +39,8 @@ class Dict {
     patientsCount() { return _('patients-count') }
     queryInProgress() { return _('query-in-progress') }
     report() { return _('report') }
+    secondName() { return _('secondname') }
+    size() { return _('size') }
     statType() { return _('stat-type') }
     struct() { return _('struct') }
     welcome() { return _('welcome') }

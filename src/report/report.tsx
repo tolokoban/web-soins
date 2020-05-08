@@ -8,13 +8,13 @@ import Dialog from '../tfw/factory/dialog'
 import Util from '../tfw/util'
 import ReportView from './report-view'
 import WS from '../tfw/web-service'
-import _ from "../intl";
+import Intl from "../intl";
 
 import LibreOfficeCalcTemplate from './report.fods'
 
 import "./report.css"
 
-export default { generate }
+export default { doGenerate , generate, generateFromTemplate, generateFromUserProvidedFile }
 
 
 async function generate(extraData: {}) {
@@ -32,17 +32,17 @@ async function generate(extraData: {}) {
 
 async function generateFromTemplate(extraData: {}) {
     const content = await Dialog.wait(
-        _('loading-report'),
+        Intl.loadingReport(),
         Util.loadTextFromURL(LibreOfficeCalcTemplate)
     )
-    Dialog.wait(_("generating-report"), doGenerate(content, extraData))
+    Dialog.wait(Intl.generatingReport(), doGenerate(content, extraData))
 }
 
 function generateFromUserProvidedFile(extraData: {}) {
     const onFilesChange = async (files: FileList) => {
         for(const file of files) {
             const content = await Util.loadTextFromFile(file)
-            Dialog.wait(_("generating-report"), doGenerate(content, extraData))
+            Dialog.wait(Intl.generatingReport(), doGenerate(content, extraData))
         }
         dialog.hide()
     }
