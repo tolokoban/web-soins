@@ -860,7 +860,7 @@
       <text:p>- Dans la salle de gynecologie</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce18" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{CONSULTATION-LOCATION#IN}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{CONSULTATION-LOCATION #IN}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce18" table:number-columns-repeated="3"/>
      <table:table-cell table:style-name="ce18" table:formula="of:=SUM([.B8:.E8])" office:value-type="float" office:value="0" calcext:value-type="float">
@@ -873,7 +873,7 @@
       <text:p>- Strategie avancée</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce18" office:value-type="string" calcext:value-type="string">
-      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{CONSULTATION-LOCATION#OUT}}}</text:p>
+      <text:p>{{visits [Y,1,1] [Y,4,1] filter:{= CONSULTATION-LOCATION #OUT}}}</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="ce18" table:number-columns-repeated="3"/>
      <table:table-cell table:style-name="ce18" table:formula="of:=SUM([.B9:.E9])" office:value-type="float" office:value="0" calcext:value-type="float">
