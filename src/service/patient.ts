@@ -12,14 +12,13 @@ interface IServiceResult {
     list: Array<{ [key: string]: string }>
 }
 
-interface IConsultationsServiceReturn {
-    id: number[]
-    time: number[]
-}
+// [id, time, key, value]
+type IConsultationsServiceReturn = Array<[number, number, string, string]>
 
 export interface IConsultation {
     id: number
     date: Date
+    fields: { [key: string]: string }
 }
 
 export default {
@@ -53,12 +52,26 @@ export default {
     async consultations(patientId: number): Promise<IConsultation[]> {
         const result: IConsultationsServiceReturn = await WebService.exec(
             "patient.listConsultations", patientId)
+
         const consultations: IConsultation[] = []
-        for (let k = 0; k < result.id.length; k++) {
-            consultations.push({
-                id: result.id[k],
-                date: new Date(result.time[k] * 1000)
-            })
+        let currentConsultation: IConsultation = {
+            id: 0,
+            date: new Date(),
+            fields: {}
+        }
+        let lastId = 0
+        for (const row of result) {
+            const [id, time, key, value] = row
+            if (lastId !== id) {
+                currentConsultation = {
+                    id,
+                    date: new Date(time * 1000),
+                    fields: {}
+                }
+                consultations.push(currentConsultation)
+                lastId = id
+            }
+            currentConsultation.fields[key] = value
         }
         return consultations
     }

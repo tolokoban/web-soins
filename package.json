@@ -20,7 +20,7 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "PORT=4400 react-app-rewired start",
     "build": "npm run php && react-app-rewired build",
     "deploy": "react-app-rewired build && gh-pages -b gh-pages -d build",
     "php": "docker cp backend/tfw LAMP:/app/web-soins/",

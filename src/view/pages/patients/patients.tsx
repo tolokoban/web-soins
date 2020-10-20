@@ -4,14 +4,17 @@ import PageHeader from '../../../container/page-header'
 import I from '../../../intl'
 import { IPatient, ICarecenter } from '../../../types'
 import PatientService, { IConsultation as IConsultationHeader } from '../../../service/patient'
-import ConsultationService, { IConsultation } from '../../../service/consultation'
+import ConsultationService from '../../../service/consultation'
+import StructureManager from '../../../structure'
 import PatientButton from '../../patient-button'
+import ConsultationViewer from '../../consultation-viewer'
 import Info from '../../info'
 
 import PlaceholderImage from './placeholder.jpg'
 import "./patients.css"
 
 const Button = Tfw.View.Button
+const Expand = Tfw.View.Expand
 const Input = Tfw.View.Input
 const List = Tfw.View.List
 
@@ -30,7 +33,7 @@ interface IPatientsState {
 export default class Patients extends React.Component<IPatientsProps, IPatientsState> {
     state: IPatientsState = {
         patients: [],
-        filter: "",
+        filter: "daline",
         page: "list",
         consultations: []
     }
@@ -46,14 +49,27 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
         this.setState({ consultations })
     }
 
-    private async showConsultation(consultation: IConsultationHeader) {
-        await ConsultationService.get(consultation.id)
-    }
-
     renderPatient = (patient: IPatient) => <PatientButton
         patient={patient}
         onClick={this.handlePatientClick}
     />
+
+    renderConsulation = (consultationData: IConsultationHeader, index: number) => {
+        const structureData = StructureManager.getCurrentStructure()
+        if (!structureData) return null
+        return (
+            <Expand
+                key={`consultation-${consultationData.id}`}
+                value={index === 0}
+                label={consultationData.date.toLocaleString()}
+            >
+                <ConsultationViewer
+                    consultationData={consultationData}
+                    structureData={structureData}
+                />
+            </Expand>
+        )
+    }
 
     render() {
         const { patients, patient, filter, consultations } = this.state
@@ -70,16 +86,16 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
             })
 
         return (<div className={classes.join(' ')}>
-            <PageHeader key="list" label={I.buttonPatient()} icon="user">
+            <PageHeader key="list" label={I.buttonPatient} icon="user">
                 <div className="view-pages-Patients-list">
                     <div className="list">
                         <Input
                             wide={true}
                             label={
-                                `${I.filter()} ${
-                                    filteredPatients.length
+                                `${I.filter} ${
+                                filteredPatients.length
                                 } / ${
-                                    patients.length
+                                patients.length
                                 }`}
                             value={filter}
                             onChange={filter => this.setState({ filter })} />
@@ -95,26 +111,16 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
                         patient &&
                         <div className="detail thm-bg1">
                             <header className="thm-bgPD">
-                                <Info label={I.lastName()}>{patient.lastName}</Info>
-                                <Info label={I.firstName()}>{patient.firstName}</Info>
-                                <Info label={I.secondName()}>{patient.secondName}</Info>
-                                <Info label={I.gender()}>{I.genderValue(patient.sex)}</Info>
-                                <Info label={I.size()}>{`${patient.size} cm`}</Info>
+                                <Info label={I.lastName}>{patient.lastName}</Info>
+                                <Info label={I.firstName}>{patient.firstName}</Info>
+                                <Info label={I.secondName}>{patient.secondName}</Info>
+                                <Info label={I.gender}>{I.genderValue(patient.sex)}</Info>
+                                <Info label={I.size}>{`${patient.size} cm`}</Info>
+                                <Info label={I.identifier}>{patient.key}</Info>
                             </header>
                             <section>
                                 {
-                                    consultations.map(
-                                        consultation => (
-                                            <Button
-                                                key={`consultation-${consultation.date.getTime()}`}
-                                                icon="show"
-                                                flat={true}
-                                                wide={false}
-                                                label={consultation.date.toLocaleString()}
-                                                onClick={() => this.showConsultation(consultation)}
-                                            />
-                                        )
-                                    )
+                                    consultations.map(this.renderConsulation)
                                 }
                             </section>
                         </div>

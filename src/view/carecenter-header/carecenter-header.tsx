@@ -53,41 +53,41 @@ export default class CarecenterHeader extends React.Component<ICarecenterHeaderP
             <div>
                 <div className="name">{carecenter.name}</div>
                 <div className="prop">
-                    <div>{Intl.code()}</div>
+                    <div>{Intl.code}</div>
                     <div>{carecenter.id}-{carecenter.code}</div>
                 </div>
                 <div className="prop">
-                    <div>{Intl.patientsCount()}</div>
+                    <div>{Intl.patientsCount}</div>
                     <div>{carecenter.patientsCount}</div>
                 </div>
                 <div className="prop">
-                    <div>{Intl.consultationsCount()}</div>
+                    <div>{Intl.consultationsCount}</div>
                     <div>{carecenter.consultationsCount}</div>
                 </div>
                 <div className="prop">
-                    <div>{Intl.struct()}</div>
+                    <div>{Intl.struct}</div>
                     <div>{structure ? structure.name : '...'}</div>
                 </div>
             </div>
             <div className="buttons">
                 <Button
                     icon="stat"
-                    label={Intl.buttonStats()}
+                    label={Intl.buttonStats}
                     small={true}
                     onClick={this.handleStatClick} />
                 <Button
                     icon="report"
-                    label={Intl.buttonReports()}
+                    label={Intl.buttonReports}
                     small={true}
                     onClick={this.handleReportClick} /><br />
                 <Button
                     icon="user"
-                    label={Intl.buttonPatient()}
+                    label={Intl.buttonPatient}
                     small={true}
                     onClick={this.handlePatientClick} /><br />
                 <Button
                     icon="sitemap"
-                    label={Intl.buttonStruct()}
+                    label={Intl.buttonStruct}
                     small={true}
                     onClick={this.handleStructClick} /><br />
             </div>

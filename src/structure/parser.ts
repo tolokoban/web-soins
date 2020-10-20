@@ -1,6 +1,11 @@
-import Intl from "../tfw/intl";
-const _ = Intl.make(require("./parser.yaml"));
+import Tfw from 'tfw'
+import { IFormField } from '../types'
 
+const _ = Tfw.Intl.make(require("./parser.yaml"));
+
+interface IFormFieldWithPath extends IFormField {
+    path: string[]
+}
 
 /**
  * Le fichier `types.org` définit tous  les types de données complexe.
@@ -70,9 +75,8 @@ const _ = Intl.make(require("./parser.yaml"));
 
 const RX_LINE = /^(#[A-Z0-9-]+)?([^\(@]*)(\([^\)]*\)\+?)?(@[A-Z0-9,-]+)?/;
 
-
-function parse(code: string) {
-    const types = {};
+function parse(code: string): { [key: string]: IFormField } {
+    const types: { [key: string]: IFormField } = {};
     const levels = [types];
     if (typeof code !== 'string') code = `${code}`;
     code.split('\n').forEach(function(line, lineNumber) {
@@ -94,7 +98,7 @@ function parse(code: string) {
             while (levels.length > level) {
                 levels.pop();
             }
-            const item = parseLine(line);
+            const item: IFormField = parseLine(line);
             if (typeof levels[levels.length - 1][item.id] !== 'undefined') {
                 throw _('err-3', item.id);
             }
@@ -123,24 +127,39 @@ function computeLevel(line: string): number {
 }
 
 
-function parseLine(line: string) {
-    const item = { children: {} };
-    const m = RX_LINE.exec(line.trim());
+function parseLine(line: string): IFormField {
+    const item: IFormField = {
+        id: "",
+        caption: "",
+        children: {},
+        tags: []
+    }
+    const m = RX_LINE.exec(line.trim())
+    if (!m) return item
+
     if (m[2]) {
-        item.caption = m[2].trim();
+        item.caption = m[2].trim()
     }
     if (m[1]) {
-        item.id = m[1].trim();
+        item.id = m[1].trim()
     } else {
-        item.id = item.caption.toUpperCase();
+        if (!item.caption) {
+            console.error("line:", line)
+            console.error("item:", item)
+            throw Error("Missing id and caption!")
+        }
+        item.id = item.caption.toUpperCase()
     }
     if (m[3]) {
-        item.type = m[3].substr(1, m[3].length - 2).trim();
+        item.type = m[3].substr(1, m[3].length - 2).trim()
     }
     if (m[4]) {
-        item.tags = m[4].trim().substr(1).split(',').map(function(v) { return v.trim(); });
+        item.tags = m[4].trim()
+            .substr(1)
+            .split(',')
+            .map(v => v.trim())
     }
-    return item;
+    return item
 }
 
 
@@ -161,8 +180,10 @@ function parseLine(line: string) {
  * }
  * @return `[{ id:"#SURGERY-GYN", caption:"Chirurgie", path:["Conclusion", "Chirurgie"] }, ...]`
  */
-function flattenFormsFields(forms) {
-    var list = [];
+function flattenFormsFields(
+    forms: { [key: string]: IFormField }
+): IFormField[] {
+    var list: IFormFieldWithPath[] = [];
     recursiveFlattenFormsFields(forms, list, []);
     list.sort(function(a, b) {
         var captionA = a.caption;
@@ -175,7 +196,11 @@ function flattenFormsFields(forms) {
 }
 
 
-function recursiveFlattenFormsFields(children, list, path) {
+function recursiveFlattenFormsFields(
+    children: { [key: string]: IFormField },
+    list: IFormFieldWithPath[],
+    path: string[]
+) {
     Object.keys(children).forEach(function(key) {
         var child = children[key];
         if (typeof child.id === 'string' && child.id.charAt(0) === '#') {
@@ -183,6 +208,8 @@ function recursiveFlattenFormsFields(children, list, path) {
             list.push({
                 id: child.id,
                 caption: child.caption,
+                children: {},
+                tags: [],
                 path: path.slice()
             });
         }

@@ -12,7 +12,7 @@ export default class Wait extends React.Component<IWaitProps, {}> {
     render() {
         return (<div className="webSoins-Wait">
             <Icon content="wait" animate={true} />
-            <div>{this.props.label || Intl.loading()}</div>
+            <div>{this.props.label || Intl.loading}</div>
         </div>)
     }
 }

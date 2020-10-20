@@ -19,23 +19,25 @@ function execService($args)
 
     // Retrieving consultation of a patient, recent first.
     $stm = \Data\query(
-        "SELECT C.id, C.enter "
-        . "FROM " . \Data\Admission\name() . " AS A, "
-        . \Data\Consultation\name() . " AS C "
-        . "WHERE A.patient = ? "
-        . "AND A.id = C.admission "
-        . "ORDER BY C.enter DESC",
+        "SELECT C.id, C.enter, D.key, D.value "
+        . "FROM " . \Data\Patient\name() . " AS P, "
+        . \Data\Admission\name() . " AS A, "
+        . \Data\Consultation\name() . " AS C, "
+        . \Data\Data\name() . " AS D "
+        . "WHERE P.id=? "
+        . "AND A.patient = P.id "
+        . "AND C.admission = A.id "
+        . "AND D.consultation = C.id "
+        . "ORDER BY C.enter DESC, D.key",
         $patientId
     );
-    $result = Array(
-        "id" => Array(),
-        "time" => Array()
-    );
+    $result = Array();
     while ($row = $stm->fetch()) {
         $id = intVal($row['id']);
         $time = intVal($row['enter']);
-        $result["id"][] = $id;
-        $result["time"][] = $time;
+        $key = $row['key'];
+        $value = $row['value'];
+        $result[] = [$id, $time, $key, $value];
     }
 
     return $result;

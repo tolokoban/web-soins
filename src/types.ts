@@ -153,3 +153,11 @@ export type IFilterAge = [
     // Max
     number
 ]
+
+type IFields = { [key: string]: string }
+
+export interface IConsultation {
+    id: number
+    date: Date
+    fields: IFields
+}

@@ -23,8 +23,6 @@ export default class MainPanel extends React.Component<IMainPanelProps, IMainPan
 
     renderCareCenterHeader(organization: IOrganization) {
         const { carecenters, structures } = this.props
-        console.info("carecenters=", carecenters)
-        console.info("structures=", structures)
         const carecentersOfOrganization = carecenters.filter((carecenter: ICarecenter) =>
             carecenter.organizationId === organization.id)
         if (carecentersOfOrganization.length === 0) return <Wait />
@@ -52,7 +50,7 @@ export default class MainPanel extends React.Component<IMainPanelProps, IMainPan
             ))
             }</ul>
             <br /><hr /><br />
-            <Button label={Intl.logout()} icon="logout" wide={true}
+            <Button label={Intl.logout} icon="logout" wide={true}
                 onClick={() => window.location.reload()} />
         </div>)
     }
