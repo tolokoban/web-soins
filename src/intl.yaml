@@ -37,6 +37,7 @@ en:
     size: Size
     stat-type: "Statistic Type"
     struct: "Structure:"
+    type: "Type"
     welcome: "To add new statistics, clic on the left pane's button bearing the following icon:"
 fr:
     button-patient: Patients
@@ -77,4 +78,5 @@ fr:
     size: Taille
     stat-type: "Type de statistique"
     struct: "Structure :"
+    type: "Type"
     welcome: "Pour ajouter des statistiques, cliquez sur le bouton avec l'icône suivante dans le panneau de gauche : "

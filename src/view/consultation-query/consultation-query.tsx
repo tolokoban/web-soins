@@ -1,11 +1,11 @@
 import React from "react"
 
 import { IFilter } from "../../types"
-import Button from "../../tfw/view/button"
-import Flex from "../../tfw/layout/flex"
-import InputDate from "../../tfw/view/input-date"
-import PermissiveJSON from '../../tfw/permissive-json'
-import Storage from "../../tfw/storage"
+import Button from "tololib/view/button"
+import Flex from "tololib/layout/flex"
+import InputDate from "tololib/view/input-date"
+import PermissiveJSON from 'tololib/permissive-json'
+import Storage from "tololib/storage"
 
 import "./consultation-query.css"
 

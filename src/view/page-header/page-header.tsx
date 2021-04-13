@@ -1,13 +1,13 @@
 import React from "react"
-import Tfw from 'tfw'
-
+import Tfw from "tololib"
+import State from "../../state"
 import { ICarecenter, IOrganization } from "../../types"
 
 import "./page-header.css"
 
 const Icon = Tfw.View.Icon
 
-export interface IPageHeaderProps {
+interface PageHeaderProps {
     className?: string[]
     organization: IOrganization
     carecenter: ICarecenter
@@ -15,27 +15,33 @@ export interface IPageHeaderProps {
     icon?: string
     children: JSX.Element | JSX.Element[]
 }
-interface IPageHeaderState { }
 
-export default class PageHeader extends React.Component<IPageHeaderProps, IPageHeaderState> {
-    state = {}
+export default function PageHeader(props: PageHeaderProps) {
+    const { label, icon, children } = props
+    const organization = State.useSelector(state => state.current.organization)
+    const carecenter = State.useSelector(state => state.current.carecenter)
+    if (!organization || !carecenter) return null
 
-    render() {
-        const { organization, carecenter, label, icon, children } = this.props
-        const classes = [
-            'view-PageHeader', 'thm-bg0', 'thm-ele-nav',
-            ...Tfw.Converter.StringArray(this.props.className, [])
-        ]
-
-        return (<div className={classes.join(' ')}>
+    return (
+        <div className={getClassName(props)}>
             <header className="thm-bgPD">
                 <div className="thm-bgPL">
                     {icon && <Icon content={icon} />}
                     <div className="label">{label}</div>
                 </div>
-                <div>{organization.name} / {carecenter.name}</div>
+                <div>
+                    {organization.name} / {carecenter.name}
+                </div>
             </header>
             <section>{children}</section>
-        </div>)
+        </div>
+    )
+}
+
+function getClassName(props: PageHeaderProps) {
+    const classes = ["view-PageHeader", "thm-bg0", "thm-ele-nav"]
+    if (typeof props.className === "string") {
+        classes.push(props.className)
     }
+    return classes.join(" ")
 }

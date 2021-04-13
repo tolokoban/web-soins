@@ -1,9 +1,9 @@
 import * as React from "react"
 import { connect } from 'react-redux'
 import Stat from "../../view/stat"
-import Sidemenu from "../../tfw/layout/sidemenu"
-import Icon from "../../tfw/view/icon"
-import Flex from "../../tfw/layout/flex"
+import Sidemenu from "tololib/layout/sidemenu"
+import Icon from "tololib/view/icon"
+import Flex from "tololib/layout/flex"
 import User from "../../state/user"
 import State from "../../state"
 import Hash from "../../util/hash"

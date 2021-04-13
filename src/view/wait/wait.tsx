@@ -1,5 +1,5 @@
 import React from "react"
-import Icon from '../../tfw/view/icon'
+import Icon from 'tololib/view/icon'
 import Intl from '../../intl'
 
 import "./wait.css"

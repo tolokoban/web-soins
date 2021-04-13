@@ -1,19 +1,18 @@
-import Tfw from 'tfw'
 import React from 'react'
-import Storage from "./tfw/storage"
+import Storage from "tololib/storage"
 import { IUser } from "./types"
+
+import Icon from 'tololib/view/icon'
+import Combo from 'tololib/view/combo'
+import Input from 'tololib/view/input'
+import Button from 'tololib/view/button'
+import Dialog from 'tololib/factory/dialog'
+import WebService from 'tololib/web-service'
 
 import "./Login.css"
 
-const Icon = Tfw.View.Icon
-const Combo = Tfw.View.Combo
-const Input = Tfw.View.Input
-const Button = Tfw.View.Button
 
-const Dialog = Tfw.Factory.Dialog
-const WebService = Tfw.WebService
-
-import Intl from "./tfw/intl";
+import Intl from "tololib/intl";
 const _ = Intl.make(require("./Login.yaml"));
 
 const AsyncStart = import("./main");

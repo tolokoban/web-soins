@@ -3,7 +3,7 @@
  * This module helps you nesting closable things.
  *
  * @example
- * import * from EscapeHandler from "./tfw/escape-handler"
+ * import * from EscapeHandler from "tololib/escape-handler"
  * EscapeHandler.add(() => myDialog.close());
  * EscapeHandler.fire();
  */

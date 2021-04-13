@@ -1,4 +1,4 @@
-import Tfw from 'tfw'
+import Tfw from 'tololib'
 import { IPatient } from "../types"
 
 const WebService = Tfw.WebService

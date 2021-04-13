@@ -1,56 +1,56 @@
 export interface IAction {
-    type: string;
-    [key: string]: any;
+    type: string
+    [key: string]: any
 }
 
 export interface IUser {
-    language?: string;
-    email: string;
-    nickname: string;
-    roles: string[];
+    language?: string
+    email: string
+    nickname: string
+    roles: string[]
 }
 
 export interface IOrganization {
-    id: number;
-    name: string;
+    id: number
+    name: string
 }
 
 export interface ICarecenter {
-    id: number;
-    organizationId: number;
-    structureId: number;
-    patientsCount: number;
-    consultationsCount: number;
-    name: string;
-    code: string;
+    id: number
+    organizationId: number
+    structureId: number
+    patientsCount: number
+    consultationsCount: number
+    name: string
+    code: string
 }
 
-export type IOccurence = [string, number];
+export type IOccurence = [string, number]
 
 export interface IOccurences {
-    sum: number;
+    sum: number
     occ: IOccurence[]
 }
 
 export interface IPatientField {
-    id: string;
-    type: string;
+    id: string
+    type: string
     caption: { [key: string]: string }
 }
 
 export interface IFormField {
-    id: string,
-    type?: string,
-    caption: string,
-    tags: string[],
+    id: string
+    type?: string
+    caption: string
+    tags: string[]
     children: {
         [key: string]: IFormField
     }
 }
 
 export interface IType {
-    id: string,
-    caption?: string,
+    id: string
+    caption?: string
     children: ITypes
 }
 
@@ -59,33 +59,36 @@ export interface ITypes {
 }
 
 export interface IStructure {
-    id: number;
-    organizationId: number;
-    name: string;
-    patientFields: IPatientField[];
+    id: number
+    organizationId: number
+    name: string
+    patientFields: IPatientField[]
     formFields: {
-        [key: string]: { caption: string; type: string }
-    };
+        [key: string]: {
+            caption: { [key: string]: string }
+            type: string
+        }
+    }
     forms: {
         [key: string]: IFormField
-    },
-    types: ITypes,
+    }
+    types: ITypes
     sources: {
-        exams: string;
-        vaccins: string;
-        patient: string;
-        forms: string;
-        types: string;
+        exams: string
+        vaccins: string
+        patient: string
+        forms: string
+        types: string
     }
 }
 
 export interface IStatsConfig {
-    carecenter: ICarecenter;
-    statsType: "patients" | "consultations";
-    dateMin: number;
-    dateMax: number;
-    patientsFields: { [key: string]: boolean };
-    patientsFieldsCaptions: { [key: string]: string };
+    carecenter: ICarecenter
+    statsType: "patients" | "consultations"
+    dateMin: number
+    dateMax: number
+    patientsFields: { [key: string]: boolean }
+    patientsFieldsCaptions: { [key: string]: string }
 }
 
 export interface IStateCurrent {
@@ -104,7 +107,7 @@ export interface IState {
     statsConfig: IStatsConfig
 }
 
-export type IDispatchFunction = (action: IAction) => void;
+export type IDispatchFunction = (action: IAction) => void
 
 export interface IPatient {
     id: number
@@ -118,23 +121,17 @@ export interface IPatient {
     size: number
 }
 
-
 export type IFilter = IFilterGroup | IFilterTest | IFilterNot | IFilterRange | IFilterAge
 
-export type IFilterGroup = [
-    "XOR" | "OR" | "AND",
-  ...IFilter[]
-]
+export type IFilterGroup = ["XOR" | "OR" | "AND", ...IFilter[]]
 
 export type IFilterTest = [
     "EQUAL" | "DIFF",
-    string,      // Key
-    ...string[]  // Values
+    string, // Key
+    ...string[] // Values
 ]
 
-export type IFilterNot = [
-    "NOT", IFilter
-]
+export type IFilterNot = ["NOT", IFilter]
 
 export type IFilterRange = [
     "RANGE",

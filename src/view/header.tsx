@@ -1,10 +1,10 @@
 import * as React from "react"
 import "./header.css"
 
-import Icon from "../tfw/view/icon";
-import Button from "../tfw/view/button";
+import Icon from "tololib/view/icon";
+import Button from "tololib/view/button";
 
-import Intl from "../tfw/intl";
+import Intl from "tololib/intl";
 const _ = Intl.make(require("./header.yaml"));
 
 interface IHeaderProps {

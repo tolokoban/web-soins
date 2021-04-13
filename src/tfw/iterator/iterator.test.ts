@@ -1,6 +1,6 @@
 import Iterator from './iterator'
 
-describe('tfw/iterator', () => {
+describe('tololib/iterator', () => {
     describe('lines()', () => {
         function check(caption: string, input: string, expected: string[]) {
             it(caption, () => {

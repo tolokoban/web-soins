@@ -1,42 +1,39 @@
 import React from "react"
-import Tfw from 'tfw'
-import PagePatients from '../../container/pages/patients'
-import PageReports from '../../container/pages/reports'
-import PageStats from '../../container/pages/stats'
-import PageStruct from '../../container/pages/struct'
-import PageWelcome from './welcome'
+import Tfw from "tololib"
+import PagePatients from "../pages/patients"
+import PageReports from "../pages/reports"
+import PageStats from "../pages/stats"
+import PageStruct from "../pages/struct"
+import PageWelcome from "./welcome"
+import State from '../../state'
+import carecenter from "../../service/carecenter"
 
 import "./pages.css"
 
 const Stack = Tfw.Layout.Stack
 
-interface IPagesProps {
+interface PagesProps {
     className?: string[]
     page: string
 }
-interface IPagesState { }
 
-export default class Pages extends React.Component<IPagesProps, IPagesState> {
-    state = {}
+export default function Pages(props: PagesProps) {
+    const carecenter = State.useSelector(state => state.current.carecenter)
+    return (
+        <Stack className={getClassName(props)} fullscreen={true} value={props.page}>
+            <PageWelcome key="welcome" />
+            <PagePatients key="patients" carecenter={carecenter} />
+            <PageReports key="reports" />
+            <PageStats key="stats" />
+            <PageStruct key="struct" />
+        </Stack>
+    )
+}
 
-    render() {
-        const classes = [
-            'view-Pages',
-            ...Tfw.Converter.StringArray(this.props.className, [])
-        ]
-
-        return (
-            <Stack
-                className={classes.join(' ')}
-                fullscreen={true}
-                value={this.props.page}
-            >
-                <PageWelcome key="welcome" />
-                <PagePatients key="patients" />
-                <PageReports key="reports" />
-                <PageStats key="stats" />
-                <PageStruct key="struct" />
-            </Stack>
-        )
+function getClassName(props: PagesProps) {
+    const classes = ["view-Pages"]
+    if (typeof props.className === "string") {
+        classes.push(props.className)
     }
+    return classes.join(" ")
 }

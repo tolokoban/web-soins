@@ -1,4 +1,4 @@
-import WebService from "../tfw/web-service"
+import WebService from "tololib/web-service"
 import { ICarecenter } from "../types"
 
 interface IServiceCarecenter {

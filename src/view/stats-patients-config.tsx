@@ -1,8 +1,8 @@
 import React from "react"
-import Checkbox from "../tfw/view/checkbox"
-import InputDate from "../tfw/view/input-date"
-import Flex from "../tfw/layout/flex"
-import castInteger from "../tfw/converter/integer"
+import Checkbox from "tololib/view/checkbox"
+import InputDate from "tololib/view/input-date"
+import Flex from "tololib/layout/flex"
+import castInteger from "tololib/converter/integer"
 
 import _ from "../intl"
 

@@ -1,15 +1,15 @@
 import * as React from "react"
 import { IStatsConfig, IStructure, IOccurences } from "../types"
 import Pie from "./pie"
-import Flex from "../tfw/layout/flex"
-import Icon from "../tfw/view/icon"
-import Combo from "../tfw/view/combo"
-import Button from "../tfw/view/button"
-import FileAPI from "../tfw/fileapi"
+import Flex from "tololib/layout/flex"
+import Icon from "tololib/view/icon"
+import Combo from "tololib/view/combo"
+import Button from "tololib/view/button"
+import FileAPI from "tololib/fileapi"
 import Structure from "../structure"
 import StatService from "../service/stat"
 
-import Intl from "../tfw/intl"
+import Intl from "tololib/intl"
 const _ = Intl.make(require("./stat.yaml"));
 
 import "./stat.css"

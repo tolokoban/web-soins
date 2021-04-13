@@ -1,6 +1,6 @@
 import * as React from "react"
-import castArray from "../tfw/converter/array"
-import castInteger from "../tfw/converter/integer"
+import castArray from "tololib/converter/array"
+import castInteger from "tololib/converter/integer"
 import "./pie.css"
 
 interface IPieProps {

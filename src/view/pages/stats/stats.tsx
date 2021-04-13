@@ -1,5 +1,5 @@
 import React from "react"
-import Tfw from 'tfw'
+import Tfw from 'tololib'
 import PageHeader from '../../../container/page-header'
 import Intl from '../../../intl'
 
@@ -23,7 +23,7 @@ export default class Stats extends React.Component<IStatsProps, IStatsState> {
         ]
 
         return (<div className={classes.join(' ')}>
-            <PageHeader label={Intl.buttonStats()} icon="stat" />
+            <PageHeader label={Intl.buttonStats} icon="stat" />
         </div>)
     }
 }

@@ -1,6 +1,6 @@
 import { IAction, IStatsConfig } from "../types"
-import castString from "../tfw/converter/string"
-import castBoolean from "../tfw/converter/boolean"
+import castString from "tololib/converter/string"
+import castBoolean from "tololib/converter/boolean"
 
 const PREFIX = "stats:";
 

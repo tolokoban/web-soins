@@ -1,26 +1,27 @@
 import React from "react"
-import Tfw from 'tfw'
-import PageHeader from '../../../container/page-header'
-import I from '../../../intl'
-import { IPatient, ICarecenter } from '../../../types'
-import PatientService, { IConsultation as IConsultationHeader } from '../../../service/patient'
-import ConsultationService from '../../../service/consultation'
-import StructureManager from '../../../structure'
-import PatientButton from '../../patient-button'
-import ConsultationViewer from '../../consultation-viewer'
-import Info from '../../info'
+import Tfw from "tololib"
+import PageHeader from "../../page-header"
+import I from "../../../intl"
+import { IPatient, ICarecenter, IOrganization } from "../../../types"
+import PatientService, {
+    IConsultation as IConsultationHeader
+} from "../../../service/patient"
+import StructureManager from "../../../structure"
+import PatientButton from "../../patient-button"
+import ConsultationViewer from "../../consultation-viewer"
+import Info from "../../info"
 
-import PlaceholderImage from './placeholder.jpg'
+import PlaceholderImage from "./placeholder.jpg"
 import "./patients.css"
 
-const Button = Tfw.View.Button
 const Expand = Tfw.View.Expand
 const Input = Tfw.View.Input
 const List = Tfw.View.List
 
 interface IPatientsProps {
     className?: string[]
-    carecenter: ICarecenter
+    carecenter?: ICarecenter
+    organization?: IOrganization
 }
 interface IPatientsState {
     patients: IPatient[]
@@ -39,7 +40,10 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
     }
 
     async componentDidMount() {
-        const patients = await PatientService.list(this.props.carecenter.id)
+        const { carecenter } = this.props
+        if (!carecenter) return
+
+        const patients = await PatientService.list(carecenter.id)
         this.setState({ patients })
     }
 
@@ -49,10 +53,9 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
         this.setState({ consultations })
     }
 
-    renderPatient = (patient: IPatient) => <PatientButton
-        patient={patient}
-        onClick={this.handlePatientClick}
-    />
+    renderPatient = (patient: IPatient) => (
+        <PatientButton patient={patient} onClick={this.handlePatientClick} />
+    )
 
     renderConsulation = (consultationData: IConsultationHeader, index: number) => {
         const structureData = StructureManager.getCurrentStructure()
@@ -72,61 +75,66 @@ export default class Patients extends React.Component<IPatientsProps, IPatientsS
     }
 
     render() {
+        const { carecenter, organization } = this.props
+        if (!carecenter || !organization) return null
+
         const { patients, patient, filter, consultations } = this.state
         const classes = [
-            'view-pages-Patients',
+            "view-pages-Patients",
             ...Tfw.Converter.StringArray(this.props.className, [])
         ]
-        const filteredPatients = patients
-            .filter((patient: IPatient) => {
-                const trimedFilter = filter.trim().toLowerCase()
-                if (trimedFilter.length === 0) return true
-                const name = `${patient.lastName.toLowerCase()} ${patient.firstName.toLowerCase()} ${patient.secondName.toLowerCase()}`
-                return name.indexOf(trimedFilter) !== -1
-            })
+        const filteredPatients = patients.filter((patient: IPatient) => {
+            const trimedFilter = filter.trim().toLowerCase()
+            if (trimedFilter.length === 0) return true
+            const name = `${patient.lastName.toLowerCase()} ${patient.firstName.toLowerCase()} ${patient.secondName.toLowerCase()}`
+            return name.indexOf(trimedFilter) !== -1
+        })
 
-        return (<div className={classes.join(' ')}>
-            <PageHeader key="list" label={I.buttonPatient} icon="user">
-                <div className="view-pages-Patients-list">
-                    <div className="list">
-                        <Input
-                            wide={true}
-                            label={
-                                `${I.filter} ${
-                                filteredPatients.length
-                                } / ${
-                                patients.length
-                                }`}
-                            value={filter}
-                            onChange={filter => this.setState({ filter })} />
-                        <List
-                            className="patients-list"
-                            placeholder={PlaceholderImage}
-                            itemHeight={48}
-                            items={filteredPatients}
-                            mapper={this.renderPatient}
-                        />
-                    </div>
-                    {
-                        patient &&
-                        <div className="detail thm-bg1">
-                            <header className="thm-bgPD">
-                                <Info label={I.lastName}>{patient.lastName}</Info>
-                                <Info label={I.firstName}>{patient.firstName}</Info>
-                                <Info label={I.secondName}>{patient.secondName}</Info>
-                                <Info label={I.gender}>{I.genderValue(patient.sex)}</Info>
-                                <Info label={I.size}>{`${patient.size} cm`}</Info>
-                                <Info label={I.identifier}>{patient.key}</Info>
-                            </header>
-                            <section>
-                                {
-                                    consultations.map(this.renderConsulation)
-                                }
-                            </section>
+        return (
+            <div className={classes.join(" ")}>
+                <PageHeader
+                    key="list"
+                    label={I.buttonPatient}
+                    icon="user"
+                    carecenter={carecenter}
+                    organization={organization}
+                >
+                    <div className="view-pages-Patients-list">
+                        <div className="list">
+                            <Input
+                                wide={true}
+                                label={`${I.filter} ${filteredPatients.length} / ${patients.length}`}
+                                value={filter}
+                                onChange={filter => this.setState({ filter })}
+                            />
+                            <List
+                                className="patients-list"
+                                placeholder={PlaceholderImage}
+                                itemHeight={48}
+                                items={filteredPatients}
+                                mapper={this.renderPatient}
+                            />
                         </div>
-                    }
-                </div>
-            </PageHeader>
-        </div>)
+                        {patient && (
+                            <div className="detail thm-bg1">
+                                <header className="thm-bgPD">
+                                    <Info label={I.lastName}>{patient.lastName}</Info>
+                                    <Info label={I.firstName}>{patient.firstName}</Info>
+                                    <Info label={I.secondName}>{patient.secondName}</Info>
+                                    <Info label={I.gender}>
+                                        {I.genderValue(patient.sex)}
+                                    </Info>
+                                    <Info label={I.size}>{`${patient.size} cm`}</Info>
+                                    <Info label={I.identifier}>{patient.key}</Info>
+                                </header>
+                                <section>
+                                    {consultations.map(this.renderConsulation)}
+                                </section>
+                            </div>
+                        )}
+                    </div>
+                </PageHeader>
+            </div>
+        )
     }
 }

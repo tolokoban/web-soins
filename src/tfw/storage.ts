@@ -1,6 +1,6 @@
 /**
  * @example
- * import Storage from "./tfw/storage";
+ * import Storage from "tololib/storage";
  * Storage.local.set("state", {lang:"jp", currentPage: "checkpoint-list"});
  * const state = Storage.local.get("state", {lang:"jp", currentPage: "checkpoint-list"});
  * Storage.local.del("state");

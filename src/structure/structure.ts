@@ -1,6 +1,6 @@
 import { IStructure, IPatientField } from "../types"
 import State from '../state'
-import Intl from "../tfw/intl"
+import Intl from "tololib/intl"
 
 export default {
     createPatientsFieldsFromStructure,

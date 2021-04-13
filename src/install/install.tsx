@@ -1,10 +1,10 @@
 import React from "react"
 
-import WS from '../tfw/web-service'
-import Button from '../tfw/view/button'
-import Dialog from '../tfw/factory/dialog'
-import Install, { IInstallState } from './install.view'
-import Intl from '../tfw/intl'
+import WS from 'tololib/web-service'
+import Button from 'tololib/view/button'
+import Dialog from 'tololib/factory/dialog'
+import Install, { IInstallState } from './install-view'
+import Intl from 'tololib/intl'
 
 const _ = Intl.make(require("./install.yaml"))
 

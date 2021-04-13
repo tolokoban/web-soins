@@ -1,0 +1,17 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "preprocessor.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tolokoban",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "json5": "^2.2.0",
+    "yaml": "^1.10.0"
+  }
+}

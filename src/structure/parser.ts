@@ -1,4 +1,4 @@
-import Tfw from 'tfw'
+import Tfw from 'tololib'
 import { IFormField } from '../types'
 
 const _ = Tfw.Intl.make(require("./parser.yaml"));

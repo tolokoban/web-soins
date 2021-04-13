@@ -1,4 +1,4 @@
-import Tfw from 'tfw'
+import Tfw from 'tololib'
 import { IConsultation } from '../types'
 
 interface IGetResult {

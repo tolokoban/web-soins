@@ -1,7 +1,8 @@
 /**
  * The full state of the application is stored and managed here.
  */
-import { createStore } from 'redux'
+import { createStore } from "redux"
+import { useSelector } from "react-redux"
 import Current from './current'
 import User from "./user"
 import Organizations from "./organizations"
@@ -88,6 +89,10 @@ function initStatsConfig(state: IState, action: IAction): IState {
 
 export default {
     store, dispatch,
+
+    useSelector<T>(selector:(state: IState) => T): T {
+        return useSelector(selector)
+    },
 
     Current, Page, User, Organizations, Carecenters, Structures, StatsConfig,
 

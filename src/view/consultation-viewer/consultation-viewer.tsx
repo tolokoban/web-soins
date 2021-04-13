@@ -1,5 +1,5 @@
 import React from "react"
-import Tfw from 'tfw'
+import Tfw from 'tololib'
 import StructureManager from '../../structure'
 import { IStructure, IConsultation } from "../../types"
 

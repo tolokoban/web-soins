@@ -1,10 +1,10 @@
 import React from "react"
 import { IFormField, ITypes, IType } from '../types'
-import Combo from '../tfw/view/combo'
-import Expand from '../tfw/view/expand'
-import Checkbox from '../tfw/view/checkbox'
-import InputDate from '../tfw/view/input-date'
-import Storage from '../tfw/storage'
+import Combo from 'tololib/view/combo'
+import Expand from 'tololib/view/expand'
+import Checkbox from 'tololib/view/checkbox'
+import InputDate from 'tololib/view/input-date'
+import Storage from 'tololib/storage'
 
 import "./form-field.css"
 
