@@ -49,7 +49,7 @@ export default class FormField extends React.Component<IFormFieldProps, IFormFie
         return <Expand  key={id}
                         label={caption}
                         value={this.state.values[id]}
-                        onValueChange={(value: boolean) => this.setValue(id, value)}>
+                        onChange={(value: boolean) => this.setValue(id, value)}>
                     <div>{
                         Object.values(children).map(this.renderField)
                     }</div>

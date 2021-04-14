@@ -4,7 +4,7 @@ import { IFilter } from "../../types"
 import Button from "tololib/view/button"
 import Flex from "tololib/layout/flex"
 import InputDate from "tololib/view/input-date"
-import PermissiveJSON from 'tololib/permissive-json'
+import JSON5 from 'json5'
 import Storage from "tololib/storage"
 
 import "./consultation-query.css"
@@ -41,7 +41,7 @@ export default class ContainerQuery extends React.Component<TContainerQueryProps
         const target = evt.target
         if (!target) return
         const query = target.value as string
-        const valid = PermissiveJSON.isValid(query)
+        const valid = isValidJSON(query)
         this.setState({ query, valid })
     }
 
@@ -50,7 +50,7 @@ export default class ContainerQuery extends React.Component<TContainerQueryProps
         if (valid) {
             Storage.local.set('web-soins/container-query/query', query)
             const { onQueryClick } = this.props
-            onQueryClick(PermissiveJSON.parse(query), dateMin, dateMax)
+            onQueryClick(JSON5.parse(query), dateMin, dateMax)
         }
     }
 
@@ -69,21 +69,21 @@ export default class ContainerQuery extends React.Component<TContainerQueryProps
         return (<div className={classes.join(' ')}>
             <Flex>
                 <div><InputDate
-                    label={Intl.dateMin()}
+                    label={Intl.dateMin}
                     onChange={this.handleDateMinChange}
                     value={dateMin} /></div>
                 <div><InputDate
-                    label={Intl.dateMax()}
+                    label={Intl.dateMax}
                     onChange={this.handleDateMaxChange}
                     value={dateMax} /></div>
             </Flex>
-            <label>{Intl.filter()}</label><br/>
+            <label>{Intl.filter}</label><br/>
             <textarea className={valid ? 'valid' : 'invalid'}
                       rows={15}
                       onChange={this.handleQueryChange}>{
                 query
             }</textarea><br/>
-            <Button icon="play" label={Intl.executeQuery()} enabled={valid} onClick={this.handleExecuteClick}/>
+            <Button icon="play" label={Intl.executeQuery} enabled={valid} onClick={this.handleExecuteClick}/>
         </div>)
     }
 }
@@ -101,3 +101,14 @@ function oneYearBack() {
     )
     return date.valueOf()
 }
+
+
+function isValidJSON(value: string): boolean {
+    try {
+        JSON5.parse(value)
+        return true
+    } catch (ex) {
+        return false
+    }
+}
+

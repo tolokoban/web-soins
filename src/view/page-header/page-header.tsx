@@ -13,7 +13,7 @@ interface PageHeaderProps {
     carecenter: ICarecenter
     label: string
     icon?: string
-    children: JSX.Element | JSX.Element[]
+    children?: JSX.Element | JSX.Element[]
 }
 
 export default function PageHeader(props: PageHeaderProps) {

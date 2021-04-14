@@ -21,7 +21,7 @@ export default class CountingReports extends React.Component<ICountingReportsPro
     handleFilesChange = async (files: FileList) => {
         for (const file of files) {
             const content = await Tfw.Util.loadTextFromFile(file)
-            Dialog.wait(Intl.generatingReport(), Report.doGenerate(content, {}))
+            Dialog.wait(Intl.generatingReport, Report.doGenerate(content, {}))
         }
     }
 
@@ -41,7 +41,7 @@ export default class CountingReports extends React.Component<ICountingReportsPro
                 label="Ajouter un nouveau rapport"
                 enabled={false}
                 icon="add"
-                warning={true}
+                color="S"
                 onClick={() => Report.generateFromUserProvidedFile({})}
             />
             <InputFile
@@ -55,7 +55,7 @@ export default class CountingReports extends React.Component<ICountingReportsPro
             <Section label="Documentation" default={false} background="thm-bg2">
                 <div>
                     <p dangerouslySetInnerHTML={{
-                        __html: Intl.hintReportTemplates()
+                        __html: Intl.hintReportTemplates
                     }}></p>
                     <ul>
                         <li>

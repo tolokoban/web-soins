@@ -28,11 +28,9 @@ export default {
             Tfw.Util.fatal(
                 CONSULTATION_NOT_FOUND, `Consultation id not found: ${consultationId}`)
         }
-        const patientFields = result.patients[patientKey][0]
-        console.info("patientFields=", patientFields)
-        console.info("patientFields.slice(1)=", patientFields.slice(1))
+        const [patientEnterDate, ...patientFields] = result.patients[patientKey]
         const fieldNames = result.fields
-        const fieldValues = patientFields.slice(1) as string[]
+        const fieldValues: string[] = patientFields
         console.info("fieldNames=", fieldNames)
         console.info("fieldValues=", fieldValues)
         for (let k = 0; k < fieldNames.length; k++) {

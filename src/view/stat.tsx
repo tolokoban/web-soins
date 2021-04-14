@@ -109,10 +109,10 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
                             })
                         }</Combo>
                     <br />
-                    <center>
+                    <Flex alignItems="center" justifyContent="center">
                         <Pie colors={DEFAULT_COLORS}
                             values={getValuesForPie(occurences)} />
-                    </center>
+                    </Flex>
                     <div>{
                         occurences.occ.map(([caption, count], index) => {
                             const colorIndex = Math.min(DEFAULT_COLORS.length - 1, index);
@@ -122,7 +122,7 @@ export default class Stat extends React.Component<IStatProps, IStatState> {
                                     justifyContent="space-between"
                                     alignItems="center"
                                     dir="row"
-                                    classes={index % 2 ? "thm-bg1" : "thm-bg2"}>
+                                    className={index % 2 ? "thm-bg1" : "thm-bg2"}>
                                     <Flex
                                         justifyContent="space-between"
                                         wide={false}

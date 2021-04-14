@@ -21,7 +21,11 @@ export default {
     generateFromUserProvidedFile
 }
 
-async function generate(extraData: { carecenter: number }) {
+interface ExtraData {
+    carecenter?: number
+}
+
+async function generate(extraData: ExtraData) {
     Dialog.alert(
         <div className="report-icons-container">
             <div>
@@ -46,7 +50,7 @@ async function generate(extraData: { carecenter: number }) {
     )
 }
 
-async function generateFromTemplate(extraData: {}) {
+async function generateFromTemplate(extraData: ExtraData) {
     const content = await Dialog.wait(
         Intl.loadingReport,
         Util.loadTextFromURL(LibreOfficeCalcTemplate)
@@ -54,7 +58,7 @@ async function generateFromTemplate(extraData: {}) {
     Dialog.wait(Intl.generatingReport, doGenerate(content, extraData))
 }
 
-function generateFromUserProvidedFile(extraData: { carecenter: number }) {
+function generateFromUserProvidedFile(extraData: ExtraData) {
     const onFilesChange = async (files: FileList) => {
         for (const file of files) {
             const content = await Util.loadTextFromFile(file)
@@ -65,13 +69,16 @@ function generateFromUserProvidedFile(extraData: { carecenter: number }) {
 
     const dialog = Dialog.show({
         content: (
-            <ReportView carecenter={extraData.carecenter} onFilesChange={onFilesChange} />
+            <ReportView
+                carecenter={extraData.carecenter ?? 0}
+                onFilesChange={onFilesChange}
+            />
         ),
         footer: <Button label="Close" icon="cancel" onClick={() => dialog.hide()} />
     })
 }
 
-async function doGenerate(content: string, extraData: {}) {
+async function doGenerate(content: string, extraData: ExtraData) {
     //const content = await Util.loadTextFromURL(LibreOfficeCalcTemplate)
     const domParser = new DOMParser()
     const doc = domParser.parseFromString(content, "application/xml")
